@@ -8,6 +8,15 @@
 ]]></content>
   </entry>
   <entry>
+    <title>ReadThis</title>
+    <url>/2020/09/20/ReadThis/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><strong>网站功能还不完善，等我心情好了再做 喜喜</strong></p>
+]]></content>
+      <tags>
+        <tag>Hello motherfucker?!#</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>HTML相关</title>
     <url>/2020/10/13/HTML%E7%9B%B8%E5%85%B3/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="HTML备忘录"><a href="#HTML备忘录" class="headerlink" title="HTML备忘录"></a>HTML备忘录</h1><ul>
@@ -51,6 +60,8 @@
 </tr>
 </tbody></table>
 <ul>
+<li><p>使用相对路径优于绝对路径(舍去了DNS查找等操作)</p>
+</li>
 <li><p><code>&lt;script&gt;</code>放在<code> &lt;body&gt;</code>末尾前更优，这样可以确保脚本加载前浏览器已经解析HTML内容</p>
 </li>
 <li><p><code> &lt;a&gt;</code>标签的title属性作为悬停提示</p>
@@ -59,43 +70,26 @@
 </li>
 <li><p>描述列表</p>
 </li>
-<li><p>块引用</p>
-<p><code> &lt;blockquote cite=&quot;url&quot;&gt;&lt;/blockquote&gt;</code></p>
+<li><p>块引用<code> &lt;blockquote cite=&quot;url&quot;&gt;&lt;/blockquote&gt;</code></p>
 </li>
-<li><p>行内引用</p>
-<p><code>&lt;q cite=&quot;url&quot;&gt;</code></p>
+<li><p>行内引用<code>&lt;q cite=&quot;url&quot;&gt;</code></p>
 </li>
-<li><p>缩略语</p>
+<li><p>缩略语<code>&lt;abbr title=&quot;..&quot;&gt;&lt;/abbr&gt;</code></p>
+</li>
+<li><p>保留空格渲染<code>&lt;pre&gt;content&lt;/pre&gt;</code></p>
+</li>
+<li><p>标记键盘输入<code>&lt;kbd&gt;&lt;/kbd&gt;</code></p>
+</li>
+<li><p>换行<code>&lt;br&gt;</code></p>
+</li>
+<li><p>水平线<code>&lt;hr&gt;</code></p>
+</li>
+<li><p>嵌入其他网页<code>&lt;iframe&gt;</code></p>
+</li>
+<li><p>嵌入PDF,SVG,Flash—<code>&lt;embed&gt;&lt;object&gt;</code></p>
 </li>
 </ul>
-<p><code>&lt;abbr title=&quot;..&quot;&gt;&lt;/abbr&gt;</code></p>
-<ul>
-<li>保留空格渲染</li>
-</ul>
-<p><code>&lt;pre&gt;content&lt;/pre&gt;</code></p>
-<ul>
-<li>标记键盘输入</li>
-</ul>
-<p><code>&lt;kbd&gt;&lt;/kbd&gt;</code></p>
 ]]></content>
-  </entry>
-  <entry>
-    <title>ReadThis</title>
-    <url>/2020/09/20/ReadThis/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><strong>网站功能还不完善，等我心情好了再做 喜喜</strong></p>
-]]></content>
-      <tags>
-        <tag>Hello motherfucker?!#</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Start</title>
-    <url>/2020/09/20/Start/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>Exlau Web</p>
-]]></content>
-      <tags>
-        <tag>First blog</tag>
-      </tags>
   </entry>
   <entry>
     <title>MySQL相关</title>
@@ -114,6 +108,15 @@
 ]]></content>
       <tags>
         <tag>A test</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Start</title>
+    <url>/2020/09/20/Start/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>Exlau Web</p>
+]]></content>
+      <tags>
+        <tag>First blog</tag>
       </tags>
   </entry>
 </search>
