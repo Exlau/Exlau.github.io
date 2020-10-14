@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2020-09-20T06:01:09.253Z</updated>
+  <updated>2020-10-14T11:30:30.938Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>HTML备忘</title>
+    <link href="http://example.com/2020/10/14/HTML%E5%A4%87%E5%BF%98/"/>
+    <id>http://example.com/2020/10/14/HTML%E5%A4%87%E5%BF%98/</id>
+    <published>2020-10-14T11:21:06.000Z</published>
+    <updated>2020-10-14T11:30:30.938Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;</summary>
+        
+      
+    
+    
+    
+    
+    <category term="HTML备忘" scheme="http://example.com/tags/HTML%E5%A4%87%E5%BF%98/"/>
+    
+  </entry>
   
   <entry>
     <title>ReadThis</title>
