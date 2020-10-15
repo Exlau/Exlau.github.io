@@ -71,7 +71,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> Word count:</span>
-            <span class="post-count">88</span>
+            <span class="post-count">351</span>
         </span>
     </span>
 
@@ -111,6 +111,60 @@
 <li><p>unset：设置为文档默认</p>
 </li>
 </ul>
+<h3 id="选择器"><a href="#选择器" class="headerlink" title="选择器"></a>选择器</h3><table>
+<thead>
+<tr>
+<th align="left">选择器</th>
+<th align="left">示例</th>
+<th align="left">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><code>[attr]</code></td>
+<td align="left"><code>a[title]</code></td>
+<td align="left">匹配带有一个名为<em>attr</em>的属性的元素——方括号里的值。</td>
+</tr>
+<tr>
+<td align="left"><code>[attr=value]</code></td>
+<td align="left"><code>a[href=&quot;https://example.com&quot;]</code></td>
+<td align="left">匹配带有一个名为<em>attr</em>的属性的元素，其值正为<em>value</em>——引号中的字符串。</td>
+</tr>
+<tr>
+<td align="left"><code>[attr~=value]</code></td>
+<td align="left"><code>p[class~=&quot;special&quot;]</code></td>
+<td align="left">匹配带有一个名为<em>attr</em>的属性的元素 ，其值正为<em>value</em>，或者匹配带有一个<em>attr</em>属性的元素，其值有一个或者更多，至少有一个和<em>value</em>匹配。（即可以匹配class=”hello special”类似这样的)</td>
+</tr>
+<tr>
+<td align="left">`[attr</td>
+<td align="left">=value]`</td>
+<td align="left">`div[lang</td>
+</tr>
+</tbody></table>
+<hr>
+<table>
+<thead>
+<tr>
+<th align="left">选择器</th>
+<th align="left">示例</th>
+<th align="left">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><code>[attr^=value]</code></td>
+<td align="left"><code>li[class^=&quot;box-&quot;]</code></td>
+<td align="left">匹配带有一个名为<em>attr</em>的属性的元素，其值开头为<em>value</em>子字符串。</td>
+</tr>
+<tr>
+<td align="left"><code>[attr$=value]</code></td>
+<td align="left"><code>li[class$=&quot;-box&quot;]</code></td>
+<td align="left">匹配带有一个名为<em>attr</em>的属性的元素，其值结尾为<em>value</em>子字符串</td>
+</tr>
+<tr>
+<td align="left"><code>[attr*=value]</code></td>
+<td align="left"><code>li[class*=&quot;box&quot;]</code></td>
+<td align="left">匹配带有一个名为<em>attr</em>的属性的元素，其值的字符串中的任何地方，至少出现了一次<em>value</em>子字符串。</td>
+</tr>
+</tbody></table>
  
       <!-- reward -->
       
@@ -372,7 +426,7 @@
 <!-- #reward -->
 <div id="reward">
   <span class="close"><i class="ri-close-line"></i></span>
-  <p class="reward-p"><i class="ri-cup-line"></i>给我钱</p>
+  <p class="reward-p"><i class="ri-cup-line"></i>请立刻给我钱</p>
   <div class="reward-box">
     
     <div class="reward-item">
