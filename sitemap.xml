@@ -53,13 +53,6 @@
 
   
   <url>
-    <loc>http://example.com/tags/HTML%E5%A4%87%E5%BF%98/</loc>
-    <lastmod>2020-10-15</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>http://example.com/tags/CSS%E5%A4%87%E5%BF%98/</loc>
     <lastmod>2020-10-15</lastmod>
     <changefreq>daily</changefreq>
@@ -68,6 +61,13 @@
   
   <url>
     <loc>http://example.com/tags/Hello-motherfucker/</loc>
+    <lastmod>2020-10-15</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/tags/HTML%E5%A4%87%E5%BF%98/</loc>
     <lastmod>2020-10-15</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
