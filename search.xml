@@ -1,6 +1,110 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>CSS备忘</title>
+    <url>/2100/10/15/CSS%E5%A4%87%E5%BF%98/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="CSS备忘"><a href="#CSS备忘" class="headerlink" title="CSS备忘"></a>CSS备忘</h1><h2 id="属性相关"><a href="#属性相关" class="headerlink" title="属性相关"></a>属性相关</h2><ul>
+<li><p>border-bottom：仅下边框</p>
+</li>
+<li><p>text-decoration：文字修饰</p>
+</li>
+<li><p>all：将选择器选中的部分设置为同一个样式(一般只能是共有的 inherit unset等)</p>
+</li>
+<li><p>background相关</p>
+<ul>
+<li>-size:<ul>
+<li><code>cover</code> —浏览器将使图像足够大，使它完全覆盖了盒子区，同时仍然保持其高宽比。在这种情况下，有些图像可能会跳出盒子外</li>
+<li><code>contain</code> — 浏览器将使图像的大小适合盒子内。在这种情况下，如果图像的长宽比与盒子的长宽比不同，则可能在图像的任何一边或顶部和底部出现间隙。</li>
+</ul>
+</li>
+<li>-positon：(根据坐标调整，默认(0,0)为左上角)<ul>
+<li>设置规则为：先y轴后x轴</li>
+</ul>
+</li>
+<li>-attachment：<ul>
+<li>scroll：使背景随页面滚动而滚动</li>
+<li>fixed：固定</li>
+<li>local：</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="继承相关"><a href="#继承相关" class="headerlink" title="继承相关"></a>继承相关</h2><h3 id="不能继承的属性"><a href="#不能继承的属性" class="headerlink" title="不能继承的属性"></a>不能继承的属性</h3><ul>
+<li>width</li>
+</ul>
+<h3 id="控制继承"><a href="#控制继承" class="headerlink" title="控制继承"></a>控制继承</h3><ul>
+<li><p>inherit：强制开启继承</p>
+</li>
+<li><p>initial：设置为浏览器默认</p>
+</li>
+<li><p>unset：设置为文档默认</p>
+</li>
+</ul>
+<h2 id="选择器"><a href="#选择器" class="headerlink" title="选择器"></a>选择器</h2><table>
+<thead>
+<tr>
+<th align="left">选择器</th>
+<th align="left">示例</th>
+<th align="left">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><code>[attr]</code></td>
+<td align="left"><code>a[title]</code></td>
+<td align="left">匹配带有一个名为<em>attr</em>的属性的元素——方括号里的值。</td>
+</tr>
+<tr>
+<td align="left"><code>[attr=value]</code></td>
+<td align="left"><code>a[href=&quot;https://example.com&quot;]</code></td>
+<td align="left">匹配带有一个名为<em>attr</em>的属性的元素，其值正为<em>value</em>——引号中的字符串。</td>
+</tr>
+<tr>
+<td align="left"><code>[attr~=value]</code></td>
+<td align="left"><code>p[class~=&quot;special&quot;]</code></td>
+<td align="left">匹配带有一个名为<em>attr</em>的属性的元素 ，其值正为<em>value</em>，或者匹配带有一个<em>attr</em>属性的元素，其值有一个或者更多，至少有一个和<em>value</em>匹配。（即可以匹配class=”hello special”类似这样的)</td>
+</tr>
+<tr>
+<td align="left">`[attr</td>
+<td align="left">=value]`</td>
+<td align="left">`div[lang</td>
+</tr>
+</tbody></table>
+<hr>
+<table>
+<thead>
+<tr>
+<th align="left">选择器</th>
+<th align="left">示例</th>
+<th align="left">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><code>[attr^=value]</code></td>
+<td align="left"><code>li[class^=&quot;box-&quot;]</code></td>
+<td align="left">匹配带有一个名为<em>attr</em>的属性的元素，其值开头为<em>value</em>子字符串。</td>
+</tr>
+<tr>
+<td align="left"><code>[attr$=value]</code></td>
+<td align="left"><code>li[class$=&quot;-box&quot;]</code></td>
+<td align="left">匹配带有一个名为<em>attr</em>的属性的元素，其值结尾为<em>value</em>子字符串</td>
+</tr>
+<tr>
+<td align="left"><code>[attr*=value]</code></td>
+<td align="left"><code>li[class*=&quot;box&quot;]</code></td>
+<td align="left">匹配带有一个名为<em>attr</em>的属性的元素，其值的字符串中的任何地方，至少出现了一次<em>value</em>子字符串。</td>
+</tr>
+</tbody></table>
+<hr>
+<ul>
+<li><strong><em>i</em></strong> 标记可让浏览器以大小写不敏感的方式检测选择器    </li>
+</ul>
+<h2 id="渐变"><a href="#渐变" class="headerlink" title="渐变"></a>渐变</h2><h2 id="边框"><a href="#边框" class="headerlink" title="边框"></a>边框</h2>]]></content>
+      <tags>
+        <tag>CSS备忘</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>HTML备忘</title>
     <url>/2020/10/14/HTML%E5%A4%87%E5%BF%98/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="HTML备忘录"><a href="#HTML备忘录" class="headerlink" title="HTML备忘录"></a>HTML备忘录</h1><h2 id="标签相关"><a href="#标签相关" class="headerlink" title="标签相关"></a>标签相关</h2><ul>
@@ -108,88 +212,6 @@
 ]]></content>
       <tags>
         <tag>HTML备忘</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>CSS备忘</title>
-    <url>/2100/10/15/CSS%E5%A4%87%E5%BF%98/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="CSS备忘"><a href="#CSS备忘" class="headerlink" title="CSS备忘"></a>CSS备忘</h1><h2 id="属性相关"><a href="#属性相关" class="headerlink" title="属性相关"></a>属性相关</h2><ul>
-<li>border-bottom：仅下边框</li>
-<li>text-decoration：文字修饰</li>
-<li>all：将选择器选中的部分设置为同一个样式(一般只能是共有的 inherit unset等)</li>
-</ul>
-<h2 id="继承相关"><a href="#继承相关" class="headerlink" title="继承相关"></a>继承相关</h2><h3 id="不能继承的属性"><a href="#不能继承的属性" class="headerlink" title="不能继承的属性"></a>不能继承的属性</h3><ul>
-<li>width</li>
-</ul>
-<h3 id="控制继承"><a href="#控制继承" class="headerlink" title="控制继承"></a>控制继承</h3><ul>
-<li><p>inherit：强制开启继承</p>
-</li>
-<li><p>initial：设置为浏览器默认</p>
-</li>
-<li><p>unset：设置为文档默认</p>
-</li>
-</ul>
-<h2 id="选择器"><a href="#选择器" class="headerlink" title="选择器"></a>选择器</h2><table>
-<thead>
-<tr>
-<th align="left">选择器</th>
-<th align="left">示例</th>
-<th align="left">描述</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="left"><code>[attr]</code></td>
-<td align="left"><code>a[title]</code></td>
-<td align="left">匹配带有一个名为<em>attr</em>的属性的元素——方括号里的值。</td>
-</tr>
-<tr>
-<td align="left"><code>[attr=value]</code></td>
-<td align="left"><code>a[href=&quot;https://example.com&quot;]</code></td>
-<td align="left">匹配带有一个名为<em>attr</em>的属性的元素，其值正为<em>value</em>——引号中的字符串。</td>
-</tr>
-<tr>
-<td align="left"><code>[attr~=value]</code></td>
-<td align="left"><code>p[class~=&quot;special&quot;]</code></td>
-<td align="left">匹配带有一个名为<em>attr</em>的属性的元素 ，其值正为<em>value</em>，或者匹配带有一个<em>attr</em>属性的元素，其值有一个或者更多，至少有一个和<em>value</em>匹配。（即可以匹配class=”hello special”类似这样的)</td>
-</tr>
-<tr>
-<td align="left">`[attr</td>
-<td align="left">=value]`</td>
-<td align="left">`div[lang</td>
-</tr>
-</tbody></table>
-<hr>
-<table>
-<thead>
-<tr>
-<th align="left">选择器</th>
-<th align="left">示例</th>
-<th align="left">描述</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="left"><code>[attr^=value]</code></td>
-<td align="left"><code>li[class^=&quot;box-&quot;]</code></td>
-<td align="left">匹配带有一个名为<em>attr</em>的属性的元素，其值开头为<em>value</em>子字符串。</td>
-</tr>
-<tr>
-<td align="left"><code>[attr$=value]</code></td>
-<td align="left"><code>li[class$=&quot;-box&quot;]</code></td>
-<td align="left">匹配带有一个名为<em>attr</em>的属性的元素，其值结尾为<em>value</em>子字符串</td>
-</tr>
-<tr>
-<td align="left"><code>[attr*=value]</code></td>
-<td align="left"><code>li[class*=&quot;box&quot;]</code></td>
-<td align="left">匹配带有一个名为<em>attr</em>的属性的元素，其值的字符串中的任何地方，至少出现了一次<em>value</em>子字符串。</td>
-</tr>
-</tbody></table>
-<hr>
-<ul>
-<li><strong><em>i</em></strong> 标记可让浏览器以大小写不敏感的方式检测选择器</li>
-</ul>
-]]></content>
-      <tags>
-        <tag>CSS备忘</tag>
       </tags>
   </entry>
   <entry>
