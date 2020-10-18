@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2020-10-16T03:54:26.725Z</updated>
+  <updated>2020-10-18T14:51:27.031Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://example.com/2100/10/15/CSS%E5%A4%87%E5%BF%98/"/>
     <id>http://example.com/2100/10/15/CSS%E5%A4%87%E5%BF%98/</id>
     <published>2100-10-15T12:31:54.000Z</published>
-    <updated>2020-10-16T03:54:26.725Z</updated>
+    <updated>2020-10-18T14:51:27.031Z</updated>
     
     
       
@@ -87,10 +87,10 @@
   
   <entry>
     <title>ReadThis</title>
-    <link href="http://example.com/2020/09/20/ReadThis/"/>
-    <id>http://example.com/2020/09/20/ReadThis/</id>
+    <link href="http://example.com/2020/09/20/HELLO/"/>
+    <id>http://example.com/2020/09/20/HELLO/</id>
     <published>2020-09-20T05:58:13.000Z</published>
-    <updated>2020-09-20T06:01:09.253Z</updated>
+    <updated>2020-10-18T14:18:13.368Z</updated>
     
     
       
@@ -104,7 +104,7 @@
     
     
     
-    <category term="Hello motherfucker?!#" scheme="http://example.com/tags/Hello-motherfucker/"/>
+    <category term="Hello!" scheme="http://example.com/tags/Hello/"/>
     
   </entry>
   

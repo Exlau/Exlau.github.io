@@ -71,7 +71,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> Word count:</span>
-            <span class="post-count">533</span>
+            <span class="post-count">820</span>
         </span>
     </span>
 
@@ -80,7 +80,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-book-open-line"></i>
             <span class="post-meta-item-text"> Reading time≈</span>
-            <span class="post-count">2 min</span>
+            <span class="post-count">3 min</span>
         </span>
     </span>
 </div>
@@ -110,7 +110,7 @@
 </ul>
 </li>
 <li>-positon：(根据坐标调整，默认(0,0)为左上角)<ul>
-<li>设置规则为：先y轴后x轴</li>
+<li>设置规则为：先x轴后y轴</li>
 </ul>
 </li>
 <li>-attachment：<ul>
@@ -119,6 +119,30 @@
 <li>local：</li>
 </ul>
 </li>
+</ul>
+</li>
+<li><p>inline-size：可自动根据书写模式调整内联文本宽度</p>
+</li>
+<li><p>overflow:（当溢出盒子时应怎样处理溢出的文本）</p>
+<ul>
+<li>visible：默认属性，可视</li>
+<li>hidden</li>
+<li>scroll：添加滚动条，可与-x,-y配合使用</li>
+</ul>
+</li>
+<li><p>opacity:透明度</p>
+</li>
+<li><p>min-，max-属性：（设置最值）</p>
+<p>例如</p>
+<ul>
+<li>min-height：最小高度</li>
+</ul>
+</li>
+<li><p>object-fit：（调整图像覆盖方式）</p>
+<ul>
+<li>cover：比例不变，覆盖盒子</li>
+<li>cotain：比例不变，适应盒子</li>
+<li>fill：比例变，覆盖盒子</li>
 </ul>
 </li>
 </ul>
@@ -191,7 +215,95 @@
 <ul>
 <li><strong><em>i</em></strong> 标记可让浏览器以大小写不敏感的方式检测选择器    </li>
 </ul>
-<h2 id="渐变"><a href="#渐变" class="headerlink" title="渐变"></a>渐变</h2><h2 id="边框"><a href="#边框" class="headerlink" title="边框"></a>边框</h2> 
+<h2 id="单位制度"><a href="#单位制度" class="headerlink" title="单位制度"></a>单位制度</h2><table>
+<thead>
+<tr>
+<th align="left">单位</th>
+<th align="left">名称</th>
+<th align="left">等价换算</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><code>cm</code></td>
+<td align="left">厘米</td>
+<td align="left">1cm = 96px/2.54</td>
+</tr>
+<tr>
+<td align="left"><code>mm</code></td>
+<td align="left">毫米</td>
+<td align="left">1mm = 1/10th of 1cm</td>
+</tr>
+<tr>
+<td align="left"><code>Q</code></td>
+<td align="left">四分之一毫米</td>
+<td align="left">1Q = 1/40th of 1cm</td>
+</tr>
+<tr>
+<td align="left"><code>in</code></td>
+<td align="left">英寸</td>
+<td align="left">1in = 2.54cm = 96px</td>
+</tr>
+<tr>
+<td align="left"><code>pc</code></td>
+<td align="left">十二点活字</td>
+<td align="left">1pc = 1/16th of 1in</td>
+</tr>
+<tr>
+<td align="left"><code>pt</code></td>
+<td align="left">点</td>
+<td align="left">1pt = 1/72th of 1in</td>
+</tr>
+<tr>
+<td align="left"><code>px</code></td>
+<td align="left">像素</td>
+<td align="left">1px = 1/96th of 1in</td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th align="left">单位</th>
+<th align="left">相对于</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><code>em</code></td>
+<td align="left">在 font-size 中使用是相对于父元素的字体大小，在其他属性中使用是相对于自身的字体大小，如 width</td>
+</tr>
+<tr>
+<td align="left"><code>ex</code></td>
+<td align="left">字符“x”的高度</td>
+</tr>
+<tr>
+<td align="left"><code>ch</code></td>
+<td align="left">数字“0”的宽度</td>
+</tr>
+<tr>
+<td align="left"><code>rem</code></td>
+<td align="left">根元素的字体大小</td>
+</tr>
+<tr>
+<td align="left"><code>lh</code></td>
+<td align="left">元素的line-height</td>
+</tr>
+<tr>
+<td align="left"><code>vw</code></td>
+<td align="left">视窗宽度的1%</td>
+</tr>
+<tr>
+<td align="left"><code>vh</code></td>
+<td align="left">视窗高度的1%</td>
+</tr>
+<tr>
+<td align="left"><code>vmin</code></td>
+<td align="left">视窗较小尺寸的1%</td>
+</tr>
+<tr>
+<td align="left"><code>vmax</code></td>
+<td align="left">视图大尺寸的1%</td>
+</tr>
+</tbody></table>
+ 
       <!-- reward -->
       
       <div id="reword-out">
