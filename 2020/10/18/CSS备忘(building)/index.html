@@ -71,7 +71,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> Word count:</span>
-            <span class="post-count">1.2k</span>
+            <span class="post-count">1.3k</span>
         </span>
     </span>
 
@@ -80,7 +80,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-book-open-line"></i>
             <span class="post-meta-item-text"> Reading time≈</span>
-            <span class="post-count">4 min</span>
+            <span class="post-count">5 min</span>
         </span>
     </span>
 </div>
@@ -311,23 +311,41 @@
 <li>在 flex 容器中表现为柔性的盒子的元素被称之为 <strong>flex 项</strong>（<strong>flex item</strong>）</li>
 </ul>
 <h4 id="属性"><a href="#属性" class="headerlink" title="属性"></a>属性</h4><ul>
-<li><p><code>flex-direction</code>:（指定主轴方向）</p>
-<ul>
+<li><code>flex-direction</code>:（指定主轴方向）<ul>
 <li><code>column</code></li>
 <li><code>row</code></li>
 </ul>
 </li>
-<li><p><code>flex-wrap</code>:</p>
+<li><code>flex-wrap</code>:</li>
+<li><code>flex-flow</code>=<code>flex-direction flex-wrap</code></li>
+<li><code>flex: num</code>：为每个选项设置相对大小</li>
+<li><code>flex-grow</code>：设定多余部分分配比例（无单位）</li>
+<li><code>flex-shrink</code>：溢出调整？</li>
+<li><code>align-item</code>:  默认的值是 <code>stretch</code>，其会使所有 flex 项沿着交叉轴的方向拉伸以填充父容器。如果父容器在交叉轴方向上没有固定宽度（即高度），则所有 flex 项将变得与最长的 flex 项一样长（即高度保持一致）。<code>center</code> 值会使这些项保持其原有的高度，但是会在交叉轴居中。这就是那些按钮垂直居中的原因。也可以设置诸如 <code>flex-start</code> 或 <code>flex-end</code> 这样使 flex 项在交叉轴的开始或结束处对齐所有的值。</li>
+<li><code>justify-content</code>：<ul>
+<li><code>flex-start</code>：默认值，从主轴开始处排列</li>
+<li><code>flex-end</code>：排列到主轴末尾</li>
+<li><code>center</code>：在主轴居中</li>
+<li><code>space-around</code>：均匀分布在主轴</li>
+<li><code>space-between</code>：效果同space-around但左右无空隙</li>
+</ul>
 </li>
-<li><p><code>flex-flow</code>=<code>flex-direction flex-wrap</code></p>
+</ul>
+<h4 id="项排序"><a href="#项排序" class="headerlink" title="项排序"></a>项排序</h4><ul>
+<li><code>order</code>：默认值为0，值越大排位越靠后</li>
+</ul>
+<h3 id="网格布局"><a href="#网格布局" class="headerlink" title="网格布局"></a>网格布局</h3><h4 id="属性-1"><a href="#属性-1" class="headerlink" title="属性"></a>属性</h4><ul>
+<li><p><code>grid-template-columns:num1 ...numN</code>：添加N个宽度为num的列</p>
+<ul>
+<li><code>repeat(N,w)</code>方法：创建N个w宽的列</li>
+</ul>
 </li>
-<li><p><code>flex: num</code>：为每个选项设置相对大小</p>
+<li><p><code>grid-(column)-gap</code>：调整格间隙</p>
 </li>
-<li><p><code>flex-grow</code>：设定多余部分分配比例（无单位）</p>
-</li>
-<li><p><code>flex-shrink</code>：溢出调整？</p>
-</li>
-<li><p><code>align-item</code>:  默认的值是 <code>stretch</code>，其会使所有 flex 项沿着交叉轴的方向拉伸以填充父容器。如果父容器在交叉轴方向上没有固定宽度（即高度），则所有 flex 项将变得与最长的 flex 项一样长（即高度保持一致）。<code>center</code> 值会使这些项保持其原有的高度，但是会在交叉轴居中。这就是那些按钮垂直居中的原因。也可以设置诸如 <code>flex-start</code> 或 <code>flex-end</code> 这样使 flex 项在交叉轴的开始或结束处对齐所有的值。</p>
+<li><p><code>grid-auto-rows</code>：隐式表格的高</p>
+<ul>
+<li><code>minmax(min,max)</code>方法：设置最小和最大值</li>
+</ul>
 </li>
 </ul>
  
@@ -413,11 +431,11 @@
    
   <nav class="article-nav">
     
-      <a href="/2220/09/20/ReadME!!!/" class="article-nav-link">
+      <a href="/2020/10/21/RPC%E7%9B%B8%E5%85%B3/" class="article-nav-link">
         <strong class="article-nav-caption">上一篇</strong>
         <div class="article-nav-title">
           
-            ReadME!!
+            RPC相关
           
         </div>
       </a>
@@ -846,6 +864,28 @@
                 <!-- <iframe frameborder="no" border="1" marginwidth="0" marginheight="0" width="200" height="86" src="//music.163.com/outchain/player?type=2&id=31421490&auto=1&height=66"></iframe> -->
                 <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="250" height="110" loading="lazy" sandbox="allow-popups allow-scripts allow-same-origin" src="https://www.xiami.com/webapp/embed-player?autoPlay=1&id=1796017555"></iframe>
 </div>
+<!-- <div>
+    <button id="changeButton" value="ChangeButton" width=400px height=auto>change</button>
+</div> -->
+<!-- <script>
+    var divS = document.getElementById("music");
+    var btn = document.getElementById("changeButton");
+
+    function Change() {
+        var newI = divS.createElement("iframe");
+        newI.setAttribute("frameborder", "no");
+        newI.setAttribute("border", "0");
+        newI.setAttribute("marginwidth", "0");
+        newI.setAttribute("marginheight", "0");
+        newI.setAttribute("width", "250");
+        newI.setAttribute("height", "120");
+        newI.setAttribute("loading", "lazy");
+        newI.setAttribute("sandbox", "allow-popups allow-scripts allow-same-origin");
+        newI.setAttribute("src", "https://www.xiami.com/webapp/embed-player?autoPlay=1&id=1796017555");
+        div.appendChild(newI);
+    }
+    btn.onmouseover = Change;
+</script> -->
 
 <style>
     #music {
