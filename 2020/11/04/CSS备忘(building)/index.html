@@ -71,7 +71,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> Word count:</span>
-            <span class="post-count">2k</span>
+            <span class="post-count">2.2k</span>
         </span>
     </span>
 
@@ -80,7 +80,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-book-open-line"></i>
             <span class="post-meta-item-text"> Reading time≈</span>
-            <span class="post-count">7 min</span>
+            <span class="post-count">8 min</span>
         </span>
     </span>
 </div>
@@ -340,7 +340,24 @@
 <li><code>display:inline</code>：将元素设置为内联元素</li>
 <li><code>display:block</code>：将元素设置为块级元素</li>
 </ul>
-<h3 id="Position"><a href="#Position" class="headerlink" title="Position"></a>Position</h3><h2 id="继承相关"><a href="#继承相关" class="headerlink" title="继承相关"></a>继承相关</h2><h3 id="不能继承的属性"><a href="#不能继承的属性" class="headerlink" title="不能继承的属性"></a>不能继承的属性</h3><ul>
+<h3 id="Position"><a href="#Position" class="headerlink" title="Position"></a>Position</h3><ul>
+<li><p><code>static</code>：遵循浏览器本身的规则</p>
+</li>
+<li><p><code>fixed</code>：固定定位，即使滚动窗口也不动</p>
+</li>
+<li><p><code>relative</code>：相对定位，相对其<code>static</code>的位置。在定义<code>position:relative</code>后进行位置移动会在其<code>static</code>位置的基础上移动</p>
+</li>
+<li><p><code>absolute</code>：相对于最近已定位父元素，如果没有， 则相对于<code>&lt;html&gt;</code>元素</p>
+</li>
+<li><p><code>sticky</code>：粘性定位的元素是依赖于用户的滚动，在 <code>position:relative</code> 与 <code>position:fixed</code> 定位之间切换。</p>
+<p>它的行为就像 <code>position:relative</code>页面滚动超出目标区域时，它的表现就像 <code>position:fixed</code>，它会固定在目标位置。</p>
+<p>超过某个阈值会变为<code>fixed</code></p>
+</li>
+</ul>
+<h3 id="重叠处理"><a href="#重叠处理" class="headerlink" title="重叠处理"></a>重叠处理</h3><ul>
+<li><code>z-index：</code>赋一个数值，越大在z轴方向堆叠越高</li>
+</ul>
+<h2 id="继承相关"><a href="#继承相关" class="headerlink" title="继承相关"></a>继承相关</h2><h3 id="不能继承的属性"><a href="#不能继承的属性" class="headerlink" title="不能继承的属性"></a>不能继承的属性</h3><ul>
 <li>width</li>
 </ul>
 <h3 id="控制继承"><a href="#控制继承" class="headerlink" title="控制继承"></a>控制继承</h3><ul>
