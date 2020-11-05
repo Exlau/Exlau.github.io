@@ -71,7 +71,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> Word count:</span>
-            <span class="post-count">2.2k</span>
+            <span class="post-count">2.3k</span>
         </span>
     </span>
 
@@ -337,8 +337,17 @@
 <li><code>visibility:hidden</code>：仅本体消失，占位还在</li>
 </ul>
 <h3 id="display"><a href="#display" class="headerlink" title="display"></a>display</h3><ul>
-<li><code>display:inline</code>：将元素设置为内联元素</li>
+<li><code>display:inline</code>：将元素设置为内联元素<ul>
+<li>不能修改width、height属性，大小由内容撑开</li>
+<li>padding属性 top、right、bottom、left设置都有效；margin属性只有left、right设置有效</li>
+</ul>
+</li>
 <li><code>display:block</code>：将元素设置为块级元素</li>
+<li><code>display:inline-block</code>：元素设置为行内块级元素<ul>
+<li>共享行</li>
+<li>可修改width height</li>
+</ul>
+</li>
 </ul>
 <h3 id="Position"><a href="#Position" class="headerlink" title="Position"></a>Position</h3><ul>
 <li><p><code>static</code>：遵循浏览器本身的规则</p>
@@ -356,6 +365,12 @@
 </ul>
 <h3 id="重叠处理"><a href="#重叠处理" class="headerlink" title="重叠处理"></a>重叠处理</h3><ul>
 <li><code>z-index：</code>赋一个数值，越大在z轴方向堆叠越高</li>
+</ul>
+<h3 id="float"><a href="#float" class="headerlink" title="float"></a>float</h3><ul>
+<li><code>clear</code>：属性指定元素两侧不能出现浮动元素，避免元素混乱<ul>
+<li>both</li>
+</ul>
+</li>
 </ul>
 <h2 id="继承相关"><a href="#继承相关" class="headerlink" title="继承相关"></a>继承相关</h2><h3 id="不能继承的属性"><a href="#不能继承的属性" class="headerlink" title="不能继承的属性"></a>不能继承的属性</h3><ul>
 <li>width</li>
