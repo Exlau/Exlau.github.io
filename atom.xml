@@ -40,6 +40,29 @@
   </entry>
   
   <entry>
+    <title>HTTP</title>
+    <link href="http://example.com/2020/11/08/HTTP/"/>
+    <id>http://example.com/2020/11/08/HTTP/</id>
+    <published>2020-11-08T04:53:35.000Z</published>
+    <updated>2020-11-08T05:45:47.467Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;</summary>
+        
+      
+    
+    
+    
+    
+    <category term="整理自菜鸟教程" scheme="http://example.com/tags/%E6%95%B4%E7%90%86%E8%87%AA%E8%8F%9C%E9%B8%9F%E6%95%99%E7%A8%8B/"/>
+    
+  </entry>
+  
+  <entry>
     <title>CSS备忘</title>
     <link href="http://example.com/2020/11/04/CSS%E5%A4%87%E5%BF%98(building)/"/>
     <id>http://example.com/2020/11/04/CSS%E5%A4%87%E5%BF%98(building)/</id>
@@ -67,7 +90,7 @@
     <link href="http://example.com/2020/10/21/JS%E5%A4%87%E5%BF%98/"/>
     <id>http://example.com/2020/10/21/JS%E5%A4%87%E5%BF%98/</id>
     <published>2020-10-21T07:59:27.000Z</published>
-    <updated>2020-11-04T15:48:53.643Z</updated>
+    <updated>2020-11-08T06:22:41.283Z</updated>
     
     
       
