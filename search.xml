@@ -1,6 +1,116 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>HTML备忘</title>
+    <url>/2020/10/14/HTML%E5%A4%87%E5%BF%98/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="HTML备忘录"><a href="#HTML备忘录" class="headerlink" title="HTML备忘录"></a>HTML备忘录</h1><h2 id="标签相关"><a href="#标签相关" class="headerlink" title="标签相关"></a>标签相关</h2><ul>
+<li><p>块级元素自动换行而内联元素不自动换行</p>
+</li>
+<li><p>disabled = <em>value</em> 无论<em>value</em>值为什么，标签都会处于disabled状态，想要改变需将<em>value</em>置空</p>
+</li>
+<li><p>特殊字符引用表</p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th align="left">原义字符</th>
+<th align="left">等价字符引用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">&lt;”</td>
+<td align="left">&amp;lt</td>
+</tr>
+<tr>
+<td align="left">&gt;</td>
+<td align="left">&amp;gt</td>
+</tr>
+<tr>
+<td align="left">“</td>
+<td align="left">&amp;quot</td>
+</tr>
+<tr>
+<td align="left">‘</td>
+<td align="left">&amp;apos</td>
+</tr>
+<tr>
+<td align="left">&amp;</td>
+<td align="left">&amp;amp</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+</tbody></table>
+<ul>
+<li><p>使用相对路径优于绝对路径(舍去了DNS查找等操作)</p>
+</li>
+<li><p><code>&lt;script&gt;</code>放在<code> &lt;body&gt;</code>末尾前更优，这样可以确保脚本加载前浏览器已经解析HTML内容</p>
+</li>
+<li><p><code> &lt;a&gt;</code>标签的title属性作为悬停提示</p>
+</li>
+<li><p>href的mailto subject cc body等关键字，用于发送邮件</p>
+</li>
+<li><p>描述列表</p>
+</li>
+<li><p>块引用<code> &lt;blockquote cite=&quot;url&quot;&gt;&lt;/blockquote&gt;</code></p>
+</li>
+<li><p>行内引用<code>&lt;q cite=&quot;url&quot;&gt;</code></p>
+</li>
+<li><p>缩略语<code>&lt;abbr title=&quot;..&quot;&gt;&lt;/abbr&gt;</code></p>
+</li>
+<li><p>保留空格渲染<code>&lt;pre&gt;content&lt;/pre&gt;</code></p>
+</li>
+<li><p>标记键盘输入<code>&lt;kbd&gt;&lt;/kbd&gt;</code></p>
+</li>
+<li><p>换行<code>&lt;br&gt;</code></p>
+</li>
+<li><p>水平线<code>&lt;hr&gt;</code></p>
+</li>
+<li><p>嵌入其他网页<code>&lt;iframe&gt;</code></p>
+<p>属性：</p>
+<p>allowfullscreen：可设置全屏</p>
+<p>frameborder：边框</p>
+<p>（尽量用js设置src）</p>
+</li>
+<li><p>嵌入PDF,SVG,Flash—<code>&lt;embed&gt;&lt;object&gt;</code></p>
+</li>
+<li><p>视频标签:<code>&lt;video&gt;</code></p>
+<p>属性：</p>
+<p>autoplay:自动播放</p>
+<p>loop:循环</p>
+<p>muted:静音播放</p>
+<p>poster:封面图</p>
+<p>preload:缓冲（”none”：不缓冲 “auto”：页面加载自动缓冲）</p>
+</li>
+<li><p>权限管理 sandbox属性</p>
+</li>
+<li><p>表格相关</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">table</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- colgroup 必须包含在table标签内--&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">colgroup</span>&gt;</span> </span><br><span class="line">		<span class="tag">&lt;<span class="name">col</span> <span class="attr">style</span>=<span class="string">&quot;#&quot;</span> <span class="attr">span</span>=<span class="string">&quot;x&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">colgroup</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- col标签可以指定每一行的属性，span是需要设置属性的行数--&gt;</span></span><br><span class="line">        <span class="comment">&lt;!-- table row --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">tr</span>&gt;</span> </span><br><span class="line">    <span class="tag">&lt;<span class="name">td</span>&gt;</span> </span><br><span class="line">        <span class="comment">&lt;!-- table data --&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">table</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>​    </p>
+</li>
+</ul>
+<h2 id="响应式设计"><a href="#响应式设计" class="headerlink" title="响应式设计"></a>响应式设计</h2><ul>
+<li><p>```<img>``的 srcset和sizes属性</p>
+<p>举例:</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!--srcset是一个文件列表，后面以w为单位的数据是文件的像素大小--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">img</span> <span class="attr">srcset</span>=<span class="string">&quot;elva-fairy-320w.jpg 320w,</span></span></span><br><span class="line"><span class="tag"><span class="string">             elva-fairy-480w.jpg 480w,</span></span></span><br><span class="line"><span class="tag"><span class="string">             elva-fairy-800w.jpg 800w&quot;</span></span></span><br><span class="line">     &lt;!-- sizes 括号内的是条件 括号外的是前面条件为真时采用的样式--&gt;</span><br><span class="line">     sizes=&quot;(max-width: 320px) 280px,</span><br><span class="line">            (max-width: 480px) 440px,</span><br><span class="line">            800px&quot; <span class="comment">&lt;!--无条件的是默认样式--&gt;</span></span><br><span class="line">     src=&quot;elva-fairy-800w.jpg&quot; alt=&quot;Elva dressed as a fairy&quot;&gt;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><code>&lt;picture&gt;</code>的应用</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">​	&#96;&#96;&#96;&lt;soucre&gt;&#96;&#96;&#96;包含media srcset sizes属性</span><br><span class="line"></span><br><span class="line">&#96;&#96;&#96;html</span><br><span class="line">&lt;source media&#x3D;&quot;(maxwidth:799px)&quot;srcset&#x3D;&quot;exa.jpg&quot;&gt;</span><br><span class="line">&lt;!--media属性设置一个条件，为真则显示此图片--&gt;</span><br></pre></td></tr></table></figure>
+
+
+
+</li>
+</ul>
+<p>aaa</p>
+]]></content>
+      <tags>
+        <tag>HTML备忘</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>CSS备忘</title>
     <url>/2020/11/04/CSS%E5%A4%87%E5%BF%98(building)/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="CSS备忘（building）"><a href="#CSS备忘（building）" class="headerlink" title="CSS备忘（building）"></a>CSS备忘（building）</h1><h2 id="属性相关"><a href="#属性相关" class="headerlink" title="属性相关"></a>属性相关</h2><ul>
@@ -485,116 +595,6 @@
       </tags>
   </entry>
   <entry>
-    <title>HTML备忘</title>
-    <url>/2020/10/14/HTML%E5%A4%87%E5%BF%98/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="HTML备忘录"><a href="#HTML备忘录" class="headerlink" title="HTML备忘录"></a>HTML备忘录</h1><h2 id="标签相关"><a href="#标签相关" class="headerlink" title="标签相关"></a>标签相关</h2><ul>
-<li><p>块级元素自动换行而内联元素不自动换行</p>
-</li>
-<li><p>disabled = <em>value</em> 无论<em>value</em>值为什么，标签都会处于disabled状态，想要改变需将<em>value</em>置空</p>
-</li>
-<li><p>特殊字符引用表</p>
-</li>
-</ul>
-<table>
-<thead>
-<tr>
-<th align="left">原义字符</th>
-<th align="left">等价字符引用</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="left">&lt;”</td>
-<td align="left">&amp;lt</td>
-</tr>
-<tr>
-<td align="left">&gt;</td>
-<td align="left">&amp;gt</td>
-</tr>
-<tr>
-<td align="left">“</td>
-<td align="left">&amp;quot</td>
-</tr>
-<tr>
-<td align="left">‘</td>
-<td align="left">&amp;apos</td>
-</tr>
-<tr>
-<td align="left">&amp;</td>
-<td align="left">&amp;amp</td>
-</tr>
-<tr>
-<td align="left"></td>
-<td align="left"></td>
-</tr>
-</tbody></table>
-<ul>
-<li><p>使用相对路径优于绝对路径(舍去了DNS查找等操作)</p>
-</li>
-<li><p><code>&lt;script&gt;</code>放在<code> &lt;body&gt;</code>末尾前更优，这样可以确保脚本加载前浏览器已经解析HTML内容</p>
-</li>
-<li><p><code> &lt;a&gt;</code>标签的title属性作为悬停提示</p>
-</li>
-<li><p>href的mailto subject cc body等关键字，用于发送邮件</p>
-</li>
-<li><p>描述列表</p>
-</li>
-<li><p>块引用<code> &lt;blockquote cite=&quot;url&quot;&gt;&lt;/blockquote&gt;</code></p>
-</li>
-<li><p>行内引用<code>&lt;q cite=&quot;url&quot;&gt;</code></p>
-</li>
-<li><p>缩略语<code>&lt;abbr title=&quot;..&quot;&gt;&lt;/abbr&gt;</code></p>
-</li>
-<li><p>保留空格渲染<code>&lt;pre&gt;content&lt;/pre&gt;</code></p>
-</li>
-<li><p>标记键盘输入<code>&lt;kbd&gt;&lt;/kbd&gt;</code></p>
-</li>
-<li><p>换行<code>&lt;br&gt;</code></p>
-</li>
-<li><p>水平线<code>&lt;hr&gt;</code></p>
-</li>
-<li><p>嵌入其他网页<code>&lt;iframe&gt;</code></p>
-<p>属性：</p>
-<p>allowfullscreen：可设置全屏</p>
-<p>frameborder：边框</p>
-<p>（尽量用js设置src）</p>
-</li>
-<li><p>嵌入PDF,SVG,Flash—<code>&lt;embed&gt;&lt;object&gt;</code></p>
-</li>
-<li><p>视频标签:<code>&lt;video&gt;</code></p>
-<p>属性：</p>
-<p>autoplay:自动播放</p>
-<p>loop:循环</p>
-<p>muted:静音播放</p>
-<p>poster:封面图</p>
-<p>preload:缓冲（”none”：不缓冲 “auto”：页面加载自动缓冲）</p>
-</li>
-<li><p>权限管理 sandbox属性</p>
-</li>
-<li><p>表格相关</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">table</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- colgroup 必须包含在table标签内--&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">colgroup</span>&gt;</span> </span><br><span class="line">		<span class="tag">&lt;<span class="name">col</span> <span class="attr">style</span>=<span class="string">&quot;#&quot;</span> <span class="attr">span</span>=<span class="string">&quot;x&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">colgroup</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- col标签可以指定每一行的属性，span是需要设置属性的行数--&gt;</span></span><br><span class="line">        <span class="comment">&lt;!-- table row --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">tr</span>&gt;</span> </span><br><span class="line">    <span class="tag">&lt;<span class="name">td</span>&gt;</span> </span><br><span class="line">        <span class="comment">&lt;!-- table data --&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">table</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<p>​    </p>
-</li>
-</ul>
-<h2 id="响应式设计"><a href="#响应式设计" class="headerlink" title="响应式设计"></a>响应式设计</h2><ul>
-<li><p>```<img>``的 srcset和sizes属性</p>
-<p>举例:</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!--srcset是一个文件列表，后面以w为单位的数据是文件的像素大小--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">img</span> <span class="attr">srcset</span>=<span class="string">&quot;elva-fairy-320w.jpg 320w,</span></span></span><br><span class="line"><span class="tag"><span class="string">             elva-fairy-480w.jpg 480w,</span></span></span><br><span class="line"><span class="tag"><span class="string">             elva-fairy-800w.jpg 800w&quot;</span></span></span><br><span class="line">     &lt;!-- sizes 括号内的是条件 括号外的是前面条件为真时采用的样式--&gt;</span><br><span class="line">     sizes=&quot;(max-width: 320px) 280px,</span><br><span class="line">            (max-width: 480px) 440px,</span><br><span class="line">            800px&quot; <span class="comment">&lt;!--无条件的是默认样式--&gt;</span></span><br><span class="line">     src=&quot;elva-fairy-800w.jpg&quot; alt=&quot;Elva dressed as a fairy&quot;&gt;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p><code>&lt;picture&gt;</code>的应用</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">​	&#96;&#96;&#96;&lt;soucre&gt;&#96;&#96;&#96;包含media srcset sizes属性</span><br><span class="line"></span><br><span class="line">&#96;&#96;&#96;html</span><br><span class="line">&lt;source media&#x3D;&quot;(maxwidth:799px)&quot;srcset&#x3D;&quot;exa.jpg&quot;&gt;</span><br><span class="line">&lt;!--media属性设置一个条件，为真则显示此图片--&gt;</span><br></pre></td></tr></table></figure>
-
-
-
-</li>
-</ul>
-<p>aaa</p>
-]]></content>
-      <tags>
-        <tag>HTML备忘</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>HTTP</title>
     <url>/2020/11/08/HTTP/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="HTTP"><a href="#HTTP" class="headerlink" title="HTTP"></a>HTTP</h1><h2 id="特点"><a href="#特点" class="headerlink" title="特点"></a>特点</h2><ul>
@@ -783,20 +783,6 @@
       </tags>
   </entry>
   <entry>
-    <title>RPC相关</title>
-    <url>/2020/10/21/RPC%E7%9B%B8%E5%85%B3/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="流程"><a href="#流程" class="headerlink" title="流程"></a>流程</h1><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">graph LR</span><br><span class="line">本地--&gt;|要执行的函数与函数参数|服务端</span><br><span class="line">服务端--&gt;|通过回调函数传回函数结果|本地</span><br></pre></td></tr></table></figure>
-
-<p>以上传参过程均通过AJAX</p>
-<h1 id="传输的数据"><a href="#传输的数据" class="headerlink" title="传输的数据"></a>传输的数据</h1><p><strong>本地：服务端的函数与函数参数</strong></p>
-<p><strong>服务端：回调执行结果</strong></p>
-<h1 id="序列化与反序列化"><a href="#序列化与反序列化" class="headerlink" title="序列化与反序列化"></a>序列化与反序列化</h1><p>将JSON序列化为PHP形式</p>
-<h1 id="RPC"><a href="#RPC" class="headerlink" title="RPC"></a>RPC</h1><p>RPC(Remote Procedure Call)指的是远程过程调用，简单的说，RPC就是从一台机器上通过参数传递的方式调用另一台机器上的一个函数或方法并得到响应结果。</p>
-<p>即本地来调用远程计算机上的某个函数</p>
-<p>我们不用关心RPC的通讯细节只需要使用上层接口</p>
-]]></content>
-  </entry>
-  <entry>
     <title>JS备忘</title>
     <url>/2020/10/21/JS%E5%A4%87%E5%BF%98/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="Start"><a href="#Start" class="headerlink" title="Start"></a>Start</h1><h2 id="一般事件绑定"><a href="#一般事件绑定" class="headerlink" title="一般事件绑定"></a>一般事件绑定</h2><ul>
@@ -922,6 +908,41 @@ function func()&#123;
 <h2 id="AJAX"><a href="#AJAX" class="headerlink" title="AJAX"></a>AJAX</h2>]]></content>
   </entry>
   <entry>
+    <title>RPC相关</title>
+    <url>/2020/10/21/RPC%E7%9B%B8%E5%85%B3/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="流程"><a href="#流程" class="headerlink" title="流程"></a>流程</h1><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">graph LR</span><br><span class="line">本地--&gt;|要执行的函数与函数参数|服务端</span><br><span class="line">服务端--&gt;|通过回调函数传回函数结果|本地</span><br></pre></td></tr></table></figure>
+
+<p>以上传参过程均通过AJAX</p>
+<h1 id="传输的数据"><a href="#传输的数据" class="headerlink" title="传输的数据"></a>传输的数据</h1><p><strong>本地：服务端的函数与函数参数</strong></p>
+<p><strong>服务端：回调执行结果</strong></p>
+<h1 id="序列化与反序列化"><a href="#序列化与反序列化" class="headerlink" title="序列化与反序列化"></a>序列化与反序列化</h1><p>将JSON序列化为PHP形式</p>
+<h1 id="RPC"><a href="#RPC" class="headerlink" title="RPC"></a>RPC</h1><p>RPC(Remote Procedure Call)指的是远程过程调用，简单的说，RPC就是从一台机器上通过参数传递的方式调用另一台机器上的一个函数或方法并得到响应结果。</p>
+<p>即本地来调用远程计算机上的某个函数</p>
+<p>我们不用关心RPC的通讯细节只需要使用上层接口</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>ReadME!!</title>
+    <url>/2220/09/20/ReadME!!!/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><ul>
+<li>欢迎访问！</li>
+<li>第一次加载文章首页图可能很慢。。。</li>
+<li>如要评论文章，请先填写昵称和邮箱（这两者为必要填写项）</li>
+</ul>
+]]></content>
+      <tags>
+        <tag>Hello!</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>mySQL基础</title>
+    <url>/2020/11/30/mySQL%E5%9F%BA%E7%A1%80/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>]]></content>
+      <tags>
+        <tag>password</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Vue相关</title>
     <url>/2020/11/25/Vue%E7%BB%84%E4%BB%B6/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="流程"><a href="#流程" class="headerlink" title="流程"></a>流程</h2><ul>
@@ -980,34 +1001,31 @@ function func()&#123;
 <p>$emit(‘event-name’,props)</p>
 <figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">cpn</span> <span class="attr">:Cmessage</span>=<span class="string">&#x27;message&#x27;</span>&gt;</span><span class="tag">&lt;/<span class="name">cpn</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">template</span> <span class="attr">id</span>=<span class="string">&#x27;cpn&#x27;</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">button</span> @<span class="attr">click</span>=<span class="string">&#x27;clicked(Cmessage)&#x27;</span>&gt;</span> //点击事件发生主席那个clicked并以Cmessage作为参数</span><br><span class="line">	emit click</span><br><span class="line">    <span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="javascript">    <span class="comment">//子组件</span></span></span><br><span class="line"><span class="javascript">    <span class="keyword">const</span> cpn = &#123;</span></span><br><span class="line"><span class="javascript">        template: <span class="string">&#x27;#cpn&#x27;</span>,</span></span><br><span class="line">        props:&#123; </span><br><span class="line">            Cmessage:&#123;</span><br><span class="line"><span class="javascript">                type: <span class="built_in">String</span>,</span></span><br><span class="line"><span class="javascript">                <span class="keyword">default</span>: <span class="string">&#x27;Cmessage &#x27;</span></span></span><br><span class="line">            &#125; </span><br><span class="line">    	&#125;</span><br><span class="line">        data()&#123;</span><br><span class="line"><span class="javascript">            <span class="keyword">return</span> &#123;</span></span><br><span class="line">                </span><br><span class="line">            &#125;;</span><br><span class="line">        &#125;,</span><br><span class="line">         methods:&#123;</span><br><span class="line">          	clicked(Cmessage)&#123;           </span><br><span class="line"><span class="javascript">                <span class="built_in">this</span>.$emit(<span class="string">&#x27;cpn-click&#x27;</span>Cmessage)<span class="comment">//发射cpn-click事件到父组件，并传Cmessage</span></span></span><br><span class="line">            &#125;   </span><br><span class="line">         &#125;        </span><br><span class="line">     &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="javascript"><span class="comment">//父组件</span></span></span><br><span class="line"><span class="javascript">	<span class="keyword">const</span> VM = <span class="keyword">new</span>  Vue()&#123;</span></span><br><span class="line"><span class="javascript">		el:<span class="string">&#x27;&#x27;</span>,</span></span><br><span class="line">    	data:&#123;</span><br><span class="line"><span class="javascript">        	message: <span class="string">&#x27;this is a message&#x27;</span></span></span><br><span class="line">    	&#125;,</span><br><span class="line">    	components: &#123;</span><br><span class="line">			cpn: cpn</span><br><span class="line">    	&#125;,</span><br><span class="line">        methods:&#123;</span><br><span class="line">            cpn-click(Cmessage)&#123;</span><br><span class="line"><span class="javascript">                <span class="built_in">console</span>.log(Cmessage);</span></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">	&#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
+<h3 id="关键字"><a href="#关键字" class="headerlink" title="关键字"></a>关键字</h3><p><strong>this.$children</strong>可以获取this（Vue实例）的子组件数组通过下标来查询具体某一项组件（不推荐这种方式）</p>
+<p><strong>$refs</strong></p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">cpn</span> <span class="attr">ref</span>=<span class="string">&#x27;a&#x27;</span>&gt;</span><span class="tag">&lt;/<span class="name">cpn</span>&gt;</span>//若有一个组件像这样添加了refs属性</span><br><span class="line"></span><br><span class="line">this.$refs.a//则可以这样来获取此组件</span><br></pre></td></tr></table></figure>
 
-<p>for p64</p>
+<p><strong>$parent</strong>可以获取组件的父组件</p>
+<p><strong>$root</strong>可以访问根组件</p>
+<h2 id="插槽slot"><a href="#插槽slot" class="headerlink" title="插槽slot"></a>插槽slot</h2><h3 id="流程-1"><a href="#流程-1" class="headerlink" title="流程"></a>流程</h3><ul>
+<li>slot定义</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">template</span> <span class="attr">id</span>=<span class="string">&#x27;cpn&#x27;</span>&gt;</span></span><br><span class="line">	HTMLCODE</span><br><span class="line">	<span class="tag">&lt;<span class="name">slot</span>&gt;</span><span class="tag">&lt;/<span class="name">slot</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!--&lt;slot&gt;&lt;p&gt;default value&lt;/p&gt;&lt;/slot&gt;--&gt;</span></span><br><span class="line">    <span class="comment">&lt;!--插槽还可以具有默认值,手动赋值会覆盖此默认值--&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>这里为cpn组件预留了一个slot插槽</p>
+<ul>
+<li>插槽使用</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">cpn</span>&gt;</span><span class="tag">&lt;<span class="name">button</span>&gt;</span>click<span class="tag">&lt;/<span class="name">button</span>&gt;</span><span class="tag">&lt;/<span class="name">cpn</span>&gt;</span></span><br><span class="line">//这里把slot替换为了一个button</span><br></pre></td></tr></table></figure>
+
+<h3 id="slot的name"><a href="#slot的name" class="headerlink" title="slot的name"></a>slot的name</h3><p>默认替换的是无name属性的插槽</p>
+<p>若要选定某name的插槽,则需要</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line">例如:</span><br><span class="line"><span class="tag">&lt;<span class="name">template</span> <span class="attr">id</span>=<span class="string">&quot;cpn&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">h2</span>&gt;</span>组件<span class="tag">&lt;/<span class="name">h2</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">p</span>&gt;</span>组件组件<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">slot</span> <span class="attr">name</span>=<span class="string">&quot;left&quot;</span>&gt;</span><span class="tag">&lt;<span class="name">span</span>&gt;</span>left<span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="tag">&lt;/<span class="name">slot</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">slot</span> <span class="attr">name</span>=<span class="string">&quot;center&quot;</span>&gt;</span><span class="tag">&lt;<span class="name">span</span>&gt;</span>center<span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="tag">&lt;/<span class="name">slot</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">slot</span> <span class="attr">name</span>=<span class="string">&quot;right&quot;</span>&gt;</span><span class="tag">&lt;<span class="name">span</span>&gt;</span>right<span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="tag">&lt;/<span class="name">slot</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">cpn</span>&gt;</span><span class="tag">&lt;<span class="name">span</span> <span class="attr">slot</span>=<span class="string">&#x27;left&#x27;</span>&gt;</span>left will be cover<span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="tag">&lt;/<span class="name">cpn</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>p71</p>
 ]]></content>
       <tags>
         <tag>buliding...</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>ReadME!!</title>
-    <url>/2220/09/20/ReadME!!!/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><ul>
-<li>欢迎访问！</li>
-<li>第一次加载文章首页图可能很慢。。。</li>
-<li>如要评论文章，请先填写昵称和邮箱（这两者为必要填写项）</li>
-</ul>
-]]></content>
-      <tags>
-        <tag>Hello!</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>《关掉》</title>
-    <url>/2020/10/16/%E3%80%8A%E5%85%B3%E6%8E%89%E3%80%8B/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>​    关掉！关掉！一定要关掉！再不关掉那些网络游戏，小孩哪有美好的未来？哪有美好的前程？祖国哪有</p>
-<h1 id="栋"><a href="#栋" class="headerlink" title="栋"></a>栋</h1><p>梁之才？</p>
-<iframe src="//player.bilibili.com/player.html?aid=457253380&bvid=BV1s5411j7Po&cid=242488467&page=1" width="800px" height="450px" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" auto="1"> </iframe>]]></content>
-      <tags>
-        <tag>关掉</tag>
       </tags>
   </entry>
   <entry>
@@ -1021,6 +1039,16 @@ function func()&#123;
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">root@host# mysql -u root -p</span><br><span class="line">Enter password:*******</span><br><span class="line">mysql&gt; use mysql;</span><br><span class="line">Database changed</span><br><span class="line"></span><br><span class="line">mysql&gt; INSERT INTO user </span><br><span class="line">          (host, user, password, </span><br><span class="line">           select_priv, insert_priv, update_priv) </span><br><span class="line">           VALUES (&#39;localhost&#39;, &#39;guest&#39;, </span><br><span class="line">           PASSWORD(&#39;guest123&#39;), &#39;Y&#39;, &#39;Y&#39;, &#39;Y&#39;);</span><br><span class="line">Query OK, 1 row affected (0.20 sec)</span><br><span class="line"></span><br><span class="line">mysql&gt; FLUSH PRIVILEGES;</span><br><span class="line">Query OK, 1 row affected (0.01 sec)</span><br><span class="line"></span><br><span class="line">mysql&gt; SELECT host, user, password FROM user WHERE user &#x3D; &#39;guest&#39;;</span><br><span class="line">+-----------+---------+------------------+</span><br><span class="line">| host      | user    | password         |</span><br><span class="line">+-----------+---------+------------------+</span><br><span class="line">| localhost | guest | 6f8c114b58f2ce9e |</span><br><span class="line">+-----------+---------+------------------+</span><br><span class="line">1 row in set (0.00 sec)</span><br></pre></td></tr></table></figure>
 
 ]]></content>
+  </entry>
+  <entry>
+    <title>《关掉》</title>
+    <url>/2020/10/16/%E3%80%8A%E5%85%B3%E6%8E%89%E3%80%8B/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>​    关掉！关掉！一定要关掉！再不关掉那些网络游戏，小孩哪有美好的未来？哪有美好的前程？祖国哪有</p>
+<h1 id="栋"><a href="#栋" class="headerlink" title="栋"></a>栋</h1><p>梁之才？</p>
+<iframe src="//player.bilibili.com/player.html?aid=457253380&bvid=BV1s5411j7Po&cid=242488467&page=1" width="800px" height="450px" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" auto="1"> </iframe>]]></content>
+      <tags>
+        <tag>关掉</tag>
+      </tags>
   </entry>
   <entry>
     <title>很快啊</title>
