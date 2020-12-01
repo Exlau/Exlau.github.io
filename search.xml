@@ -1,116 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>HTML备忘</title>
-    <url>/2020/10/14/HTML%E5%A4%87%E5%BF%98/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="HTML备忘录"><a href="#HTML备忘录" class="headerlink" title="HTML备忘录"></a>HTML备忘录</h1><h2 id="标签相关"><a href="#标签相关" class="headerlink" title="标签相关"></a>标签相关</h2><ul>
-<li><p>块级元素自动换行而内联元素不自动换行</p>
-</li>
-<li><p>disabled = <em>value</em> 无论<em>value</em>值为什么，标签都会处于disabled状态，想要改变需将<em>value</em>置空</p>
-</li>
-<li><p>特殊字符引用表</p>
-</li>
-</ul>
-<table>
-<thead>
-<tr>
-<th align="left">原义字符</th>
-<th align="left">等价字符引用</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="left">&lt;”</td>
-<td align="left">&amp;lt</td>
-</tr>
-<tr>
-<td align="left">&gt;</td>
-<td align="left">&amp;gt</td>
-</tr>
-<tr>
-<td align="left">“</td>
-<td align="left">&amp;quot</td>
-</tr>
-<tr>
-<td align="left">‘</td>
-<td align="left">&amp;apos</td>
-</tr>
-<tr>
-<td align="left">&amp;</td>
-<td align="left">&amp;amp</td>
-</tr>
-<tr>
-<td align="left"></td>
-<td align="left"></td>
-</tr>
-</tbody></table>
-<ul>
-<li><p>使用相对路径优于绝对路径(舍去了DNS查找等操作)</p>
-</li>
-<li><p><code>&lt;script&gt;</code>放在<code> &lt;body&gt;</code>末尾前更优，这样可以确保脚本加载前浏览器已经解析HTML内容</p>
-</li>
-<li><p><code> &lt;a&gt;</code>标签的title属性作为悬停提示</p>
-</li>
-<li><p>href的mailto subject cc body等关键字，用于发送邮件</p>
-</li>
-<li><p>描述列表</p>
-</li>
-<li><p>块引用<code> &lt;blockquote cite=&quot;url&quot;&gt;&lt;/blockquote&gt;</code></p>
-</li>
-<li><p>行内引用<code>&lt;q cite=&quot;url&quot;&gt;</code></p>
-</li>
-<li><p>缩略语<code>&lt;abbr title=&quot;..&quot;&gt;&lt;/abbr&gt;</code></p>
-</li>
-<li><p>保留空格渲染<code>&lt;pre&gt;content&lt;/pre&gt;</code></p>
-</li>
-<li><p>标记键盘输入<code>&lt;kbd&gt;&lt;/kbd&gt;</code></p>
-</li>
-<li><p>换行<code>&lt;br&gt;</code></p>
-</li>
-<li><p>水平线<code>&lt;hr&gt;</code></p>
-</li>
-<li><p>嵌入其他网页<code>&lt;iframe&gt;</code></p>
-<p>属性：</p>
-<p>allowfullscreen：可设置全屏</p>
-<p>frameborder：边框</p>
-<p>（尽量用js设置src）</p>
-</li>
-<li><p>嵌入PDF,SVG,Flash—<code>&lt;embed&gt;&lt;object&gt;</code></p>
-</li>
-<li><p>视频标签:<code>&lt;video&gt;</code></p>
-<p>属性：</p>
-<p>autoplay:自动播放</p>
-<p>loop:循环</p>
-<p>muted:静音播放</p>
-<p>poster:封面图</p>
-<p>preload:缓冲（”none”：不缓冲 “auto”：页面加载自动缓冲）</p>
-</li>
-<li><p>权限管理 sandbox属性</p>
-</li>
-<li><p>表格相关</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">table</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- colgroup 必须包含在table标签内--&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">colgroup</span>&gt;</span> </span><br><span class="line">		<span class="tag">&lt;<span class="name">col</span> <span class="attr">style</span>=<span class="string">&quot;#&quot;</span> <span class="attr">span</span>=<span class="string">&quot;x&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">colgroup</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- col标签可以指定每一行的属性，span是需要设置属性的行数--&gt;</span></span><br><span class="line">        <span class="comment">&lt;!-- table row --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">tr</span>&gt;</span> </span><br><span class="line">    <span class="tag">&lt;<span class="name">td</span>&gt;</span> </span><br><span class="line">        <span class="comment">&lt;!-- table data --&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">table</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<p>​    </p>
-</li>
-</ul>
-<h2 id="响应式设计"><a href="#响应式设计" class="headerlink" title="响应式设计"></a>响应式设计</h2><ul>
-<li><p>```<img>``的 srcset和sizes属性</p>
-<p>举例:</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!--srcset是一个文件列表，后面以w为单位的数据是文件的像素大小--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">img</span> <span class="attr">srcset</span>=<span class="string">&quot;elva-fairy-320w.jpg 320w,</span></span></span><br><span class="line"><span class="tag"><span class="string">             elva-fairy-480w.jpg 480w,</span></span></span><br><span class="line"><span class="tag"><span class="string">             elva-fairy-800w.jpg 800w&quot;</span></span></span><br><span class="line">     &lt;!-- sizes 括号内的是条件 括号外的是前面条件为真时采用的样式--&gt;</span><br><span class="line">     sizes=&quot;(max-width: 320px) 280px,</span><br><span class="line">            (max-width: 480px) 440px,</span><br><span class="line">            800px&quot; <span class="comment">&lt;!--无条件的是默认样式--&gt;</span></span><br><span class="line">     src=&quot;elva-fairy-800w.jpg&quot; alt=&quot;Elva dressed as a fairy&quot;&gt;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p><code>&lt;picture&gt;</code>的应用</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">​	&#96;&#96;&#96;&lt;soucre&gt;&#96;&#96;&#96;包含media srcset sizes属性</span><br><span class="line"></span><br><span class="line">&#96;&#96;&#96;html</span><br><span class="line">&lt;source media&#x3D;&quot;(maxwidth:799px)&quot;srcset&#x3D;&quot;exa.jpg&quot;&gt;</span><br><span class="line">&lt;!--media属性设置一个条件，为真则显示此图片--&gt;</span><br></pre></td></tr></table></figure>
-
-
-
-</li>
-</ul>
-<p>aaa</p>
-]]></content>
-      <tags>
-        <tag>HTML备忘</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>CSS备忘</title>
     <url>/2020/11/04/CSS%E5%A4%87%E5%BF%98(building)/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="CSS备忘（building）"><a href="#CSS备忘（building）" class="headerlink" title="CSS备忘（building）"></a>CSS备忘（building）</h1><h2 id="属性相关"><a href="#属性相关" class="headerlink" title="属性相关"></a>属性相关</h2><ul>
@@ -595,6 +485,241 @@
       </tags>
   </entry>
   <entry>
+    <title>HTML备忘</title>
+    <url>/2020/10/14/HTML%E5%A4%87%E5%BF%98/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="HTML备忘录"><a href="#HTML备忘录" class="headerlink" title="HTML备忘录"></a>HTML备忘录</h1><h2 id="标签相关"><a href="#标签相关" class="headerlink" title="标签相关"></a>标签相关</h2><ul>
+<li><p>块级元素自动换行而内联元素不自动换行</p>
+</li>
+<li><p>disabled = <em>value</em> 无论<em>value</em>值为什么，标签都会处于disabled状态，想要改变需将<em>value</em>置空</p>
+</li>
+<li><p>特殊字符引用表</p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th align="left">原义字符</th>
+<th align="left">等价字符引用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">&lt;”</td>
+<td align="left">&amp;lt</td>
+</tr>
+<tr>
+<td align="left">&gt;</td>
+<td align="left">&amp;gt</td>
+</tr>
+<tr>
+<td align="left">“</td>
+<td align="left">&amp;quot</td>
+</tr>
+<tr>
+<td align="left">‘</td>
+<td align="left">&amp;apos</td>
+</tr>
+<tr>
+<td align="left">&amp;</td>
+<td align="left">&amp;amp</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+</tbody></table>
+<ul>
+<li><p>使用相对路径优于绝对路径(舍去了DNS查找等操作)</p>
+</li>
+<li><p><code>&lt;script&gt;</code>放在<code> &lt;body&gt;</code>末尾前更优，这样可以确保脚本加载前浏览器已经解析HTML内容</p>
+</li>
+<li><p><code> &lt;a&gt;</code>标签的title属性作为悬停提示</p>
+</li>
+<li><p>href的mailto subject cc body等关键字，用于发送邮件</p>
+</li>
+<li><p>描述列表</p>
+</li>
+<li><p>块引用<code> &lt;blockquote cite=&quot;url&quot;&gt;&lt;/blockquote&gt;</code></p>
+</li>
+<li><p>行内引用<code>&lt;q cite=&quot;url&quot;&gt;</code></p>
+</li>
+<li><p>缩略语<code>&lt;abbr title=&quot;..&quot;&gt;&lt;/abbr&gt;</code></p>
+</li>
+<li><p>保留空格渲染<code>&lt;pre&gt;content&lt;/pre&gt;</code></p>
+</li>
+<li><p>标记键盘输入<code>&lt;kbd&gt;&lt;/kbd&gt;</code></p>
+</li>
+<li><p>换行<code>&lt;br&gt;</code></p>
+</li>
+<li><p>水平线<code>&lt;hr&gt;</code></p>
+</li>
+<li><p>嵌入其他网页<code>&lt;iframe&gt;</code></p>
+<p>属性：</p>
+<p>allowfullscreen：可设置全屏</p>
+<p>frameborder：边框</p>
+<p>（尽量用js设置src）</p>
+</li>
+<li><p>嵌入PDF,SVG,Flash—<code>&lt;embed&gt;&lt;object&gt;</code></p>
+</li>
+<li><p>视频标签:<code>&lt;video&gt;</code></p>
+<p>属性：</p>
+<p>autoplay:自动播放</p>
+<p>loop:循环</p>
+<p>muted:静音播放</p>
+<p>poster:封面图</p>
+<p>preload:缓冲（”none”：不缓冲 “auto”：页面加载自动缓冲）</p>
+</li>
+<li><p>权限管理 sandbox属性</p>
+</li>
+<li><p>表格相关</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">table</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- colgroup 必须包含在table标签内--&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">colgroup</span>&gt;</span> </span><br><span class="line">		<span class="tag">&lt;<span class="name">col</span> <span class="attr">style</span>=<span class="string">&quot;#&quot;</span> <span class="attr">span</span>=<span class="string">&quot;x&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">colgroup</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- col标签可以指定每一行的属性，span是需要设置属性的行数--&gt;</span></span><br><span class="line">        <span class="comment">&lt;!-- table row --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">tr</span>&gt;</span> </span><br><span class="line">    <span class="tag">&lt;<span class="name">td</span>&gt;</span> </span><br><span class="line">        <span class="comment">&lt;!-- table data --&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">table</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>​    </p>
+</li>
+</ul>
+<h2 id="响应式设计"><a href="#响应式设计" class="headerlink" title="响应式设计"></a>响应式设计</h2><ul>
+<li><p>```<img>``的 srcset和sizes属性</p>
+<p>举例:</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!--srcset是一个文件列表，后面以w为单位的数据是文件的像素大小--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">img</span> <span class="attr">srcset</span>=<span class="string">&quot;elva-fairy-320w.jpg 320w,</span></span></span><br><span class="line"><span class="tag"><span class="string">             elva-fairy-480w.jpg 480w,</span></span></span><br><span class="line"><span class="tag"><span class="string">             elva-fairy-800w.jpg 800w&quot;</span></span></span><br><span class="line">     &lt;!-- sizes 括号内的是条件 括号外的是前面条件为真时采用的样式--&gt;</span><br><span class="line">     sizes=&quot;(max-width: 320px) 280px,</span><br><span class="line">            (max-width: 480px) 440px,</span><br><span class="line">            800px&quot; <span class="comment">&lt;!--无条件的是默认样式--&gt;</span></span><br><span class="line">     src=&quot;elva-fairy-800w.jpg&quot; alt=&quot;Elva dressed as a fairy&quot;&gt;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><code>&lt;picture&gt;</code>的应用</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">​	&#96;&#96;&#96;&lt;soucre&gt;&#96;&#96;&#96;包含media srcset sizes属性</span><br><span class="line"></span><br><span class="line">&#96;&#96;&#96;html</span><br><span class="line">&lt;source media&#x3D;&quot;(maxwidth:799px)&quot;srcset&#x3D;&quot;exa.jpg&quot;&gt;</span><br><span class="line">&lt;!--media属性设置一个条件，为真则显示此图片--&gt;</span><br></pre></td></tr></table></figure>
+
+
+
+</li>
+</ul>
+<p>aaa</p>
+]]></content>
+      <tags>
+        <tag>HTML备忘</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>JS备忘</title>
+    <url>/2020/10/21/JS%E5%A4%87%E5%BF%98/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="Start"><a href="#Start" class="headerlink" title="Start"></a>Start</h1><h2 id="一般事件绑定"><a href="#一般事件绑定" class="headerlink" title="一般事件绑定"></a>一般事件绑定</h2><ul>
+<li><p><code>.onclick</code>：点击事件</p>
+</li>
+<li><p><code>.onfocus</code>：聚焦（选中）</p>
+</li>
+<li><p><code>.onblur</code>：解除聚焦</p>
+</li>
+<li><p><code>.onmouse(over/out)</code>：鼠标移入/移开</p>
+</li>
+<li><p><code>.onsubmit</code>：表单提交</p>
+</li>
+<li><p><code>.addEventListener(&#39;事件&#39;,函数)/removeEventListener(&#39;事件&#39;,函数)</code>：添加/移除，监听事件，可对一个对象的一个事件添加两个不同函数</p>
+</li>
+</ul>
+<h2 id="特殊对象"><a href="#特殊对象" class="headerlink" title="特殊对象"></a>特殊对象</h2><ul>
+<li>诸如<code>event evt e（可以是任何表示）</code>都是事件对象会默认传入事件绑定的函数，<code>event/evt/e.target</code>指刚刚发生事件的元素</li>
+</ul>
+<h2 id="继承"><a href="#继承" class="headerlink" title="继承"></a>继承</h2><ul>
+<li><p><code>Objet().</code>的属性不被继承，而<code>Object.prototype.</code>的属性被继承</p>
+</li>
+<li><p><code>.call()</code>：这个函数允许您调用一个在这个文件里别处定义的函数。第一个参数指明了在您运行这个函数时想对“<code>this</code>”指定的值，也就是说，您可以重新指定您调用的函数里所有“<code>this</code>”指向的对象。可以让构造器继承某个构造器的属性</p>
+</li>
+<li><p><code>newObj.prototype = Object.create(Obj.prototype)</code>这串代码使得newObj继承了Obj的方法</p>
+</li>
+<li><p><code>newObj.prototype.constructor = newObj</code>这使得newObj的prototype和constructior只想的newObj构造器本身，而不是调用call函数的对象的构造器</p>
+</li>
+<li><p><code>Obj.prototype.constructor===Obj()（构造方法）</code></p>
+</li>
+</ul>
+<h2 id="JSON"><a href="#JSON" class="headerlink" title="JSON"></a>JSON</h2><p><strong>纯数据，无函数</strong></p>
+<ul>
+<li>获取内部成员的方法类似对象</li>
+<li><code>.parse()</code>：接收json字符串，返回json对象</li>
+<li><code>.stringify()</code>：接收对象，返回json字符串</li>
+</ul>
+<h2 id="异步"><a href="#异步" class="headerlink" title="异步"></a>异步</h2><p>JS一般是单线程</p>
+<p><code>() =&gt; x</code> 是 <code>()=&gt; &#123;return x;&#125;</code> 的有效简写; </p>
+<h3 id="callbacks-回调函数"><a href="#callbacks-回调函数" class="headerlink" title="callbacks(回调函数)"></a>callbacks(回调函数)</h3><p>将回调函数作为参数传递给另一个函数仅仅是把回调函数定义作为参数传递过去 — 回调函数并没有立刻执行，回调函数会在包含它的函数的某个地方异步执行，包含函数负责在合适的时候执行回调函数。</p>
+<h3 id="promises"><a href="#promises" class="headerlink" title="promises"></a>promises</h3><p>用来表示异步操作成功或者失败的对象</p>
+<p>​    有三个状态：</p>
+<ul>
+<li><p>pending(待定)</p>
+</li>
+<li><p>resolved(已解决)</p>
+<ul>
+<li>fullfilled（成功）</li>
+<li>rejected（失败）</li>
+</ul>
+</li>
+</ul>
+<p><code>promise.all()</code>：传入promise数组，当数组中所有promise执行成功后再执行<code>promise.all()</code>的<code>then</code></p>
+<h3 id="异步函数"><a href="#异步函数" class="headerlink" title="异步函数"></a>异步函数</h3><h4 id="setTimeout-和setInterval"><a href="#setTimeout-和setInterval" class="headerlink" title="setTimeout()和setInterval()"></a>setTimeout()和setInterval()</h4><ul>
+<li><p><code>setTimeout(func,time)</code>：在一段时间time后执行函数func</p>
+<ul>
+<li><code>clearTimeout()</code>：清除</li>
+</ul>
+</li>
+<li><p><code>setInterval(func,time)</code>：以固定时间间隔重复运行代码</p>
+<ul>
+<li><p><code>clearInterval()</code>：清除intervals</p>
+</li>
+<li><pre><code class="javascript">setTimeout(func,time)
+function func()&#123;
+    //options-codes;
+    setTimeout(func,time);
+&#125;
+//用递归和setTimeout()实现与setInterval相同的功能</code></pre>
+</li>
+</ul>
+</li>
+<li><p><code>setTimeout()</code>严格按照所传入的时间间隔执行，而<code>setInterval()</code>传入的时间间隔则包括代码执行时间和间隔时间(<em>例如传入100ms，代码执行10ms，则实际间隔只有90ms</em>)</p>
+</li>
+<li><p>使用<strong>0</strong>用作<code>setTimeout()</code>的回调函数会立刻执行，但是在主线程代码运行之后执行。</p>
+</li>
+</ul>
+<h4 id="requestAnimationFrame"><a href="#requestAnimationFrame" class="headerlink" title="requestAnimationFrame()"></a>requestAnimationFrame()</h4><ul>
+<li><code>requestAnimationFrame()</code>：setInterval()的现代版本;在浏览器下一次重新绘制显示之前执行指定的代码块，从而允许动画在适当的帧率下运行，而不管它在什么环境中运行.</li>
+<li><code>requestAnimationFrame()</code>:可传入一个带时间戳参数的函数，表示从函数执行到现在的时间</li>
+<li><code>cancelAnimationFrame()</code>：用于撤销动画</li>
+</ul>
+<h3 id="异步API"><a href="#异步API" class="headerlink" title="异步API"></a>异步API</h3><ul>
+<li><code>URL.createObjectURL(thing)</code>：此静态方法会创建一个thing的URL</li>
+</ul>
+<p><strong>fetch</strong></p>
+<ul>
+<li>全局fetch：<code>fetch(URL).then(func1()).then(func2()).catch(func3(err))</code>：返回一个promise，两个<code>then</code>的参数都是回调函数，如果前一个操作成功则运行该回调函数，并且每个回调函数的参数均是前一个操作的返回值，每个<code>then</code>也会返回一个promise，当任何一个<code>then</code>失败就会运行<code>catch</code></li>
+</ul>
+<h2 id="APIS"><a href="#APIS" class="headerlink" title="APIS"></a>APIS</h2><h3 id="浏览器"><a href="#浏览器" class="headerlink" title="浏览器"></a>浏览器</h3><ul>
+<li>window是载入浏览器的标签，在JavaScript中用<a href="https://developer.mozilla.org/zh-CN/docs/Web/API/Window"><code>Window</code></a>对象来表示，使用这个对象的可用方法，你可以返回窗口的大小（参见<a href="https://developer.mozilla.org/zh-CN/docs/Web/API/Window/innerWidth"><code>Window.innerWidth</code></a>和<a href="https://developer.mozilla.org/zh-CN/docs/Web/API/Window/innerHeight"><code>Window.innerHeight</code></a>），操作载入窗口的文档，存储客户端上文档的特殊数据（例如使用本地数据库或其他存储设备），为当前窗口绑定<a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Events#A_series_of_fortunate_events">event handler</a>，等等。</li>
+<li>navigator表示浏览器存在于web上的状态和标识（即用户代理）。在JavaScript中，用<a href="https://developer.mozilla.org/zh-CN/docs/Web/API/Navigator"><code>Navigator</code></a>来表示。你可以用这个对象获取一些信息，比如来自用户摄像头的地理信息、用户偏爱的语言、多媒体流等等。</li>
+<li>document（在浏览器中用DOM表示）是载入窗口的实际页面，在JavaScript中用<a href="https://developer.mozilla.org/zh-CN/docs/Web/API/Document"><code>Document</code></a> 对象表示，你可以用这个对象来返回和操作文档中HTML和CSS上的信息。例如获取DOM中一个元素的引用，修改其文本内容，并应用新的样式，创建新的元素并添加为当前元素的子元素，甚至把他们一起删除。<ul>
+<li><code>.querySelector()</code>：根据dom规则寻找元素</li>
+<li><code>.appendChild()</code>：添加子元素</li>
+<li><code>.removeChild()</code>：rm子元素</li>
+</ul>
+</li>
+</ul>
+<h2 id="正则匹配"><a href="#正则匹配" class="headerlink" title="正则匹配"></a>正则匹配</h2><ul>
+<li><code>\d</code>：匹配数字</li>
+<li><code>\w</code>：匹配字母</li>
+<li><code>.</code>：匹配任意字符</li>
+<li><code>*</code>：匹配任意个字符，包括<strong>0</strong>个，<ul>
+<li>用**+**来表示至少包含一个字符，</li>
+<li><strong>？</strong>来匹配0或者1个字符，</li>
+<li>{n}表示n个字符</li>
+<li>{n,m}表示n-m个字符</li>
+</ul>
+</li>
+<li><code>\s</code>：匹配空白符</li>
+<li><code>[]</code>：表示范围，例如<code>[0-9a-zA-Z\_]</code>可以匹配一个数字、字母或者下划线</li>
+<li><code>A|B</code>：匹配A或者B</li>
+<li><code>^</code>：表示行的开头<ul>
+<li><code>^\d</code>：表示以数字开头</li>
+</ul>
+</li>
+<li><code>$</code>：表示行结束<ul>
+<li><code>\d$</code>：表示以数字结束</li>
+</ul>
+</li>
+</ul>
+<h2 id="AJAX"><a href="#AJAX" class="headerlink" title="AJAX"></a>AJAX</h2>]]></content>
+  </entry>
+  <entry>
     <title>HTTP</title>
     <url>/2020/11/08/HTTP/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="HTTP"><a href="#HTTP" class="headerlink" title="HTTP"></a>HTTP</h1><h2 id="特点"><a href="#特点" class="headerlink" title="特点"></a>特点</h2><ul>
@@ -783,131 +908,6 @@
       </tags>
   </entry>
   <entry>
-    <title>JS备忘</title>
-    <url>/2020/10/21/JS%E5%A4%87%E5%BF%98/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="Start"><a href="#Start" class="headerlink" title="Start"></a>Start</h1><h2 id="一般事件绑定"><a href="#一般事件绑定" class="headerlink" title="一般事件绑定"></a>一般事件绑定</h2><ul>
-<li><p><code>.onclick</code>：点击事件</p>
-</li>
-<li><p><code>.onfocus</code>：聚焦（选中）</p>
-</li>
-<li><p><code>.onblur</code>：解除聚焦</p>
-</li>
-<li><p><code>.onmouse(over/out)</code>：鼠标移入/移开</p>
-</li>
-<li><p><code>.onsubmit</code>：表单提交</p>
-</li>
-<li><p><code>.addEventListener(&#39;事件&#39;,函数)/removeEventListener(&#39;事件&#39;,函数)</code>：添加/移除，监听事件，可对一个对象的一个事件添加两个不同函数</p>
-</li>
-</ul>
-<h2 id="特殊对象"><a href="#特殊对象" class="headerlink" title="特殊对象"></a>特殊对象</h2><ul>
-<li>诸如<code>event evt e（可以是任何表示）</code>都是事件对象会默认传入事件绑定的函数，<code>event/evt/e.target</code>指刚刚发生事件的元素</li>
-</ul>
-<h2 id="继承"><a href="#继承" class="headerlink" title="继承"></a>继承</h2><ul>
-<li><p><code>Objet().</code>的属性不被继承，而<code>Object.prototype.</code>的属性被继承</p>
-</li>
-<li><p><code>.call()</code>：这个函数允许您调用一个在这个文件里别处定义的函数。第一个参数指明了在您运行这个函数时想对“<code>this</code>”指定的值，也就是说，您可以重新指定您调用的函数里所有“<code>this</code>”指向的对象。可以让构造器继承某个构造器的属性</p>
-</li>
-<li><p><code>newObj.prototype = Object.create(Obj.prototype)</code>这串代码使得newObj继承了Obj的方法</p>
-</li>
-<li><p><code>newObj.prototype.constructor = newObj</code>这使得newObj的prototype和constructior只想的newObj构造器本身，而不是调用call函数的对象的构造器</p>
-</li>
-<li><p><code>Obj.prototype.constructor===Obj()（构造方法）</code></p>
-</li>
-</ul>
-<h2 id="JSON"><a href="#JSON" class="headerlink" title="JSON"></a>JSON</h2><p><strong>纯数据，无函数</strong></p>
-<ul>
-<li>获取内部成员的方法类似对象</li>
-<li><code>.parse()</code>：接收json字符串，返回json对象</li>
-<li><code>.stringify()</code>：接收对象，返回json字符串</li>
-</ul>
-<h2 id="异步"><a href="#异步" class="headerlink" title="异步"></a>异步</h2><p>JS一般是单线程</p>
-<p><code>() =&gt; x</code> 是 <code>()=&gt; &#123;return x;&#125;</code> 的有效简写; </p>
-<h3 id="callbacks-回调函数"><a href="#callbacks-回调函数" class="headerlink" title="callbacks(回调函数)"></a>callbacks(回调函数)</h3><p>将回调函数作为参数传递给另一个函数仅仅是把回调函数定义作为参数传递过去 — 回调函数并没有立刻执行，回调函数会在包含它的函数的某个地方异步执行，包含函数负责在合适的时候执行回调函数。</p>
-<h3 id="promises"><a href="#promises" class="headerlink" title="promises"></a>promises</h3><p>用来表示异步操作成功或者失败的对象</p>
-<p>​    有三个状态：</p>
-<ul>
-<li><p>pending(待定)</p>
-</li>
-<li><p>resolved(已解决)</p>
-<ul>
-<li>fullfilled（成功）</li>
-<li>rejected（失败）</li>
-</ul>
-</li>
-</ul>
-<p><code>promise.all()</code>：传入promise数组，当数组中所有promise执行成功后再执行<code>promise.all()</code>的<code>then</code></p>
-<h3 id="异步函数"><a href="#异步函数" class="headerlink" title="异步函数"></a>异步函数</h3><h4 id="setTimeout-和setInterval"><a href="#setTimeout-和setInterval" class="headerlink" title="setTimeout()和setInterval()"></a>setTimeout()和setInterval()</h4><ul>
-<li><p><code>setTimeout(func,time)</code>：在一段时间time后执行函数func</p>
-<ul>
-<li><code>clearTimeout()</code>：清除</li>
-</ul>
-</li>
-<li><p><code>setInterval(func,time)</code>：以固定时间间隔重复运行代码</p>
-<ul>
-<li><p><code>clearInterval()</code>：清除intervals</p>
-</li>
-<li><pre><code class="javascript">setTimeout(func,time)
-function func()&#123;
-    //options-codes;
-    setTimeout(func,time);
-&#125;
-//用递归和setTimeout()实现与setInterval相同的功能</code></pre>
-</li>
-</ul>
-</li>
-<li><p><code>setTimeout()</code>严格按照所传入的时间间隔执行，而<code>setInterval()</code>传入的时间间隔则包括代码执行时间和间隔时间(<em>例如传入100ms，代码执行10ms，则实际间隔只有90ms</em>)</p>
-</li>
-<li><p>使用<strong>0</strong>用作<code>setTimeout()</code>的回调函数会立刻执行，但是在主线程代码运行之后执行。</p>
-</li>
-</ul>
-<h4 id="requestAnimationFrame"><a href="#requestAnimationFrame" class="headerlink" title="requestAnimationFrame()"></a>requestAnimationFrame()</h4><ul>
-<li><code>requestAnimationFrame()</code>：setInterval()的现代版本;在浏览器下一次重新绘制显示之前执行指定的代码块，从而允许动画在适当的帧率下运行，而不管它在什么环境中运行.</li>
-<li><code>requestAnimationFrame()</code>:可传入一个带时间戳参数的函数，表示从函数执行到现在的时间</li>
-<li><code>cancelAnimationFrame()</code>：用于撤销动画</li>
-</ul>
-<h3 id="异步API"><a href="#异步API" class="headerlink" title="异步API"></a>异步API</h3><ul>
-<li><code>URL.createObjectURL(thing)</code>：此静态方法会创建一个thing的URL</li>
-</ul>
-<p><strong>fetch</strong></p>
-<ul>
-<li>全局fetch：<code>fetch(URL).then(func1()).then(func2()).catch(func3(err))</code>：返回一个promise，两个<code>then</code>的参数都是回调函数，如果前一个操作成功则运行该回调函数，并且每个回调函数的参数均是前一个操作的返回值，每个<code>then</code>也会返回一个promise，当任何一个<code>then</code>失败就会运行<code>catch</code></li>
-</ul>
-<h2 id="APIS"><a href="#APIS" class="headerlink" title="APIS"></a>APIS</h2><h3 id="浏览器"><a href="#浏览器" class="headerlink" title="浏览器"></a>浏览器</h3><ul>
-<li>window是载入浏览器的标签，在JavaScript中用<a href="https://developer.mozilla.org/zh-CN/docs/Web/API/Window"><code>Window</code></a>对象来表示，使用这个对象的可用方法，你可以返回窗口的大小（参见<a href="https://developer.mozilla.org/zh-CN/docs/Web/API/Window/innerWidth"><code>Window.innerWidth</code></a>和<a href="https://developer.mozilla.org/zh-CN/docs/Web/API/Window/innerHeight"><code>Window.innerHeight</code></a>），操作载入窗口的文档，存储客户端上文档的特殊数据（例如使用本地数据库或其他存储设备），为当前窗口绑定<a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Events#A_series_of_fortunate_events">event handler</a>，等等。</li>
-<li>navigator表示浏览器存在于web上的状态和标识（即用户代理）。在JavaScript中，用<a href="https://developer.mozilla.org/zh-CN/docs/Web/API/Navigator"><code>Navigator</code></a>来表示。你可以用这个对象获取一些信息，比如来自用户摄像头的地理信息、用户偏爱的语言、多媒体流等等。</li>
-<li>document（在浏览器中用DOM表示）是载入窗口的实际页面，在JavaScript中用<a href="https://developer.mozilla.org/zh-CN/docs/Web/API/Document"><code>Document</code></a> 对象表示，你可以用这个对象来返回和操作文档中HTML和CSS上的信息。例如获取DOM中一个元素的引用，修改其文本内容，并应用新的样式，创建新的元素并添加为当前元素的子元素，甚至把他们一起删除。<ul>
-<li><code>.querySelector()</code>：根据dom规则寻找元素</li>
-<li><code>.appendChild()</code>：添加子元素</li>
-<li><code>.removeChild()</code>：rm子元素</li>
-</ul>
-</li>
-</ul>
-<h2 id="正则匹配"><a href="#正则匹配" class="headerlink" title="正则匹配"></a>正则匹配</h2><ul>
-<li><code>\d</code>：匹配数字</li>
-<li><code>\w</code>：匹配字母</li>
-<li><code>.</code>：匹配任意字符</li>
-<li><code>*</code>：匹配任意个字符，包括<strong>0</strong>个，<ul>
-<li>用**+**来表示至少包含一个字符，</li>
-<li><strong>？</strong>来匹配0或者1个字符，</li>
-<li>{n}表示n个字符</li>
-<li>{n,m}表示n-m个字符</li>
-</ul>
-</li>
-<li><code>\s</code>：匹配空白符</li>
-<li><code>[]</code>：表示范围，例如<code>[0-9a-zA-Z\_]</code>可以匹配一个数字、字母或者下划线</li>
-<li><code>A|B</code>：匹配A或者B</li>
-<li><code>^</code>：表示行的开头<ul>
-<li><code>^\d</code>：表示以数字开头</li>
-</ul>
-</li>
-<li><code>$</code>：表示行结束<ul>
-<li><code>\d$</code>：表示以数字结束</li>
-</ul>
-</li>
-</ul>
-<h2 id="AJAX"><a href="#AJAX" class="headerlink" title="AJAX"></a>AJAX</h2>]]></content>
-  </entry>
-  <entry>
     <title>RPC相关</title>
     <url>/2020/10/21/RPC%E7%9B%B8%E5%85%B3/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="流程"><a href="#流程" class="headerlink" title="流程"></a>流程</h1><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">graph LR</span><br><span class="line">本地--&gt;|要执行的函数与函数参数|服务端</span><br><span class="line">服务端--&gt;|通过回调函数传回函数结果|本地</span><br></pre></td></tr></table></figure>
@@ -922,6 +922,14 @@ function func()&#123;
 ]]></content>
   </entry>
   <entry>
+    <title>mySQL基础</title>
+    <url>/2020/11/30/mySQL%E5%9F%BA%E7%A1%80/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>]]></content>
+      <tags>
+        <tag>password</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>ReadME!!</title>
     <url>/2220/09/20/ReadME!!!/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><ul>
@@ -932,100 +940,6 @@ function func()&#123;
 ]]></content>
       <tags>
         <tag>Hello!</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>mySQL基础</title>
-    <url>/2020/11/30/mySQL%E5%9F%BA%E7%A1%80/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>]]></content>
-      <tags>
-        <tag>password</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Vue相关</title>
-    <url>/2020/11/25/Vue%E7%BB%84%E4%BB%B6/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="流程"><a href="#流程" class="headerlink" title="流程"></a>流程</h2><ul>
-<li>创建组件构造器</li>
-</ul>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> cpN = Vue.extend(&#123;</span><br><span class="line">	template:<span class="string">&#x27;HTMLCODE&#x27;</span></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>注册组件</li>
-</ul>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">Vue.component(<span class="string">&#x27;cpn&#x27;</span>,cpN)</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>组件使用</li>
-</ul>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">cpn</span>&gt;</span><span class="tag">&lt;/<span class="name">cpn</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-
-
-<h2 id="全局组件和局部组件"><a href="#全局组件和局部组件" class="headerlink" title="全局组件和局部组件"></a>全局组件和局部组件</h2><ul>
-<li>Vue实例外注册的组件是全局组件</li>
-<li>Vue实例内注册的组件为局部组件</li>
-</ul>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">//局部组件注册</span></span><br><span class="line">component:&#123;</span><br><span class="line">	cpn: cpN</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-<h2 id="父子组件"><a href="#父子组件" class="headerlink" title="父子组件"></a>父子组件</h2><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> cpn2 = Vue.extend(&#123;</span><br><span class="line">	template:<span class="string">`HTML CODE`</span>,</span><br><span class="line">&#125;)<span class="comment">//子组件</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> cpn1 = Vue.extend(&#123;</span><br><span class="line">	template:<span class="string">`HTML CODE</span></span><br><span class="line"><span class="string">				&lt;cpn&gt;&lt;/cpn&gt;`</span>,</span><br><span class="line"><span class="comment">//这里的cpn是cpn2在cpn1内注册的组件</span></span><br><span class="line">	components:&#123;</span><br><span class="line">		cpn: cpn2</span><br><span class="line">	&#125;,</span><br><span class="line">&#125;)<span class="comment">//父组件</span></span><br></pre></td></tr></table></figure>
-
-<p><strong><em>注意：**</em></strong>cpn2因未在全局注册，所以仅能在cpn1中调用，不能在Vue挂载的部分使用**</p>
-<hr>
-<h2 id="更推荐的组件创建方式"><a href="#更推荐的组件创建方式" class="headerlink" title="更推荐的组件创建方式"></a>更推荐的组件创建方式</h2><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">Vue.component(<span class="string">&#x27;cpn1&#x27;</span>,&#123;</span><br><span class="line">	template: <span class="string">`HTML CODE`</span></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
-
-<h3 id="HTML-CODE分离写法"><a href="#HTML-CODE分离写法" class="headerlink" title="HTML CODE分离写法"></a><code>HTML CODE</code>分离写法</h3><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">scriprt</span> <span class="attr">type</span>=<span class="string">&#x27;text/x-template&#x27;</span> <span class="attr">id</span>=<span class="string">&#x27;cpn&#x27;</span>&gt;</span></span><br><span class="line">	SOME HTML CODE</span><br><span class="line"><span class="tag">&lt;/<span class="name">scriprt</span>&gt;</span></span><br><span class="line"></span><br><span class="line">Vue.component(&#x27;cpn&#x27;&#123;</span><br><span class="line">	template: &#x27;#cpn&#x27;,</span><br><span class="line">	//这里的template的内容即是<span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span>标签里的&#x27;SOME HTML CODE&#x27;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
-
-<p><strong>OR</strong></p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">template</span> <span class="attr">id</span>=<span class="string">&#x27;cpn  &#x27;</span>&gt;</span></span><br><span class="line">	SOME HTML CODE</span><br><span class="line"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></span><br><span class="line"></span><br><span class="line">Vue.component(&#x27;cpn&#x27;&#123;</span><br><span class="line">	template: &#x27;#cpn&#x27;,</span><br><span class="line">	//这里的template的内容即是<span class="tag">&lt;<span class="name">template</span>&gt;</span>标签里的&#x27;SOME HTML CODE&#x27;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
-
-<h2 id="组件访问数据的范围"><a href="#组件访问数据的范围" class="headerlink" title="组件访问数据的范围"></a>组件访问数据的范围</h2><ul>
-<li>组件不能直接访问Vue实例的data</li>
-</ul>
-<p><code>component</code>内也有data选项，<strong>但是data选项应该是一个返回对象的函数而不是对象</strong></p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">Vue.component(<span class="string">&#x27;cpn&#x27;</span>,&#123;</span><br><span class="line">	template: <span class="string">`HTML CODE`</span>,</span><br><span class="line">	data()&#123;</span><br><span class="line">		<span class="keyword">return</span> &#123;</span><br><span class="line">            message: <span class="number">2</span>,</span><br><span class="line">        &#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
-
-<p>为什么data不能是对象？？</p>
-<p>​    因为当有多个组件实例时，若data是对象则多个实例会共享data里的值，而将data设计为函数，每次实例化组件时都会为当前组件调用data函数返回一个对象，与其余实例不共享。所以在设计Vue的时候才会这样设计，强行写为对象会报错。</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">example()&#123;</span><br><span class="line">	<span class="keyword">return</span> &#123;</span><br><span class="line">		value:<span class="number">1</span>,</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> a = example();</span><br><span class="line"><span class="keyword">const</span> b = example(); <span class="comment">//每次实例化都创建一个新的对象，a,b地址不同</span></span><br><span class="line">b.value = <span class="number">2</span>;</span><br><span class="line"><span class="comment">//此时a.value = 1; b.value = 2</span></span><br></pre></td></tr></table></figure>
-
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> obj = &#123;</span><br><span class="line">	value:<span class="number">1</span>,</span><br><span class="line">&#125;</span><br><span class="line">example()&#123;</span><br><span class="line">	<span class="keyword">return</span> obj; <span class="comment">//return的是obj的地址</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">const</span> a  = example();</span><br><span class="line"><span class="keyword">const</span> b = example();</span><br><span class="line">b.value = <span class="number">2</span>;</span><br><span class="line">a.value == b.value <span class="comment">//true</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="父子组件的通信"><a href="#父子组件的通信" class="headerlink" title="父子组件的通信"></a>父子组件的通信</h2><h3 id="父传子"><a href="#父传子" class="headerlink" title="父传子"></a>父传子</h3><p>通过<code>props</code>属性传递，<code>props</code>可以是数组也可以是对象</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">cpn</span> <span class="attr">:Cmessage</span>=<span class="string">&#x27;message&#x27;</span>&gt;</span><span class="tag">&lt;/<span class="name">cpn</span>&gt;</span><span class="comment">&lt;!--绑定VM实例下的message到cpn的props下的Cmessage--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">template</span> <span class="attr">id</span>=<span class="string">&#x27;cpn&#x27;</span>&gt;</span>&#123;&#123;Cmessage&#125;&#125;<span class="tag">&lt;/<span class="name">template</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="javascript">    <span class="comment">//子组件</span></span></span><br><span class="line"><span class="javascript">    <span class="keyword">const</span> cpn = &#123;</span></span><br><span class="line"><span class="javascript">        template: <span class="string">&#x27;#cpn&#x27;</span>,</span></span><br><span class="line"><span class="javascript">        <span class="comment">//props:[&#x27;Cmessage&#x27;] //数组写法</span></span></span><br><span class="line">        props:&#123; </span><br><span class="line"><span class="javascript">        	<span class="comment">//Cmessage: String, //这里的String是对Cmessage进行类型限制，必须为String</span></span></span><br><span class="line"><span class="javascript">  			<span class="comment">//这是完整写法，为一个对象</span></span></span><br><span class="line">            Cmessage:&#123;</span><br><span class="line"><span class="javascript">                type: <span class="built_in">String</span>,</span></span><br><span class="line"><span class="javascript">                <span class="keyword">default</span>: <span class="string">&#x27;default value&#x27;</span></span></span><br><span class="line"><span class="javascript">                <span class="built_in">require</span>: <span class="comment">//这里填一个Boolean，表示组件创建时此值是不是必须的</span></span></span><br><span class="line">            &#125;</span><br><span class="line">    	&#125;</span><br><span class="line">        data()&#123;</span><br><span class="line"><span class="javascript">            <span class="keyword">return</span> &#123;&#125;;</span></span><br><span class="line">        &#125;,</span><br><span class="line">    &#125;</span><br><span class="line"><span class="javascript">   	<span class="comment">//父组件</span></span></span><br><span class="line"><span class="javascript">	<span class="keyword">const</span> VM = <span class="keyword">new</span>  Vue()&#123;</span></span><br><span class="line"><span class="javascript">		el:<span class="string">&#x27;&#x27;</span>,</span></span><br><span class="line">    	data:&#123;</span><br><span class="line"><span class="javascript">        	message: <span class="string">&#x27;this is a message&#x27;</span></span></span><br><span class="line">    	&#125;,</span><br><span class="line">    	components: &#123;</span><br><span class="line">			cpn: cpn</span><br><span class="line">    	&#125;</span><br><span class="line">	&#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<p><strong><em>注意：**</em></strong><code>props</code>的验证还可以自定义**</p>
-<h3 id="子传父"><a href="#子传父" class="headerlink" title="子传父"></a>子传父</h3><p>通过自定义事件</p>
-<p>$emit(‘event-name’,props)</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">cpn</span> <span class="attr">:Cmessage</span>=<span class="string">&#x27;message&#x27;</span>&gt;</span><span class="tag">&lt;/<span class="name">cpn</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">template</span> <span class="attr">id</span>=<span class="string">&#x27;cpn&#x27;</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">button</span> @<span class="attr">click</span>=<span class="string">&#x27;clicked(Cmessage)&#x27;</span>&gt;</span> //点击事件发生主席那个clicked并以Cmessage作为参数</span><br><span class="line">	emit click</span><br><span class="line">    <span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="javascript">    <span class="comment">//子组件</span></span></span><br><span class="line"><span class="javascript">    <span class="keyword">const</span> cpn = &#123;</span></span><br><span class="line"><span class="javascript">        template: <span class="string">&#x27;#cpn&#x27;</span>,</span></span><br><span class="line">        props:&#123; </span><br><span class="line">            Cmessage:&#123;</span><br><span class="line"><span class="javascript">                type: <span class="built_in">String</span>,</span></span><br><span class="line"><span class="javascript">                <span class="keyword">default</span>: <span class="string">&#x27;Cmessage &#x27;</span></span></span><br><span class="line">            &#125; </span><br><span class="line">    	&#125;</span><br><span class="line">        data()&#123;</span><br><span class="line"><span class="javascript">            <span class="keyword">return</span> &#123;</span></span><br><span class="line">                </span><br><span class="line">            &#125;;</span><br><span class="line">        &#125;,</span><br><span class="line">         methods:&#123;</span><br><span class="line">          	clicked(Cmessage)&#123;           </span><br><span class="line"><span class="javascript">                <span class="built_in">this</span>.$emit(<span class="string">&#x27;cpn-click&#x27;</span>Cmessage)<span class="comment">//发射cpn-click事件到父组件，并传Cmessage</span></span></span><br><span class="line">            &#125;   </span><br><span class="line">         &#125;        </span><br><span class="line">     &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="javascript"><span class="comment">//父组件</span></span></span><br><span class="line"><span class="javascript">	<span class="keyword">const</span> VM = <span class="keyword">new</span>  Vue()&#123;</span></span><br><span class="line"><span class="javascript">		el:<span class="string">&#x27;&#x27;</span>,</span></span><br><span class="line">    	data:&#123;</span><br><span class="line"><span class="javascript">        	message: <span class="string">&#x27;this is a message&#x27;</span></span></span><br><span class="line">    	&#125;,</span><br><span class="line">    	components: &#123;</span><br><span class="line">			cpn: cpn</span><br><span class="line">    	&#125;,</span><br><span class="line">        methods:&#123;</span><br><span class="line">            cpn-click(Cmessage)&#123;</span><br><span class="line"><span class="javascript">                <span class="built_in">console</span>.log(Cmessage);</span></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">	&#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="关键字"><a href="#关键字" class="headerlink" title="关键字"></a>关键字</h3><p><strong>this.$children</strong>可以获取this（Vue实例）的子组件数组通过下标来查询具体某一项组件（不推荐这种方式）</p>
-<p><strong>$refs</strong></p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">cpn</span> <span class="attr">ref</span>=<span class="string">&#x27;a&#x27;</span>&gt;</span><span class="tag">&lt;/<span class="name">cpn</span>&gt;</span>//若有一个组件像这样添加了refs属性</span><br><span class="line"></span><br><span class="line">this.$refs.a//则可以这样来获取此组件</span><br></pre></td></tr></table></figure>
-
-<p><strong>$parent</strong>可以获取组件的父组件</p>
-<p><strong>$root</strong>可以访问根组件</p>
-<h2 id="插槽slot"><a href="#插槽slot" class="headerlink" title="插槽slot"></a>插槽slot</h2><h3 id="流程-1"><a href="#流程-1" class="headerlink" title="流程"></a>流程</h3><ul>
-<li>slot定义</li>
-</ul>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">template</span> <span class="attr">id</span>=<span class="string">&#x27;cpn&#x27;</span>&gt;</span></span><br><span class="line">	HTMLCODE</span><br><span class="line">	<span class="tag">&lt;<span class="name">slot</span>&gt;</span><span class="tag">&lt;/<span class="name">slot</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!--&lt;slot&gt;&lt;p&gt;default value&lt;/p&gt;&lt;/slot&gt;--&gt;</span></span><br><span class="line">    <span class="comment">&lt;!--插槽还可以具有默认值,手动赋值会覆盖此默认值--&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<p>这里为cpn组件预留了一个slot插槽</p>
-<ul>
-<li>插槽使用</li>
-</ul>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">cpn</span>&gt;</span><span class="tag">&lt;<span class="name">button</span>&gt;</span>click<span class="tag">&lt;/<span class="name">button</span>&gt;</span><span class="tag">&lt;/<span class="name">cpn</span>&gt;</span></span><br><span class="line">//这里把slot替换为了一个button</span><br></pre></td></tr></table></figure>
-
-<h3 id="slot的name"><a href="#slot的name" class="headerlink" title="slot的name"></a>slot的name</h3><p>默认替换的是无name属性的插槽</p>
-<p>若要选定某name的插槽,则需要</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line">例如:</span><br><span class="line"><span class="tag">&lt;<span class="name">template</span> <span class="attr">id</span>=<span class="string">&quot;cpn&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">h2</span>&gt;</span>组件<span class="tag">&lt;/<span class="name">h2</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">p</span>&gt;</span>组件组件<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">slot</span> <span class="attr">name</span>=<span class="string">&quot;left&quot;</span>&gt;</span><span class="tag">&lt;<span class="name">span</span>&gt;</span>left<span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="tag">&lt;/<span class="name">slot</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">slot</span> <span class="attr">name</span>=<span class="string">&quot;center&quot;</span>&gt;</span><span class="tag">&lt;<span class="name">span</span>&gt;</span>center<span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="tag">&lt;/<span class="name">slot</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">slot</span> <span class="attr">name</span>=<span class="string">&quot;right&quot;</span>&gt;</span><span class="tag">&lt;<span class="name">span</span>&gt;</span>right<span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="tag">&lt;/<span class="name">slot</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">cpn</span>&gt;</span><span class="tag">&lt;<span class="name">span</span> <span class="attr">slot</span>=<span class="string">&#x27;left&#x27;</span>&gt;</span>left will be cover<span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="tag">&lt;/<span class="name">cpn</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<p>p71</p>
-]]></content>
-      <tags>
-        <tag>buliding...</tag>
       </tags>
   </entry>
   <entry>
