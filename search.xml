@@ -783,20 +783,6 @@
       </tags>
   </entry>
   <entry>
-    <title>RPC相关</title>
-    <url>/2020/10/21/RPC%E7%9B%B8%E5%85%B3/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="流程"><a href="#流程" class="headerlink" title="流程"></a>流程</h1><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">graph LR</span><br><span class="line">本地--&gt;|要执行的函数与函数参数|服务端</span><br><span class="line">服务端--&gt;|通过回调函数传回函数结果|本地</span><br></pre></td></tr></table></figure>
-
-<p>以上传参过程均通过AJAX</p>
-<h1 id="传输的数据"><a href="#传输的数据" class="headerlink" title="传输的数据"></a>传输的数据</h1><p><strong>本地：服务端的函数与函数参数</strong></p>
-<p><strong>服务端：回调执行结果</strong></p>
-<h1 id="序列化与反序列化"><a href="#序列化与反序列化" class="headerlink" title="序列化与反序列化"></a>序列化与反序列化</h1><p>将JSON序列化为PHP形式</p>
-<h1 id="RPC"><a href="#RPC" class="headerlink" title="RPC"></a>RPC</h1><p>RPC(Remote Procedure Call)指的是远程过程调用，简单的说，RPC就是从一台机器上通过参数传递的方式调用另一台机器上的一个函数或方法并得到响应结果。</p>
-<p>即本地来调用远程计算机上的某个函数</p>
-<p>我们不用关心RPC的通讯细节只需要使用上层接口</p>
-]]></content>
-  </entry>
-  <entry>
     <title>JS备忘</title>
     <url>/2020/10/21/JS%E5%A4%87%E5%BF%98/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="Start"><a href="#Start" class="headerlink" title="Start"></a>Start</h1><h2 id="一般事件绑定"><a href="#一般事件绑定" class="headerlink" title="一般事件绑定"></a>一般事件绑定</h2><ul>
@@ -922,6 +908,20 @@ function func()&#123;
 <h2 id="AJAX"><a href="#AJAX" class="headerlink" title="AJAX"></a>AJAX</h2>]]></content>
   </entry>
   <entry>
+    <title>RPC相关</title>
+    <url>/2020/10/21/RPC%E7%9B%B8%E5%85%B3/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="流程"><a href="#流程" class="headerlink" title="流程"></a>流程</h1><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">graph LR</span><br><span class="line">本地--&gt;|要执行的函数与函数参数|服务端</span><br><span class="line">服务端--&gt;|通过回调函数传回函数结果|本地</span><br></pre></td></tr></table></figure>
+
+<p>以上传参过程均通过AJAX</p>
+<h1 id="传输的数据"><a href="#传输的数据" class="headerlink" title="传输的数据"></a>传输的数据</h1><p><strong>本地：服务端的函数与函数参数</strong></p>
+<p><strong>服务端：回调执行结果</strong></p>
+<h1 id="序列化与反序列化"><a href="#序列化与反序列化" class="headerlink" title="序列化与反序列化"></a>序列化与反序列化</h1><p>将JSON序列化为PHP形式</p>
+<h1 id="RPC"><a href="#RPC" class="headerlink" title="RPC"></a>RPC</h1><p>RPC(Remote Procedure Call)指的是远程过程调用，简单的说，RPC就是从一台机器上通过参数传递的方式调用另一台机器上的一个函数或方法并得到响应结果。</p>
+<p>即本地来调用远程计算机上的某个函数</p>
+<p>我们不用关心RPC的通讯细节只需要使用上层接口</p>
+]]></content>
+  </entry>
+  <entry>
     <title>ReadME!!</title>
     <url>/2220/09/20/ReadME!!!/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><ul>
@@ -932,6 +932,143 @@ function func()&#123;
 ]]></content>
       <tags>
         <tag>Hello!</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Vue相关</title>
+    <url>/2020/11/25/Vue%E7%BB%84%E4%BB%B6/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="组件"><a href="#组件" class="headerlink" title="组件"></a>组件</h1><h2 id="流程"><a href="#流程" class="headerlink" title="流程"></a>流程</h2><ul>
+<li>创建组件构造器 </li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> cpN = Vue.extend(&#123;</span><br><span class="line">	template:<span class="string">&#x27;HTMLCODE&#x27;</span></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>注册组件</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">Vue.component(<span class="string">&#x27;cpn&#x27;</span>,cpN)</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>组件使用</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">cpn</span>&gt;</span><span class="tag">&lt;/<span class="name">cpn</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="全局组件和局部组件"><a href="#全局组件和局部组件" class="headerlink" title="全局组件和局部组件"></a>全局组件和局部组件</h2><ul>
+<li>Vue实例外注册的组件是全局组件</li>
+<li>Vue实例内注册的组件为局部组件</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">//局部组件注册</span></span><br><span class="line">component:&#123;</span><br><span class="line">	cpn: cpN</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="父子组件"><a href="#父子组件" class="headerlink" title="父子组件"></a>父子组件</h2><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> cpn2 = Vue.extend(&#123;</span><br><span class="line">	template:<span class="string">`HTML CODE`</span>,</span><br><span class="line">&#125;)<span class="comment">//子组件</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> cpn1 = Vue.extend(&#123;</span><br><span class="line">	template:<span class="string">`HTML CODE</span></span><br><span class="line"><span class="string">				&lt;cpn&gt;&lt;/cpn&gt;`</span>,</span><br><span class="line"><span class="comment">//这里的cpn是cpn2在cpn1内注册的组件</span></span><br><span class="line">	components:&#123;</span><br><span class="line">		cpn: cpn2</span><br><span class="line">	&#125;,</span><br><span class="line">&#125;)<span class="comment">//父组件</span></span><br></pre></td></tr></table></figure>
+
+<p><strong><em>注意：**</em></strong>cpn2因未在全局注册，所以仅能在cpn1中调用，不能在Vue挂载的部分使用**</p>
+<hr>
+<h2 id="更推荐的组件创建方式"><a href="#更推荐的组件创建方式" class="headerlink" title="更推荐的组件创建方式"></a>更推荐的组件创建方式</h2><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">Vue.component(<span class="string">&#x27;cpn1&#x27;</span>,&#123;</span><br><span class="line">	template: <span class="string">`HTML CODE`</span></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<h3 id="HTML-CODE分离写法"><a href="#HTML-CODE分离写法" class="headerlink" title="HTML CODE分离写法"></a><code>HTML CODE</code>分离写法</h3><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">scriprt</span> <span class="attr">type</span>=<span class="string">&#x27;text/x-template&#x27;</span> <span class="attr">id</span>=<span class="string">&#x27;cpn&#x27;</span>&gt;</span></span><br><span class="line">	SOME HTML CODE</span><br><span class="line"><span class="tag">&lt;/<span class="name">scriprt</span>&gt;</span></span><br><span class="line"></span><br><span class="line">Vue.component(&#x27;cpn&#x27;&#123;</span><br><span class="line">	template: &#x27;#cpn&#x27;,</span><br><span class="line">	//这里的template的内容即是<span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span>标签里的&#x27;SOME HTML CODE&#x27;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<p><strong>OR</strong></p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">template</span> <span class="attr">id</span>=<span class="string">&#x27;cpn  &#x27;</span>&gt;</span></span><br><span class="line">	SOME HTML CODE</span><br><span class="line"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></span><br><span class="line"></span><br><span class="line">Vue.component(&#x27;cpn&#x27;&#123;</span><br><span class="line">	template: &#x27;#cpn&#x27;,</span><br><span class="line">	//这里的template的内容即是<span class="tag">&lt;<span class="name">template</span>&gt;</span>标签里的&#x27;SOME HTML CODE&#x27;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<h2 id="组件访问数据的范围"><a href="#组件访问数据的范围" class="headerlink" title="组件访问数据的范围"></a>组件访问数据的范围</h2><ul>
+<li>组件不能直接访问Vue实例的data</li>
+</ul>
+<p><code>component</code>内也有data选项，<strong>但是data选项应该是一个返回对象的函数而不是对象</strong></p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">Vue.component(<span class="string">&#x27;cpn&#x27;</span>,&#123;</span><br><span class="line">	template: <span class="string">`HTML CODE`</span>,</span><br><span class="line">	data()&#123;</span><br><span class="line">		<span class="keyword">return</span> &#123;</span><br><span class="line">            message: <span class="number">2</span>,</span><br><span class="line">        &#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<p>为什么data不能是对象？？</p>
+<p>​    因为当有多个组件实例时，若data是对象则多个实例会共享data里的值，而将data设计为函数，每次实例化组件时都会为当前组件调用data函数返回一个对象，与其余实例不共享。所以在设计Vue的时候才会这样设计，强行写为对象会报错。</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">example()&#123;</span><br><span class="line">	<span class="keyword">return</span> &#123;</span><br><span class="line">		value:<span class="number">1</span>,</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> a = example();</span><br><span class="line"><span class="keyword">const</span> b = example(); <span class="comment">//每次实例化都创建一个新的对象，a,b地址不同</span></span><br><span class="line">b.value = <span class="number">2</span>;</span><br><span class="line"><span class="comment">//此时a.value = 1; b.value = 2</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> obj = &#123;</span><br><span class="line">	value:<span class="number">1</span>,</span><br><span class="line">&#125;</span><br><span class="line">example()&#123;</span><br><span class="line">	<span class="keyword">return</span> obj; <span class="comment">//return的是obj的地址</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">const</span> a  = example();</span><br><span class="line"><span class="keyword">const</span> b = example();</span><br><span class="line">b.value = <span class="number">2</span>;</span><br><span class="line">a.value == b.value <span class="comment">//true</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="父子组件的通信"><a href="#父子组件的通信" class="headerlink" title="父子组件的通信"></a>父子组件的通信</h2><h3 id="父传子"><a href="#父传子" class="headerlink" title="父传子"></a>父传子</h3><p>通过<code>props</code>属性传递，<code>props</code>可以是数组也可以是对象</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">cpn</span> <span class="attr">:Cmessage</span>=<span class="string">&#x27;message&#x27;</span>&gt;</span><span class="tag">&lt;/<span class="name">cpn</span>&gt;</span><span class="comment">&lt;!--绑定VM实例下的message到cpn的props下的Cmessage--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">template</span> <span class="attr">id</span>=<span class="string">&#x27;cpn&#x27;</span>&gt;</span>&#123;&#123;Cmessage&#125;&#125;<span class="tag">&lt;/<span class="name">template</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="javascript">    <span class="comment">//子组件</span></span></span><br><span class="line"><span class="javascript">    <span class="keyword">const</span> cpn = &#123;</span></span><br><span class="line"><span class="javascript">        template: <span class="string">&#x27;#cpn&#x27;</span>,</span></span><br><span class="line"><span class="javascript">        <span class="comment">//props:[&#x27;Cmessage&#x27;] //数组写法</span></span></span><br><span class="line">        props:&#123; </span><br><span class="line"><span class="javascript">        	<span class="comment">//Cmessage: String, //这里的String是对Cmessage进行类型限制，必须为String</span></span></span><br><span class="line"><span class="javascript">  			<span class="comment">//这是完整写法，为一个对象</span></span></span><br><span class="line">            Cmessage:&#123;</span><br><span class="line"><span class="javascript">                type: <span class="built_in">String</span>,</span></span><br><span class="line"><span class="javascript">                <span class="keyword">default</span>: <span class="string">&#x27;default value&#x27;</span></span></span><br><span class="line"><span class="javascript">                <span class="built_in">require</span>: <span class="comment">//这里填一个Boolean，表示组件创建时此值是不是必须的</span></span></span><br><span class="line">            &#125;</span><br><span class="line">    	&#125;</span><br><span class="line">        data()&#123;</span><br><span class="line"><span class="javascript">            <span class="keyword">return</span> &#123;&#125;;</span></span><br><span class="line">        &#125;,</span><br><span class="line">    &#125;</span><br><span class="line"><span class="javascript">   	<span class="comment">//父组件</span></span></span><br><span class="line"><span class="javascript">	<span class="keyword">const</span> VM = <span class="keyword">new</span>  Vue()&#123;</span></span><br><span class="line"><span class="javascript">		el:<span class="string">&#x27;&#x27;</span>,</span></span><br><span class="line">    	data:&#123;</span><br><span class="line"><span class="javascript">        	message: <span class="string">&#x27;this is a message&#x27;</span></span></span><br><span class="line">    	&#125;,</span><br><span class="line">    	components: &#123;</span><br><span class="line">			cpn: cpn</span><br><span class="line">    	&#125;</span><br><span class="line">	&#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p><strong><em>注意：**</em></strong><code>props</code>的验证还可以自定义**</p>
+<h3 id="子传父"><a href="#子传父" class="headerlink" title="子传父"></a>子传父</h3><p>通过自定义事件</p>
+<p>$emit(‘event-name’,props)</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">cpn</span> <span class="attr">:Cmessage</span>=<span class="string">&#x27;message&#x27;</span>&gt;</span><span class="tag">&lt;/<span class="name">cpn</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">template</span> <span class="attr">id</span>=<span class="string">&#x27;cpn&#x27;</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">button</span> @<span class="attr">click</span>=<span class="string">&#x27;clicked(Cmessage)&#x27;</span>&gt;</span> //点击事件发生主席那个clicked并以Cmessage作为参数</span><br><span class="line">	emit click</span><br><span class="line">    <span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="javascript">    <span class="comment">//子组件</span></span></span><br><span class="line"><span class="javascript">    <span class="keyword">const</span> cpn = &#123;</span></span><br><span class="line"><span class="javascript">        template: <span class="string">&#x27;#cpn&#x27;</span>,</span></span><br><span class="line">        props:&#123; </span><br><span class="line">            Cmessage:&#123;</span><br><span class="line"><span class="javascript">                type: <span class="built_in">String</span>,</span></span><br><span class="line"><span class="javascript">                <span class="keyword">default</span>: <span class="string">&#x27;Cmessage &#x27;</span></span></span><br><span class="line">            &#125; </span><br><span class="line">    	&#125;</span><br><span class="line">        data()&#123;</span><br><span class="line"><span class="javascript">            <span class="keyword">return</span> &#123;</span></span><br><span class="line">                </span><br><span class="line">            &#125;;</span><br><span class="line">        &#125;,</span><br><span class="line">         methods:&#123;</span><br><span class="line">          	clicked(Cmessage)&#123;           </span><br><span class="line"><span class="javascript">                <span class="built_in">this</span>.$emit(<span class="string">&#x27;cpn-click&#x27;</span>Cmessage)<span class="comment">//发射cpn-click事件到父组件，并传Cmessage</span></span></span><br><span class="line">            &#125;   </span><br><span class="line">         &#125;        </span><br><span class="line">     &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="javascript"><span class="comment">//父组件</span></span></span><br><span class="line"><span class="javascript">	<span class="keyword">const</span> VM = <span class="keyword">new</span>  Vue()&#123;</span></span><br><span class="line"><span class="javascript">		el:<span class="string">&#x27;&#x27;</span>,</span></span><br><span class="line">    	data:&#123;</span><br><span class="line"><span class="javascript">        	message: <span class="string">&#x27;this is a message&#x27;</span></span></span><br><span class="line">    	&#125;,</span><br><span class="line">    	components: &#123;</span><br><span class="line">			cpn: cpn</span><br><span class="line">    	&#125;,</span><br><span class="line">        methods:&#123;</span><br><span class="line">            cpn-click(Cmessage)&#123;</span><br><span class="line"><span class="javascript">                <span class="built_in">console</span>.log(Cmessage);</span></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">	&#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="关键字"><a href="#关键字" class="headerlink" title="关键字"></a>关键字</h3><p><strong>this.$children</strong>可以获取this（Vue实例）的子组件数组通过下标来查询具体某一项组件（不推荐这种方式）</p>
+<p><strong>$refs</strong></p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">cpn</span> <span class="attr">ref</span>=<span class="string">&#x27;a&#x27;</span>&gt;</span><span class="tag">&lt;/<span class="name">cpn</span>&gt;</span>//若有一个组件像这样添加了refs属性</span><br><span class="line"></span><br><span class="line">this.$refs.a//则可以这样来获取此组件</span><br></pre></td></tr></table></figure>
+
+<p><strong>$parent</strong>可以获取组件的父组件</p>
+<p><strong>$root</strong>可以访问根组件</p>
+<h2 id="插槽slot"><a href="#插槽slot" class="headerlink" title="插槽slot"></a>插槽slot</h2><h3 id="流程-1"><a href="#流程-1" class="headerlink" title="流程"></a>流程</h3><ul>
+<li>slot定义</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">template</span> <span class="attr">id</span>=<span class="string">&#x27;cpn&#x27;</span>&gt;</span></span><br><span class="line">	HTMLCODE</span><br><span class="line">	<span class="tag">&lt;<span class="name">slot</span>&gt;</span><span class="tag">&lt;/<span class="name">slot</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!--&lt;slot&gt;&lt;p&gt;default value&lt;/p&gt;&lt;/slot&gt;--&gt;</span></span><br><span class="line">    <span class="comment">&lt;!--插槽还可以具有默认值,手动赋值会覆盖此默认值--&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>这里为cpn组件预留了一个slot插槽</p>
+<ul>
+<li>插槽使用</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">cpn</span>&gt;</span><span class="tag">&lt;<span class="name">button</span>&gt;</span>click<span class="tag">&lt;/<span class="name">button</span>&gt;</span><span class="tag">&lt;/<span class="name">cpn</span>&gt;</span></span><br><span class="line">//这里把slot替换为了一个button</span><br></pre></td></tr></table></figure>
+
+<h3 id="slot的name"><a href="#slot的name" class="headerlink" title="slot的name"></a>slot的name</h3><p>默认替换的是无name属性的插槽</p>
+<p>若要选定某name的插槽,则需要</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line">例如:</span><br><span class="line"><span class="tag">&lt;<span class="name">template</span> <span class="attr">id</span>=<span class="string">&quot;cpn&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">h2</span>&gt;</span>组件<span class="tag">&lt;/<span class="name">h2</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">p</span>&gt;</span>组件组件<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">slot</span> <span class="attr">name</span>=<span class="string">&quot;left&quot;</span>&gt;</span><span class="tag">&lt;<span class="name">span</span>&gt;</span>left<span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="tag">&lt;/<span class="name">slot</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">slot</span> <span class="attr">name</span>=<span class="string">&quot;center&quot;</span>&gt;</span><span class="tag">&lt;<span class="name">span</span>&gt;</span>center<span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="tag">&lt;/<span class="name">slot</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">slot</span> <span class="attr">name</span>=<span class="string">&quot;right&quot;</span>&gt;</span><span class="tag">&lt;<span class="name">span</span>&gt;</span>right<span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="tag">&lt;/<span class="name">slot</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">cpn</span>&gt;</span><span class="tag">&lt;<span class="name">span</span> <span class="attr">slot</span>=<span class="string">&#x27;left&#x27;</span>&gt;</span>left will be cover<span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="tag">&lt;/<span class="name">cpn</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="作用域插槽"><a href="#作用域插槽" class="headerlink" title="作用域插槽"></a>作用域插槽</h3><p>想要把子组件的数据传到父组件进行显示，如下</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!--以下方式是无法取到cpn里的things的--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">template</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">slot</span>&gt;</span></span><br><span class="line">    	</span><br><span class="line">    <span class="tag">&lt;/<span class="name">slot</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">cpn</span>&gt;</span>   </span><br><span class="line">    <span class="tag">&lt;<span class="name">ul</span> &gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">li</span> <span class="attr">v-for</span>=<span class="string">&#x27;item in things&#x27;</span>&gt;</span>&#123;&#123;item&#125;&#125;<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">cpn</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!---------------------------------------------&gt;</span></span><br><span class="line"><span class="comment">&lt;!--要想完成上述目标则需要如下--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">template</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">slot</span> <span class="attr">:things</span> = <span class="string">&#x27;things&#x27;</span>&gt;</span></span><br><span class="line">        <span class="comment">&lt;!--这里的:things可以是任何自定标识符--&gt;</span></span><br><span class="line">    </span><br><span class="line">    <span class="tag">&lt;/<span class="name">slot</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">cpn</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">div</span> <span class="attr">slot-scope</span> = <span class="string">&#x27;slot&#x27;</span>&gt;</span></span><br><span class="line">        <span class="comment">&lt;!--这里的&#x27;slot&#x27;也是可以自定义的--&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">ul</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">li</span> <span class="attr">v-for</span>=<span class="string">&#x27;item in slot.things&#x27;</span>&gt;</span>&#123;&#123;item&#125;&#125;<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">cpn</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="javascript"><span class="keyword">const</span> app = <span class="keyword">new</span> Vue(&#123;</span></span><br><span class="line"><span class="javascript">	el:<span class="string">&#x27;&#x27;</span>,</span></span><br><span class="line">	data:&#123;&#125;,</span><br><span class="line">	components:&#123;</span><br><span class="line">		cpn:&#123;</span><br><span class="line">			template:</span><br><span class="line">			data()&#123;</span><br><span class="line"><span class="javascript">				things:[<span class="string">&#x27;thing1&#x27;</span>,<span class="string">&#x27;thing2&#x27;</span>].</span></span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;)</span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="作用域"><a href="#作用域" class="headerlink" title="作用域"></a>作用域</h2><p>看下面的代码</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">template</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span>&gt;</span>app.isShow<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">v-show</span>=<span class="string">&#x27;isShow&#x27;</span>&gt;</span>cpn.isShow<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">cpn</span> <span class="attr">v-show</span>=<span class="string">&#x27;isShow&#x27;</span>/&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="javascript"><span class="keyword">const</span> app = <span class="keyword">new</span> Vue(&#123;</span></span><br><span class="line"><span class="javascript">	el:<span class="string">&#x27;&#x27;</span>,</span></span><br><span class="line">	data:&#123;</span><br><span class="line"><span class="javascript">		isShow:<span class="literal">true</span>,</span></span><br><span class="line">	&#125;,</span><br><span class="line">	components:&#123;</span><br><span class="line">		tempalte: ,</span><br><span class="line">		data()&#123;</span><br><span class="line"><span class="javascript">			<span class="keyword">return</span>&#123;</span></span><br><span class="line"><span class="javascript">				isShow:<span class="literal">false</span>,</span></span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;)</span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">//cpn的v-show会绑定到Vue实例app的isShow</span><br><span class="line">//cpn内的div的v-show会绑定到cpn的isShow</span><br></pre></td></tr></table></figure>
+
+<h1 id="模块化"><a href="#模块化" class="headerlink" title="模块化"></a>模块化</h1><h2 id="为什么需要模块化？"><a href="#为什么需要模块化？" class="headerlink" title="为什么需要模块化？"></a>为什么需要模块化？</h2><p>为了避免同一个项目下各个文件中变量作用域冲突造成的奇怪问题</p>
+<p>老旧的做法是使用匿名函数和模块导出</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> mouduleA = (<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">	<span class="keyword">var</span> obj = &#123;&#125;;</span><br><span class="line">	<span class="keyword">var</span> flag = <span class="literal">true</span>;</span><br><span class="line">	<span class="function"><span class="keyword">function</span> <span class="title">sum</span>(<span class="params">num1,num2</span>)</span>&#123;</span><br><span class="line">		<span class="keyword">return</span> num1+num2;</span><br><span class="line">	&#125;</span><br><span class="line">	obj.flag = flag;</span><br><span class="line">	obj.sum = sum;</span><br><span class="line">	<span class="keyword">return</span> obj</span><br><span class="line">&#125;)</span><br><span class="line"><span class="comment">//现在mouduleA为obj,可以在其他js文件中通过mouduleA.flag和moduleA.sum(num1,num2)来调用</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p><strong>常用的模块化规范：</strong></p>
+<ul>
+<li>CommonJS(node.js)</li>
+<li>AMD</li>
+<li>CMD</li>
+<li>Modules</li>
+</ul>
+<h2 id="CommonJS做法"><a href="#CommonJS做法" class="headerlink" title="CommonJS做法"></a>CommonJS做法</h2><p><strong>node环境下</strong></p>
+<ul>
+<li>导出</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">//这是一个名为moduleA.js的文件</span></span><br><span class="line"><span class="keyword">var</span> flag = <span class="literal">true</span>;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">sum</span>(<span class="params">num1,num2</span>)</span>&#123;</span><br><span class="line">	<span class="keyword">return</span> num1+num2;</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">module</span>.exports=&#123;</span><br><span class="line">	flag, <span class="comment">//也可以写成flag:flag,</span></span><br><span class="line">	sum,</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>导出</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> moduleA = <span class="built_in">require</span>(<span class="string">&#x27;moduleA.js&#x27;</span>)</span><br><span class="line"><span class="comment">//现在可以通过mouduleA.flag和moduleA.sum()来获取</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="ES6做法"><a href="#ES6做法" class="headerlink" title="ES6做法"></a>ES6做法</h2><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;moduleA.js&quot;</span> <span class="attr">type</span>=<span class="string">&quot;module&gt;&lt;/script&gt;</span></span></span><br><span class="line"><span class="tag"><span class="string">&lt;!--规定type=&quot;</span><span class="attr">module</span>&quot;后，每个<span class="attr">js</span>文件都有单独的空间，其余<span class="attr">js</span>文件不得直接访问，需要导出<span class="attr">--</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>导出</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">//这是一个名叫moduleA.js的文件</span></span><br><span class="line"><span class="keyword">var</span> flag = <span class="literal">true</span>;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">sum</span>(<span class="params">num1,num2</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">return</span> num1+num2;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//导出</span></span><br><span class="line"><span class="keyword">export</span>&#123;flag,sum&#125;;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>导入</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123;flag,sum&#125; <span class="keyword">from</span> <span class="string">&quot;moduleA.js&quot;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="PS-export-default"><a href="#PS-export-default" class="headerlink" title="PS(export default)"></a>PS(export default)</h3><ul>
+<li>导出</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">//moduleA.js</span></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> flag</span><br><span class="line"><span class="comment">//export default 只能导出一项</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>导入</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> f <span class="keyword">from</span> <span class="string">&#x27;moduleA.js&#x27;</span></span><br><span class="line"><span class="comment">//这里的f就是moduleA.js中的flag</span></span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <tags>
+        <tag>buliding...</tag>
       </tags>
   </entry>
   <entry>
