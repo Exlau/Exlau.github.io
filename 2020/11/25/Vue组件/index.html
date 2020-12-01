@@ -198,7 +198,7 @@
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//这是一个名为moduleA.js的文件</span></span><br><span class="line"><span class="keyword">var</span> flag = <span class="literal">true</span>;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">sum</span>(<span class="params">num1,num2</span>)</span>&#123;</span><br><span class="line">	<span class="keyword">return</span> num1+num2;</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">module</span>.exports=&#123;</span><br><span class="line">	flag, <span class="comment">//也可以写成flag:flag,</span></span><br><span class="line">	sum,</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <ul>
-<li>导出</li>
+<li>导入</li>
 </ul>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> moduleA = <span class="built_in">require</span>(<span class="string">&#x27;moduleA.js&#x27;</span>)</span><br><span class="line"><span class="comment">//现在可以通过mouduleA.flag和moduleA.sum()来获取</span></span><br></pre></td></tr></table></figure>
 
@@ -212,7 +212,7 @@
 <ul>
 <li>导入</li>
 </ul>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123;flag,sum&#125; <span class="keyword">from</span> <span class="string">&quot;moduleA.js&quot;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123;flag,sum&#125; <span class="keyword">from</span> <span class="string">&quot;moduleA.js&quot;</span></span><br><span class="line"><span class="comment">//或者</span></span><br><span class="line"><span class="keyword">import</span> * <span class="keyword">as</span> mouduleA（别名） <span class="keyword">from</span> <span class="string">&#x27;moduleA.js&#x27;</span></span><br><span class="line"><span class="comment">//这样可以通过mouduleA.flag来取得变量</span></span><br></pre></td></tr></table></figure>
 
 <h3 id="PS-export-default"><a href="#PS-export-default" class="headerlink" title="PS(export default)"></a>PS(export default)</h3><ul>
 <li>导出</li>
@@ -224,6 +224,8 @@
 </ul>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> f <span class="keyword">from</span> <span class="string">&#x27;moduleA.js&#x27;</span></span><br><span class="line"><span class="comment">//这里的f就是moduleA.js中的flag</span></span><br></pre></td></tr></table></figure>
 
+<h1 id="Webpack"><a href="#Webpack" class="headerlink" title="Webpack"></a>Webpack</h1><p> 前端模块化打包工具</p>
+<p>P78</p>
  
       <!-- reward -->
       
