@@ -783,20 +783,6 @@
       </tags>
   </entry>
   <entry>
-    <title>RPC相关</title>
-    <url>/2020/10/21/RPC%E7%9B%B8%E5%85%B3/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="流程"><a href="#流程" class="headerlink" title="流程"></a>流程</h1><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">graph LR</span><br><span class="line">本地--&gt;|要执行的函数与函数参数|服务端</span><br><span class="line">服务端--&gt;|通过回调函数传回函数结果|本地</span><br></pre></td></tr></table></figure>
-
-<p>以上传参过程均通过AJAX</p>
-<h1 id="传输的数据"><a href="#传输的数据" class="headerlink" title="传输的数据"></a>传输的数据</h1><p><strong>本地：服务端的函数与函数参数</strong></p>
-<p><strong>服务端：回调执行结果</strong></p>
-<h1 id="序列化与反序列化"><a href="#序列化与反序列化" class="headerlink" title="序列化与反序列化"></a>序列化与反序列化</h1><p>将JSON序列化为PHP形式</p>
-<h1 id="RPC"><a href="#RPC" class="headerlink" title="RPC"></a>RPC</h1><p>RPC(Remote Procedure Call)指的是远程过程调用，简单的说，RPC就是从一台机器上通过参数传递的方式调用另一台机器上的一个函数或方法并得到响应结果。</p>
-<p>即本地来调用远程计算机上的某个函数</p>
-<p>我们不用关心RPC的通讯细节只需要使用上层接口</p>
-]]></content>
-  </entry>
-  <entry>
     <title>JS备忘</title>
     <url>/2020/10/21/JS%E5%A4%87%E5%BF%98/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="Start"><a href="#Start" class="headerlink" title="Start"></a>Start</h1><h2 id="一般事件绑定"><a href="#一般事件绑定" class="headerlink" title="一般事件绑定"></a>一般事件绑定</h2><ul>
@@ -922,6 +908,20 @@ function func()&#123;
 <h2 id="AJAX"><a href="#AJAX" class="headerlink" title="AJAX"></a>AJAX</h2>]]></content>
   </entry>
   <entry>
+    <title>RPC相关</title>
+    <url>/2020/10/21/RPC%E7%9B%B8%E5%85%B3/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="流程"><a href="#流程" class="headerlink" title="流程"></a>流程</h1><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">graph LR</span><br><span class="line">本地--&gt;|要执行的函数与函数参数|服务端</span><br><span class="line">服务端--&gt;|通过回调函数传回函数结果|本地</span><br></pre></td></tr></table></figure>
+
+<p>以上传参过程均通过AJAX</p>
+<h1 id="传输的数据"><a href="#传输的数据" class="headerlink" title="传输的数据"></a>传输的数据</h1><p><strong>本地：服务端的函数与函数参数</strong></p>
+<p><strong>服务端：回调执行结果</strong></p>
+<h1 id="序列化与反序列化"><a href="#序列化与反序列化" class="headerlink" title="序列化与反序列化"></a>序列化与反序列化</h1><p>将JSON序列化为PHP形式</p>
+<h1 id="RPC"><a href="#RPC" class="headerlink" title="RPC"></a>RPC</h1><p>RPC(Remote Procedure Call)指的是远程过程调用，简单的说，RPC就是从一台机器上通过参数传递的方式调用另一台机器上的一个函数或方法并得到响应结果。</p>
+<p>即本地来调用远程计算机上的某个函数</p>
+<p>我们不用关心RPC的通讯细节只需要使用上层接口</p>
+]]></content>
+  </entry>
+  <entry>
     <title>ReadME!!</title>
     <url>/2220/09/20/ReadME!!!/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><ul>
@@ -932,6 +932,14 @@ function func()&#123;
 ]]></content>
       <tags>
         <tag>Hello!</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>mySQL基础</title>
+    <url>/2020/11/30/mySQL%E5%9F%BA%E7%A1%80/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>]]></content>
+      <tags>
+        <tag>password</tag>
       </tags>
   </entry>
   <entry>
@@ -1022,7 +1030,7 @@ function func()&#123;
 <h2 id="作用域"><a href="#作用域" class="headerlink" title="作用域"></a>作用域</h2><p>看下面的代码</p>
 <figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">template</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span>&gt;</span>app.isShow<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">v-show</span>=<span class="string">&#x27;isShow&#x27;</span>&gt;</span>cpn.isShow<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">cpn</span> <span class="attr">v-show</span>=<span class="string">&#x27;isShow&#x27;</span>/&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="javascript"><span class="keyword">const</span> app = <span class="keyword">new</span> Vue(&#123;</span></span><br><span class="line"><span class="javascript">	el:<span class="string">&#x27;&#x27;</span>,</span></span><br><span class="line">	data:&#123;</span><br><span class="line"><span class="javascript">		isShow:<span class="literal">true</span>,</span></span><br><span class="line">	&#125;,</span><br><span class="line">	components:&#123;</span><br><span class="line">		tempalte: ,</span><br><span class="line">		data()&#123;</span><br><span class="line"><span class="javascript">			<span class="keyword">return</span>&#123;</span></span><br><span class="line"><span class="javascript">				isShow:<span class="literal">false</span>,</span></span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;)</span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">//cpn的v-show会绑定到Vue实例app的isShow</span><br><span class="line">//cpn内的div的v-show会绑定到cpn的isShow</span><br></pre></td></tr></table></figure>
 
-<h1 id="模块化"><a href="#模块化" class="headerlink" title="模块化"></a>模块化</h1><h2 id="为什么需要模块化？"><a href="#为什么需要模块化？" class="headerlink" title="为什么需要模块化？"></a>为什么需要模块化？</h2><p>为了避免同一个项目下各个文件中变量作用域冲突造成的奇怪问题</p>
+<h1 id="模块化"><a href="#模块化" class="headerlink" title="模块化"></a>模块化</h1><h2 id="为什么需要模块化？"><a href="#为什么需要模块化？" class="headerlink" title="为什么需要模块化？"></a>为什么需要模块化？</h2><p>为了避免同一个项目下各个文件中变量作用域冲突造成的奇怪问题和节省开发成本</p>
 <p>老旧的做法是使用匿名函数和模块导出</p>
 <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> mouduleA = (<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">	<span class="keyword">var</span> obj = &#123;&#125;;</span><br><span class="line">	<span class="keyword">var</span> flag = <span class="literal">true</span>;</span><br><span class="line">	<span class="function"><span class="keyword">function</span> <span class="title">sum</span>(<span class="params">num1,num2</span>)</span>&#123;</span><br><span class="line">		<span class="keyword">return</span> num1+num2;</span><br><span class="line">	&#125;</span><br><span class="line">	obj.flag = flag;</span><br><span class="line">	obj.sum = sum;</span><br><span class="line">	<span class="keyword">return</span> obj</span><br><span class="line">&#125;)</span><br><span class="line"><span class="comment">//现在mouduleA为obj,可以在其他js文件中通过mouduleA.flag和moduleA.sum(num1,num2)来调用</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
@@ -1066,29 +1074,121 @@ function func()&#123;
 </ul>
 <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> f <span class="keyword">from</span> <span class="string">&#x27;moduleA.js&#x27;</span></span><br><span class="line"><span class="comment">//这里的f就是moduleA.js中的flag</span></span><br></pre></td></tr></table></figure>
 
-<h1 id="Webpack"><a href="#Webpack" class="headerlink" title="Webpack"></a>Webpack</h1><p> 前端模块化打包工具</p>
-<p>P78</p>
+<h1 id="Webpack与node"><a href="#Webpack与node" class="headerlink" title="Webpack与node"></a>Webpack与node</h1><p> 前端模块化打包工具</p>
+<p>webpack依赖node环境</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">//安装webpack</span></span><br><span class="line">npm init</span><br><span class="line">npm install （--save-dev） webpack@版本号 -g</span><br><span class="line"><span class="comment">//--save-dev 是本地安装webpack命令</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="webpack配置文件"><a href="#webpack配置文件" class="headerlink" title="webpack配置文件"></a>webpack配置文件</h2><p>创建一个**<em>webpack.config.js**</em>文件</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">//webpack.config.js内容</span></span><br><span class="line"><span class="keyword">const</span> path = <span class="built_in">require</span>(<span class="string">&#x27;path&#x27;</span>) <span class="comment">//导入node中的path</span></span><br><span class="line"></span><br><span class="line">moudule.exports=&#123;</span><br><span class="line">    <span class="comment">//表示打包的入口文件</span></span><br><span class="line">    entry: <span class="string">&#x27;./src/main.js&#x27;</span></span><br><span class="line">    <span class="comment">//表示打包形成的目标文件</span></span><br><span class="line">    output:&#123;</span><br><span class="line">    	path: path.reslove(__dirname，<span class="string">&#x27;dist&#x27;</span>), <span class="comment">//path必须是绝对路径，这里动态获取__dirname是node里获取当前路径的常量</span></span><br><span class="line">    	filename:<span class="string">&#x27;bundle.js&#x27;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="package-json"><a href="#package-json" class="headerlink" title="package.json"></a>package.json</h2><figure class="highlight json"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">&quot;name&quot;</span>: <span class="string">&quot;meetwebpack&quot;</span>,</span><br><span class="line">  <span class="attr">&quot;version&quot;</span>: <span class="string">&quot;1.0.0&quot;</span>,</span><br><span class="line">  <span class="attr">&quot;description&quot;</span>: <span class="string">&quot;&quot;</span>,</span><br><span class="line">  <span class="attr">&quot;main&quot;</span>: <span class="string">&quot;index.js&quot;</span>,</span><br><span class="line">  <span class="attr">&quot;scripts&quot;</span>: &#123;</span><br><span class="line">    <span class="attr">&quot;test&quot;</span>: <span class="string">&quot;echo \&quot;Error: no test specified\&quot; &amp;&amp; exit 1&quot;</span>,</span><br><span class="line">      <span class="comment">//创建npm run bulid 和webpack命令的映射</span></span><br><span class="line">     <span class="attr">&quot;bulid&quot;</span>: <span class="string">&quot;webpack&quot;</span> </span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="attr">&quot;author&quot;</span>: <span class="string">&quot;&quot;</span>,</span><br><span class="line">  <span class="attr">&quot;license&quot;</span>: <span class="string">&quot;ISC&quot;</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//若在命令行键入npm run bulid则等效于键入webpack命令</span></span><br><span class="line"><span class="comment">//并且优先在本地webpack中(./node_modules/bin)找命令 </span></span><br></pre></td></tr></table></figure>
+
+<h2 id="loader"><a href="#loader" class="headerlink" title="loader"></a>loader</h2><h3 id="npm安装loader-以css为例"><a href="#npm安装loader-以css为例" class="headerlink" title="npm安装loader(以css为例)"></a>npm安装loader(以css为例)</h3><ul>
+<li>安装</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install --save-dev css-loader</span><br><span class="line">npm install --save-dev style-loader</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>配置</li>
+</ul>
+<p>在webpack.config.js中配置</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F;新添加module对象，如下</span><br><span class="line">module: &#123;</span><br><span class="line">        rules: [</span><br><span class="line">            &#123;</span><br><span class="line">            test: &#x2F;\.css$&#x2F;,</span><br><span class="line">            use: [&#39;style-loader&#39;, &#39;css-loader&#39;]</span><br><span class="line">            &#x2F;&#x2F;css-loader负责解析加载css</span><br><span class="line">            &#x2F;&#x2F;style-loader负责提交css到DOM上</span><br><span class="line">        	&#125;</span><br><span class="line">           	  ]</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+<p>**注意:**有时候css-loader与style-loader的版本过高或者过低会出现问题，这时候在package.json里手动调低或者调高版本号即可</p>
+<h3 id="图片loader"><a href="#图片loader" class="headerlink" title="图片loader"></a>图片loader</h3><ul>
+<li>安装url-loader</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install --save-dev url-loader</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>webpack.config.js配置</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="built_in">module</span>.exports = &#123;</span><br><span class="line">  <span class="built_in">module</span>: &#123;</span><br><span class="line">    rules: [</span><br><span class="line">      &#123;</span><br><span class="line">        test: <span class="regexp">/\.(png|jpg|gif)$/</span>,</span><br><span class="line">        use: [</span><br><span class="line">          &#123;</span><br><span class="line">            loader: <span class="string">&#x27;url-loader&#x27;</span>,</span><br><span class="line">            options: &#123;</span><br><span class="line"><span class="comment">//当加载的图片小于limit的字节数，图片url会被编译称base64字符串形式</span></span><br><span class="line"><span class="comment">//如果大于limt则会通过file-loader来编译，file-loader不需要特别配置</span></span><br><span class="line">              limit: <span class="number">8192</span>,</span><br><span class="line"><span class="comment">//name是指通过file-loader生成的图片打包在dist下的img文件夹且命名为:原文件名+8位hash值+扩展名</span></span><br><span class="line">              name: <span class="string">&#x27;img/[name].[hash:8].[ext]&#x27;</span></span><br><span class="line">            &#125;</span><br><span class="line">          &#125;</span><br><span class="line">        ]</span><br><span class="line">      &#125;</span><br><span class="line">    ]</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">//file-loader安装</span></span><br><span class="line">npm install --save-dev file-loader@版本号 </span><br></pre></td></tr></table></figure>
+
+<p>注:**通过file-loader加载图片，路径会在output中path所指的文件夹中，</p>
+<p>​    若html入口程序不在dist则浏览器无法正确找到</p>
+<p>​    需要在webpack.config.js的output中修改配置</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">publicPath: <span class="string">&#x27;dist/&#x27;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="ES6转ES5"><a href="#ES6转ES5" class="headerlink" title="ES6转ES5"></a>ES6转ES5</h3><ul>
+<li><strong>工具: babel</strong></li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">//安装，这是一个旧版的babel</span></span><br><span class="line">npm install --save-dev babel-loader@<span class="number">7</span> babel-core babel-preset-es2015</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>配置</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="built_in">module</span>: &#123;</span><br><span class="line">  rules: [</span><br><span class="line">    &#123;</span><br><span class="line">      test: <span class="regexp">/\.js$/</span>,</span><br><span class="line">      <span class="comment">// exclude是写入不进行转换操作的文件夹</span></span><br><span class="line">      exclude: <span class="regexp">/(node_modules|bower_components)/</span>,</span><br><span class="line">      use: &#123;</span><br><span class="line">        loader: <span class="string">&#x27;babel-loader&#x27;</span>,</span><br><span class="line">        options: &#123;</span><br><span class="line">          presets: [<span class="string">&#x27;es2015&#x27;</span>]</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="wepack配置Vue"><a href="#wepack配置Vue" class="headerlink" title="wepack配置Vue"></a>wepack配置Vue</h2><ul>
+<li>安装</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">npm install vue</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>引入</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">//main.js</span></span><br><span class="line"><span class="keyword">import</span> Vue <span class="keyword">from</span> <span class="string">&#x27;vue&#x27;</span></span><br><span class="line"><span class="comment">//这里会直接在node_modules里找vue</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>注意：</strong>需要在webpack.config.js中配置下面这一段代码来处理runtime-only和runtime-compiler的问题</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">resolve: &#123;</span><br><span class="line">        alias: &#123;</span><br><span class="line"><span class="comment">//这里设置了import Vue from &#x27;vue&#x27;时vue的寻找路径，包含了runtime-compiler</span></span><br><span class="line">            <span class="string">&#x27;vue$&#x27;</span>: <span class="string">&#x27;vue/dist/vue.esm.js&#x27;</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+<p>runtime-only不能编译vue模板</p>
+<p>runtime-compiler可以编译</p>
+<h1 id="Vue如何简化开发"><a href="#Vue如何简化开发" class="headerlink" title="Vue如何简化开发"></a>Vue如何简化开发</h1><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> app = <span class="keyword">new</span> Vue(&#123;</span><br><span class="line">	el:<span class="string">&#x27;#app&#x27;</span>,</span><br><span class="line">	template:<span class="string">`</span></span><br><span class="line"><span class="string">	&lt;div&gt;&#123;&#123;message&#125;&#125;&lt;/div&gt;</span></span><br><span class="line"><span class="string">	`</span>,</span><br><span class="line">	data&#123;</span><br><span class="line">		message:<span class="string">&#x27;hello&#x27;</span>,</span><br><span class="line">	&#125;,</span><br><span class="line">	<span class="comment">//这里Vue会把template的内容直接拷贝到挂载的html文档上</span></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>第一种开发方式</li>
+</ul>
+<p>在vue实例内写html模板</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> app = <span class="keyword">new</span> Vue(&#123;</span><br><span class="line">    el: <span class="string">&#x27;#app&#x27;</span>,</span><br><span class="line">    template: <span class="string">`</span></span><br><span class="line"><span class="string">    &lt;div&gt;</span></span><br><span class="line"><span class="string">        &lt;h2&gt;&#123;&#123;message&#125;&#125;&lt;/h2&gt;</span></span><br><span class="line"><span class="string">        &lt;h3&gt;&#123;&#123;name&#125;&#125;&lt;/h3&gt;</span></span><br><span class="line"><span class="string">        &lt;button @click=&#x27;btnclick&#x27;&gt;click&lt;/button&gt;</span></span><br><span class="line"><span class="string">    &lt;/div&gt;</span></span><br><span class="line"><span class="string">    `</span>,</span><br><span class="line">    data: &#123;</span><br><span class="line">        message: <span class="string">&#x27;hello&#x27;</span>,</span><br><span class="line">        name: <span class="string">&#x27;EE&#x27;</span></span><br><span class="line">    &#125;,</span><br><span class="line">    methods: &#123;</span><br><span class="line">        btnClick() &#123;</span><br><span class="line">            alert(<span class="string">&#x27;click??&#x27;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>第二种开发方式</li>
+</ul>
+<p>在组件内写html模板把此组件作为Vue实例的子组件</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">import</span> Vue <span class="keyword">from</span> <span class="string">&#x27;vue&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> App = &#123;</span><br><span class="line">    template: <span class="string">` </span></span><br><span class="line"><span class="string">    &lt;div&gt;</span></span><br><span class="line"><span class="string">        &lt;h2&gt;&#123;&#123;message&#125;&#125;&lt;/h2&gt;</span></span><br><span class="line"><span class="string">        &lt;h3&gt;&#123;&#123;name&#125;&#125;&lt;/h3&gt;</span></span><br><span class="line"><span class="string">        &lt;button @click=&#x27;btnClick&#x27;&gt;click&lt;/button&gt;</span></span><br><span class="line"><span class="string">    &lt;/div&gt;</span></span><br><span class="line"><span class="string">    `</span>,</span><br><span class="line">    data: &#123;</span><br><span class="line">        message: <span class="string">&#x27;hello&#x27;</span>,</span><br><span class="line">        name: <span class="string">&#x27;EE&#x27;</span></span><br><span class="line">    &#125;,</span><br><span class="line">    methods: &#123;</span><br><span class="line">        btnClick() &#123;</span><br><span class="line">            alert(<span class="string">&#x27;click??&#x27;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">const</span> app = <span class="keyword">new</span> Vue(&#123;</span><br><span class="line">    el: <span class="string">&#x27;#app&#x27;</span>,</span><br><span class="line">    template: <span class="string">`&lt;App/&gt;`</span>,</span><br><span class="line">    components: &#123;</span><br><span class="line">        App,</span><br><span class="line">    &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>第三种方式</li>
+</ul>
+<p>把组件抽离成一个单独的js文件后导出，再在main.js中引入此组件即可</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">//app.js</span></span><br><span class="line"> <span class="keyword">const</span> App = &#123;</span><br><span class="line">     template: <span class="string">` </span></span><br><span class="line"><span class="string">    &lt;div&gt;</span></span><br><span class="line"><span class="string">        &lt;h2&gt;&#123;&#123;message&#125;&#125;&lt;/h2&gt;</span></span><br><span class="line"><span class="string">        &lt;h3&gt;&#123;&#123;name&#125;&#125;&lt;/h3&gt;</span></span><br><span class="line"><span class="string">        &lt;button @click=&#x27;btnClick&#x27;&gt;click&lt;/button&gt;</span></span><br><span class="line"><span class="string">    &lt;/div&gt;</span></span><br><span class="line"><span class="string">    `</span>,</span><br><span class="line">     data() &#123;</span><br><span class="line">         <span class="keyword">return</span> &#123;</span><br><span class="line">             message: <span class="string">&#x27;hello&#x27;</span>,</span><br><span class="line">             name: <span class="string">&#x27;EE&#x27;</span></span><br><span class="line">         &#125;</span><br><span class="line">     &#125;,</span><br><span class="line">     methods: &#123;</span><br><span class="line">         btnClick() &#123;</span><br><span class="line">             alert(<span class="string">&#x27;click??&#x27;</span>);</span><br><span class="line">         &#125;</span><br><span class="line">     &#125;</span><br><span class="line"> &#125;</span><br><span class="line"> <span class="keyword">export</span> <span class="keyword">default</span> App</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">//main.js</span></span><br><span class="line"><span class="keyword">import</span> App <span class="keyword">from</span> <span class="string">&#x27;./src/js/vue/app.js&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> app = <span class="keyword">new</span> Vue(&#123;</span><br><span class="line">    el: <span class="string">&#x27;#app&#x27;</span>,</span><br><span class="line">    template: <span class="string">`&lt;App/&gt;`</span>,</span><br><span class="line">    components: &#123;</span><br><span class="line">        App,</span><br><span class="line">    &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>第四种开发方式</li>
+</ul>
+<p>创建.vue文件,将组件的模板，js代码，样式整合到vue文件中</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line">//app.vue</span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">template</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">h2</span> <span class="attr">class</span>=<span class="string">&#x27;title&#x27;</span>&gt;</span>&#123;&#123;message&#125;&#125;<span class="tag">&lt;/<span class="name">h2</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">h3</span>&gt;</span>&#123;&#123;name&#125;&#125;<span class="tag">&lt;/<span class="name">h3</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">button</span> @<span class="attr">click</span>=<span class="string">&#x27;btnClick&#x27;</span>&gt;</span>click<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="javascript"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</span></span><br><span class="line"><span class="javascript">    name:<span class="string">&#x27;App&#x27;</span>,</span></span><br><span class="line">    data() &#123;</span><br><span class="line"><span class="javascript">         <span class="keyword">return</span> &#123;</span></span><br><span class="line"><span class="javascript">             message: <span class="string">&#x27;hello&#x27;</span>,</span></span><br><span class="line"><span class="javascript">             name: <span class="string">&#x27;EE&#x27;</span></span></span><br><span class="line">         &#125;</span><br><span class="line">     &#125;,</span><br><span class="line">     methods: &#123;</span><br><span class="line">         btnClick() &#123;</span><br><span class="line"><span class="javascript">             alert(<span class="string">&#x27;click??&#x27;</span>);</span></span><br><span class="line">         &#125;</span><br><span class="line">     &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">style</span> <span class="attr">scoped</span>&gt;</span></span><br><span class="line"><span class="css">    <span class="selector-class">.title</span>&#123;</span></span><br><span class="line">        color: blue;</span><br><span class="line">    &#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">//main.js</span></span><br><span class="line"><span class="keyword">import</span> App <span class="keyword">from</span> <span class="string">&#x27;./src/js/vue/app.vue&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> app = <span class="keyword">new</span> Vue(&#123;</span><br><span class="line">    el: <span class="string">&#x27;#app&#x27;</span>,</span><br><span class="line">    template: <span class="string">`&lt;App/&gt;`</span>,</span><br><span class="line">    components: &#123;</span><br><span class="line">        App,</span><br><span class="line">    &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<p><strong>注意：</strong>需要安装vue-loader vue-template-compiler</p>
+<ul>
+<li>安装</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install vue-loader@15.4.2 vue-template-compiler@2.5.21 --save-dev</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>配置</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">//webpack.config.js</span></span><br><span class="line">&#123;</span><br><span class="line">    test: <span class="regexp">/\.vue$/</span>,</span><br><span class="line">    use: [<span class="string">&#x27;vue-loader&#x27;</span>]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h1 id="plugin"><a href="#plugin" class="headerlink" title="plugin"></a>plugin</h1><h2 id="添加一个版权提示插件"><a href="#添加一个版权提示插件" class="headerlink" title="添加一个版权提示插件"></a>添加一个版权提示插件</h2><p>BannerPlugin是webpack自带的所以不用另外下载</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">//webpack.config.js</span></span><br><span class="line"><span class="keyword">const</span> webpack = <span class="built_in">require</span>(<span class="string">&#x27;webpack&#x27;</span>)</span><br><span class="line"><span class="built_in">module</span>.exports=&#123;</span><br><span class="line">	plugins:[</span><br><span class="line">		<span class="keyword">new</span> webpack.BannerPlugin(<span class="string">&quot;最终解释权归EE所有&quot;</span>)</span><br><span class="line">	]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>P87</p>
 ]]></content>
       <tags>
         <tag>buliding...</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>《关掉》</title>
-    <url>/2020/10/16/%E3%80%8A%E5%85%B3%E6%8E%89%E3%80%8B/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>​    关掉！关掉！一定要关掉！再不关掉那些网络游戏，小孩哪有美好的未来？哪有美好的前程？祖国哪有</p>
-<h1 id="栋"><a href="#栋" class="headerlink" title="栋"></a>栋</h1><p>梁之才？</p>
-<iframe src="//player.bilibili.com/player.html?aid=457253380&bvid=BV1s5411j7Po&cid=242488467&page=1" width="800px" height="450px" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" auto="1"> </iframe>]]></content>
-      <tags>
-        <tag>关掉</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>mySQL基础</title>
-    <url>/2020/11/30/mySQL%E5%9F%BA%E7%A1%80/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>]]></content>
-      <tags>
-        <tag>password</tag>
       </tags>
   </entry>
   <entry>
@@ -1102,6 +1202,16 @@ function func()&#123;
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">root@host# mysql -u root -p</span><br><span class="line">Enter password:*******</span><br><span class="line">mysql&gt; use mysql;</span><br><span class="line">Database changed</span><br><span class="line"></span><br><span class="line">mysql&gt; INSERT INTO user </span><br><span class="line">          (host, user, password, </span><br><span class="line">           select_priv, insert_priv, update_priv) </span><br><span class="line">           VALUES (&#39;localhost&#39;, &#39;guest&#39;, </span><br><span class="line">           PASSWORD(&#39;guest123&#39;), &#39;Y&#39;, &#39;Y&#39;, &#39;Y&#39;);</span><br><span class="line">Query OK, 1 row affected (0.20 sec)</span><br><span class="line"></span><br><span class="line">mysql&gt; FLUSH PRIVILEGES;</span><br><span class="line">Query OK, 1 row affected (0.01 sec)</span><br><span class="line"></span><br><span class="line">mysql&gt; SELECT host, user, password FROM user WHERE user &#x3D; &#39;guest&#39;;</span><br><span class="line">+-----------+---------+------------------+</span><br><span class="line">| host      | user    | password         |</span><br><span class="line">+-----------+---------+------------------+</span><br><span class="line">| localhost | guest | 6f8c114b58f2ce9e |</span><br><span class="line">+-----------+---------+------------------+</span><br><span class="line">1 row in set (0.00 sec)</span><br></pre></td></tr></table></figure>
 
 ]]></content>
+  </entry>
+  <entry>
+    <title>《关掉》</title>
+    <url>/2020/10/16/%E3%80%8A%E5%85%B3%E6%8E%89%E3%80%8B/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>​    关掉！关掉！一定要关掉！再不关掉那些网络游戏，小孩哪有美好的未来？哪有美好的前程？祖国哪有</p>
+<h1 id="栋"><a href="#栋" class="headerlink" title="栋"></a>栋</h1><p>梁之才？</p>
+<iframe src="//player.bilibili.com/player.html?aid=457253380&bvid=BV1s5411j7Po&cid=242488467&page=1" width="800px" height="450px" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" auto="1"> </iframe>]]></content>
+      <tags>
+        <tag>关掉</tag>
+      </tags>
   </entry>
   <entry>
     <title>很快啊</title>
