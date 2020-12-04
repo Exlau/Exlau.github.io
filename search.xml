@@ -485,116 +485,6 @@
       </tags>
   </entry>
   <entry>
-    <title>HTML备忘</title>
-    <url>/2020/10/14/HTML%E5%A4%87%E5%BF%98/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="HTML备忘录"><a href="#HTML备忘录" class="headerlink" title="HTML备忘录"></a>HTML备忘录</h1><h2 id="标签相关"><a href="#标签相关" class="headerlink" title="标签相关"></a>标签相关</h2><ul>
-<li><p>块级元素自动换行而内联元素不自动换行</p>
-</li>
-<li><p>disabled = <em>value</em> 无论<em>value</em>值为什么，标签都会处于disabled状态，想要改变需将<em>value</em>置空</p>
-</li>
-<li><p>特殊字符引用表</p>
-</li>
-</ul>
-<table>
-<thead>
-<tr>
-<th align="left">原义字符</th>
-<th align="left">等价字符引用</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="left">&lt;”</td>
-<td align="left">&amp;lt</td>
-</tr>
-<tr>
-<td align="left">&gt;</td>
-<td align="left">&amp;gt</td>
-</tr>
-<tr>
-<td align="left">“</td>
-<td align="left">&amp;quot</td>
-</tr>
-<tr>
-<td align="left">‘</td>
-<td align="left">&amp;apos</td>
-</tr>
-<tr>
-<td align="left">&amp;</td>
-<td align="left">&amp;amp</td>
-</tr>
-<tr>
-<td align="left"></td>
-<td align="left"></td>
-</tr>
-</tbody></table>
-<ul>
-<li><p>使用相对路径优于绝对路径(舍去了DNS查找等操作)</p>
-</li>
-<li><p><code>&lt;script&gt;</code>放在<code> &lt;body&gt;</code>末尾前更优，这样可以确保脚本加载前浏览器已经解析HTML内容</p>
-</li>
-<li><p><code> &lt;a&gt;</code>标签的title属性作为悬停提示</p>
-</li>
-<li><p>href的mailto subject cc body等关键字，用于发送邮件</p>
-</li>
-<li><p>描述列表</p>
-</li>
-<li><p>块引用<code> &lt;blockquote cite=&quot;url&quot;&gt;&lt;/blockquote&gt;</code></p>
-</li>
-<li><p>行内引用<code>&lt;q cite=&quot;url&quot;&gt;</code></p>
-</li>
-<li><p>缩略语<code>&lt;abbr title=&quot;..&quot;&gt;&lt;/abbr&gt;</code></p>
-</li>
-<li><p>保留空格渲染<code>&lt;pre&gt;content&lt;/pre&gt;</code></p>
-</li>
-<li><p>标记键盘输入<code>&lt;kbd&gt;&lt;/kbd&gt;</code></p>
-</li>
-<li><p>换行<code>&lt;br&gt;</code></p>
-</li>
-<li><p>水平线<code>&lt;hr&gt;</code></p>
-</li>
-<li><p>嵌入其他网页<code>&lt;iframe&gt;</code></p>
-<p>属性：</p>
-<p>allowfullscreen：可设置全屏</p>
-<p>frameborder：边框</p>
-<p>（尽量用js设置src）</p>
-</li>
-<li><p>嵌入PDF,SVG,Flash—<code>&lt;embed&gt;&lt;object&gt;</code></p>
-</li>
-<li><p>视频标签:<code>&lt;video&gt;</code></p>
-<p>属性：</p>
-<p>autoplay:自动播放</p>
-<p>loop:循环</p>
-<p>muted:静音播放</p>
-<p>poster:封面图</p>
-<p>preload:缓冲（”none”：不缓冲 “auto”：页面加载自动缓冲）</p>
-</li>
-<li><p>权限管理 sandbox属性</p>
-</li>
-<li><p>表格相关</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">table</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- colgroup 必须包含在table标签内--&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">colgroup</span>&gt;</span> </span><br><span class="line">		<span class="tag">&lt;<span class="name">col</span> <span class="attr">style</span>=<span class="string">&quot;#&quot;</span> <span class="attr">span</span>=<span class="string">&quot;x&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">colgroup</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- col标签可以指定每一行的属性，span是需要设置属性的行数--&gt;</span></span><br><span class="line">        <span class="comment">&lt;!-- table row --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">tr</span>&gt;</span> </span><br><span class="line">    <span class="tag">&lt;<span class="name">td</span>&gt;</span> </span><br><span class="line">        <span class="comment">&lt;!-- table data --&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">table</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<p>​    </p>
-</li>
-</ul>
-<h2 id="响应式设计"><a href="#响应式设计" class="headerlink" title="响应式设计"></a>响应式设计</h2><ul>
-<li><p>```<img>``的 srcset和sizes属性</p>
-<p>举例:</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!--srcset是一个文件列表，后面以w为单位的数据是文件的像素大小--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">img</span> <span class="attr">srcset</span>=<span class="string">&quot;elva-fairy-320w.jpg 320w,</span></span></span><br><span class="line"><span class="tag"><span class="string">             elva-fairy-480w.jpg 480w,</span></span></span><br><span class="line"><span class="tag"><span class="string">             elva-fairy-800w.jpg 800w&quot;</span></span></span><br><span class="line">     &lt;!-- sizes 括号内的是条件 括号外的是前面条件为真时采用的样式--&gt;</span><br><span class="line">     sizes=&quot;(max-width: 320px) 280px,</span><br><span class="line">            (max-width: 480px) 440px,</span><br><span class="line">            800px&quot; <span class="comment">&lt;!--无条件的是默认样式--&gt;</span></span><br><span class="line">     src=&quot;elva-fairy-800w.jpg&quot; alt=&quot;Elva dressed as a fairy&quot;&gt;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p><code>&lt;picture&gt;</code>的应用</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">​	&#96;&#96;&#96;&lt;soucre&gt;&#96;&#96;&#96;包含media srcset sizes属性</span><br><span class="line"></span><br><span class="line">&#96;&#96;&#96;html</span><br><span class="line">&lt;source media&#x3D;&quot;(maxwidth:799px)&quot;srcset&#x3D;&quot;exa.jpg&quot;&gt;</span><br><span class="line">&lt;!--media属性设置一个条件，为真则显示此图片--&gt;</span><br></pre></td></tr></table></figure>
-
-
-
-</li>
-</ul>
-<p>aaa</p>
-]]></content>
-      <tags>
-        <tag>HTML备忘</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>HTTP</title>
     <url>/2020/11/08/HTTP/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="HTTP"><a href="#HTTP" class="headerlink" title="HTTP"></a>HTTP</h1><h2 id="特点"><a href="#特点" class="headerlink" title="特点"></a>特点</h2><ul>
@@ -783,6 +673,116 @@
       </tags>
   </entry>
   <entry>
+    <title>HTML备忘</title>
+    <url>/2020/10/14/HTML%E5%A4%87%E5%BF%98/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="HTML备忘录"><a href="#HTML备忘录" class="headerlink" title="HTML备忘录"></a>HTML备忘录</h1><h2 id="标签相关"><a href="#标签相关" class="headerlink" title="标签相关"></a>标签相关</h2><ul>
+<li><p>块级元素自动换行而内联元素不自动换行</p>
+</li>
+<li><p>disabled = <em>value</em> 无论<em>value</em>值为什么，标签都会处于disabled状态，想要改变需将<em>value</em>置空</p>
+</li>
+<li><p>特殊字符引用表</p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th align="left">原义字符</th>
+<th align="left">等价字符引用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">&lt;”</td>
+<td align="left">&amp;lt</td>
+</tr>
+<tr>
+<td align="left">&gt;</td>
+<td align="left">&amp;gt</td>
+</tr>
+<tr>
+<td align="left">“</td>
+<td align="left">&amp;quot</td>
+</tr>
+<tr>
+<td align="left">‘</td>
+<td align="left">&amp;apos</td>
+</tr>
+<tr>
+<td align="left">&amp;</td>
+<td align="left">&amp;amp</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+</tbody></table>
+<ul>
+<li><p>使用相对路径优于绝对路径(舍去了DNS查找等操作)</p>
+</li>
+<li><p><code>&lt;script&gt;</code>放在<code> &lt;body&gt;</code>末尾前更优，这样可以确保脚本加载前浏览器已经解析HTML内容</p>
+</li>
+<li><p><code> &lt;a&gt;</code>标签的title属性作为悬停提示</p>
+</li>
+<li><p>href的mailto subject cc body等关键字，用于发送邮件</p>
+</li>
+<li><p>描述列表</p>
+</li>
+<li><p>块引用<code> &lt;blockquote cite=&quot;url&quot;&gt;&lt;/blockquote&gt;</code></p>
+</li>
+<li><p>行内引用<code>&lt;q cite=&quot;url&quot;&gt;</code></p>
+</li>
+<li><p>缩略语<code>&lt;abbr title=&quot;..&quot;&gt;&lt;/abbr&gt;</code></p>
+</li>
+<li><p>保留空格渲染<code>&lt;pre&gt;content&lt;/pre&gt;</code></p>
+</li>
+<li><p>标记键盘输入<code>&lt;kbd&gt;&lt;/kbd&gt;</code></p>
+</li>
+<li><p>换行<code>&lt;br&gt;</code></p>
+</li>
+<li><p>水平线<code>&lt;hr&gt;</code></p>
+</li>
+<li><p>嵌入其他网页<code>&lt;iframe&gt;</code></p>
+<p>属性：</p>
+<p>allowfullscreen：可设置全屏</p>
+<p>frameborder：边框</p>
+<p>（尽量用js设置src）</p>
+</li>
+<li><p>嵌入PDF,SVG,Flash—<code>&lt;embed&gt;&lt;object&gt;</code></p>
+</li>
+<li><p>视频标签:<code>&lt;video&gt;</code></p>
+<p>属性：</p>
+<p>autoplay:自动播放</p>
+<p>loop:循环</p>
+<p>muted:静音播放</p>
+<p>poster:封面图</p>
+<p>preload:缓冲（”none”：不缓冲 “auto”：页面加载自动缓冲）</p>
+</li>
+<li><p>权限管理 sandbox属性</p>
+</li>
+<li><p>表格相关</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">table</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- colgroup 必须包含在table标签内--&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">colgroup</span>&gt;</span> </span><br><span class="line">		<span class="tag">&lt;<span class="name">col</span> <span class="attr">style</span>=<span class="string">&quot;#&quot;</span> <span class="attr">span</span>=<span class="string">&quot;x&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">colgroup</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- col标签可以指定每一行的属性，span是需要设置属性的行数--&gt;</span></span><br><span class="line">        <span class="comment">&lt;!-- table row --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">tr</span>&gt;</span> </span><br><span class="line">    <span class="tag">&lt;<span class="name">td</span>&gt;</span> </span><br><span class="line">        <span class="comment">&lt;!-- table data --&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">table</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>​    </p>
+</li>
+</ul>
+<h2 id="响应式设计"><a href="#响应式设计" class="headerlink" title="响应式设计"></a>响应式设计</h2><ul>
+<li><p>```<img>``的 srcset和sizes属性</p>
+<p>举例:</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!--srcset是一个文件列表，后面以w为单位的数据是文件的像素大小--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">img</span> <span class="attr">srcset</span>=<span class="string">&quot;elva-fairy-320w.jpg 320w,</span></span></span><br><span class="line"><span class="tag"><span class="string">             elva-fairy-480w.jpg 480w,</span></span></span><br><span class="line"><span class="tag"><span class="string">             elva-fairy-800w.jpg 800w&quot;</span></span></span><br><span class="line">     &lt;!-- sizes 括号内的是条件 括号外的是前面条件为真时采用的样式--&gt;</span><br><span class="line">     sizes=&quot;(max-width: 320px) 280px,</span><br><span class="line">            (max-width: 480px) 440px,</span><br><span class="line">            800px&quot; <span class="comment">&lt;!--无条件的是默认样式--&gt;</span></span><br><span class="line">     src=&quot;elva-fairy-800w.jpg&quot; alt=&quot;Elva dressed as a fairy&quot;&gt;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><code>&lt;picture&gt;</code>的应用</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">​	&#96;&#96;&#96;&lt;soucre&gt;&#96;&#96;&#96;包含media srcset sizes属性</span><br><span class="line"></span><br><span class="line">&#96;&#96;&#96;html</span><br><span class="line">&lt;source media&#x3D;&quot;(maxwidth:799px)&quot;srcset&#x3D;&quot;exa.jpg&quot;&gt;</span><br><span class="line">&lt;!--media属性设置一个条件，为真则显示此图片--&gt;</span><br></pre></td></tr></table></figure>
+
+
+
+</li>
+</ul>
+<p>aaa</p>
+]]></content>
+      <tags>
+        <tag>HTML备忘</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>JS备忘</title>
     <url>/2020/10/21/JS%E5%A4%87%E5%BF%98/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="Start"><a href="#Start" class="headerlink" title="Start"></a>Start</h1><h2 id="一般事件绑定"><a href="#一般事件绑定" class="headerlink" title="一般事件绑定"></a>一般事件绑定</h2><ul>
@@ -908,20 +908,6 @@ function func()&#123;
 <h2 id="AJAX"><a href="#AJAX" class="headerlink" title="AJAX"></a>AJAX</h2>]]></content>
   </entry>
   <entry>
-    <title>RPC相关</title>
-    <url>/2020/10/21/RPC%E7%9B%B8%E5%85%B3/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="流程"><a href="#流程" class="headerlink" title="流程"></a>流程</h1><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">graph LR</span><br><span class="line">本地--&gt;|要执行的函数与函数参数|服务端</span><br><span class="line">服务端--&gt;|通过回调函数传回函数结果|本地</span><br></pre></td></tr></table></figure>
-
-<p>以上传参过程均通过AJAX</p>
-<h1 id="传输的数据"><a href="#传输的数据" class="headerlink" title="传输的数据"></a>传输的数据</h1><p><strong>本地：服务端的函数与函数参数</strong></p>
-<p><strong>服务端：回调执行结果</strong></p>
-<h1 id="序列化与反序列化"><a href="#序列化与反序列化" class="headerlink" title="序列化与反序列化"></a>序列化与反序列化</h1><p>将JSON序列化为PHP形式</p>
-<h1 id="RPC"><a href="#RPC" class="headerlink" title="RPC"></a>RPC</h1><p>RPC(Remote Procedure Call)指的是远程过程调用，简单的说，RPC就是从一台机器上通过参数传递的方式调用另一台机器上的一个函数或方法并得到响应结果。</p>
-<p>即本地来调用远程计算机上的某个函数</p>
-<p>我们不用关心RPC的通讯细节只需要使用上层接口</p>
-]]></content>
-  </entry>
-  <entry>
     <title>ReadME!!</title>
     <url>/2220/09/20/ReadME!!!/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><ul>
@@ -935,12 +921,18 @@ function func()&#123;
       </tags>
   </entry>
   <entry>
-    <title>mySQL基础</title>
-    <url>/2020/11/30/mySQL%E5%9F%BA%E7%A1%80/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>]]></content>
-      <tags>
-        <tag>password</tag>
-      </tags>
+    <title>RPC相关</title>
+    <url>/2020/10/21/RPC%E7%9B%B8%E5%85%B3/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="流程"><a href="#流程" class="headerlink" title="流程"></a>流程</h1><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">graph LR</span><br><span class="line">本地--&gt;|要执行的函数与函数参数|服务端</span><br><span class="line">服务端--&gt;|通过回调函数传回函数结果|本地</span><br></pre></td></tr></table></figure>
+
+<p>以上传参过程均通过AJAX</p>
+<h1 id="传输的数据"><a href="#传输的数据" class="headerlink" title="传输的数据"></a>传输的数据</h1><p><strong>本地：服务端的函数与函数参数</strong></p>
+<p><strong>服务端：回调执行结果</strong></p>
+<h1 id="序列化与反序列化"><a href="#序列化与反序列化" class="headerlink" title="序列化与反序列化"></a>序列化与反序列化</h1><p>将JSON序列化为PHP形式</p>
+<h1 id="RPC"><a href="#RPC" class="headerlink" title="RPC"></a>RPC</h1><p>RPC(Remote Procedure Call)指的是远程过程调用，简单的说，RPC就是从一台机器上通过参数传递的方式调用另一台机器上的一个函数或方法并得到响应结果。</p>
+<p>即本地来调用远程计算机上的某个函数</p>
+<p>我们不用关心RPC的通讯细节只需要使用上层接口</p>
+]]></content>
   </entry>
   <entry>
     <title>Vue相关</title>
@@ -1189,6 +1181,41 @@ function func()&#123;
 ]]></content>
       <tags>
         <tag>buliding...</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>java相关</title>
+    <url>/2020/12/03/java%E7%9B%B8%E5%85%B3/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="包"><a href="#包" class="headerlink" title="包"></a>包</h1><p>Java定义了一种名字空间，称之为包：<code>package</code>。一个类总是属于某个包，类名（比如<code>Person</code>）只是一个简写，真正的完整类名是<code>包名.类名</code>。</p>
+<p>包作用域是指一个类允许访问同一个<code>package</code>的没有<code>public</code>、<code>private</code>修饰的<code>class</code>，以及没有<code>public</code>、<code>protected</code>、<code>private</code>修饰的字段和方法。</p>
+<h1 id="关键字作用域"><a href="#关键字作用域" class="headerlink" title="关键字作用域"></a>关键字作用域</h1><h2 id="public"><a href="#public" class="headerlink" title="public"></a>public</h2><ul>
+<li>class,interface可被其他任何class访问</li>
+<li>class内部定义的字段必须要先有此class的访问权限才能访问</li>
+</ul>
+<p>**PS:**如果不确定是否需要<code>public</code>，就不声明为<code>public</code>，即尽可能少地暴露对外的字段和方法。</p>
+<h2 id="private"><a href="#private" class="headerlink" title="private"></a>private</h2><ul>
+<li><p>无法被其他类访问</p>
+</li>
+<li><p>可以被定义private字段的class的内部class访问</p>
+</li>
+</ul>
+<h2 id="protected"><a href="#protected" class="headerlink" title="protected"></a>protected</h2><p><code>protected</code>作用于继承关系。定义为<code>protected</code>的字段和方法可以被子类访问，以及子类的子类</p>
+<h2 id="final"><a href="#final" class="headerlink" title="final"></a>final</h2><ul>
+<li><p>作用于class阻止class被继承</p>
+</li>
+<li><p>作用于class内的方法阻止方法被子类覆写</p>
+</li>
+<li><p>作用于变量阻止被重新赋值</p>
+</li>
+</ul>
+]]></content>
+  </entry>
+  <entry>
+    <title>mySQL基础</title>
+    <url>/2020/11/30/mySQL%E5%9F%BA%E7%A1%80/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>]]></content>
+      <tags>
+        <tag>password</tag>
       </tags>
   </entry>
   <entry>
