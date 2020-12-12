@@ -109,14 +109,14 @@
   </url>
   
   <url>
-    <loc>http://example.com/tags/HTML%E5%A4%87%E5%BF%98/</loc>
+    <loc>http://example.com/tags/%E6%95%B4%E7%90%86%E8%87%AA%E8%8F%9C%E9%B8%9F%E6%95%99%E7%A8%8B/</loc>
     <lastmod>2020-12-12</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://example.com/tags/%E6%95%B4%E7%90%86%E8%87%AA%E8%8F%9C%E9%B8%9F%E6%95%99%E7%A8%8B/</loc>
+    <loc>http://example.com/tags/HTML%E5%A4%87%E5%BF%98/</loc>
     <lastmod>2020-12-12</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -137,14 +137,14 @@
   </url>
   
   <url>
-    <loc>http://example.com/tags/%E5%85%B3%E6%8E%89/</loc>
+    <loc>http://example.com/tags/%E6%88%91%E5%A4%A7%E6%84%8F%E4%BA%86%E5%95%8A%EF%BC%8C%E6%B2%A1%E6%9C%89%E9%97%AA/</loc>
     <lastmod>2020-12-12</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://example.com/tags/%E6%88%91%E5%A4%A7%E6%84%8F%E4%BA%86%E5%95%8A%EF%BC%8C%E6%B2%A1%E6%9C%89%E9%97%AA/</loc>
+    <loc>http://example.com/tags/%E5%85%B3%E6%8E%89/</loc>
     <lastmod>2020-12-12</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
