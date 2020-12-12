@@ -71,7 +71,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> Word count:</span>
-            <span class="post-count">255</span>
+            <span class="post-count">355</span>
         </span>
     </span>
 
@@ -117,6 +117,16 @@
 <li><p>作用于变量阻止被重新赋值</p>
 </li>
 </ul>
+<h1 id="classpath和jar"><a href="#classpath和jar" class="headerlink" title="classpath和jar"></a>classpath和jar</h1><p><code>classpath</code>是JVM用到的一个环境变量，它用来指示JVM如何搜索<code>class</code></p>
+<p>假设<code>classpath</code>是<code>.;C:\work\project1\bin;C:\shared</code>，当JVM在加载<code>abc.xyz.Hello</code>这个类时，会依次查找：</p>
+<ul>
+<li>&lt;当前目录&gt;\abc\xyz\Hello.class</li>
+<li>C:\work\project1\bin\abc\xyz\Hello.class</li>
+<li>C:\shared\abc\xyz\Hello.class</li>
+</ul>
+<p>在启动JVM时设置<code>classpath</code></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">java -classpath .;C:\work\project1\bin;C:\shared abc.xyz.Hello</span><br><span class="line"></span><br><span class="line">java -cp .;C:\work\project1\bin;C:\shared abc.xyz.Hello</span><br></pre></td></tr></table></figure>
+
  
       <!-- reward -->
       
@@ -198,11 +208,11 @@
    
   <nav class="article-nav">
     
-      <a href="/2220/09/20/ReadME!!!/" class="article-nav-link">
+      <a href="/2020/12/12/Vue%E7%BB%84%E4%BB%B6/" class="article-nav-link">
         <strong class="article-nav-caption">上一篇</strong>
         <div class="article-nav-title">
           
-            ReadME!!
+            (no title)
           
         </div>
       </a>

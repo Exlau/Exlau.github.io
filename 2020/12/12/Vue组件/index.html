@@ -9,7 +9,7 @@
     
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
   <title>
-    Vue相关 |  
+     
   </title>
   <meta name="generator" content="hexo-theme-ayer">
   
@@ -52,26 +52,17 @@
   data-scroll-reveal
 >
   <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h1 class="article-title sea-center" style="border-left:0" itemprop="name">
-  Vue相关
-</h1>
- 
-
-    </header>
      
     <div class="article-meta">
-      <a href="/2020/11/25/Vue%E7%BB%84%E4%BB%B6/" class="article-date">
-  <time datetime="2020-11-25T08:58:59.000Z" itemprop="datePublished">2020-11-25</time>
+      <a href="/2020/12/12/Vue%E7%BB%84%E4%BB%B6/" class="article-date">
+  <time datetime="2020-12-12T11:31:59.000Z" itemprop="datePublished">2020-12-12</time>
 </a>   
 <div class="word_count">
     <span class="post-time">
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> Word count:</span>
-            <span class="post-count">3.3k</span>
+            <span class="post-count">5.5k</span>
         </span>
     </span>
 
@@ -80,7 +71,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-book-open-line"></i>
             <span class="post-meta-item-text"> Reading time≈</span>
-            <span class="post-count">16 min</span>
+            <span class="post-count">26 min</span>
         </span>
     </span>
 </div>
@@ -291,7 +282,7 @@
 
 <p>runtime-only不能编译vue模板</p>
 <p>runtime-compiler可以编译</p>
-<h1 id="Vue如何简化开发"><a href="#Vue如何简化开发" class="headerlink" title="Vue如何简化开发"></a>Vue如何简化开发</h1><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> app = <span class="keyword">new</span> Vue(&#123;</span><br><span class="line">	el:<span class="string">&#x27;#app&#x27;</span>,</span><br><span class="line">	template:<span class="string">`</span></span><br><span class="line"><span class="string">	&lt;div&gt;&#123;&#123;message&#125;&#125;&lt;/div&gt;</span></span><br><span class="line"><span class="string">	`</span>,</span><br><span class="line">	data&#123;</span><br><span class="line">		message:<span class="string">&#x27;hello&#x27;</span>,</span><br><span class="line">	&#125;,</span><br><span class="line">	<span class="comment">//这里Vue会把template的内容直接拷贝到挂载的html文档上</span></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<h2 id="Vue如何简化开发"><a href="#Vue如何简化开发" class="headerlink" title="Vue如何简化开发"></a>Vue如何简化开发</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> app = <span class="keyword">new</span> Vue(&#123;</span><br><span class="line">	el:<span class="string">&#x27;#app&#x27;</span>,</span><br><span class="line">	template:<span class="string">`</span></span><br><span class="line"><span class="string">	&lt;div&gt;&#123;&#123;message&#125;&#125;&lt;/div&gt;</span></span><br><span class="line"><span class="string">	`</span>,</span><br><span class="line">	data&#123;</span><br><span class="line">		message:<span class="string">&#x27;hello&#x27;</span>,</span><br><span class="line">	&#125;,</span><br><span class="line">	<span class="comment">//这里Vue会把template的内容直接拷贝到挂载的html文档上</span></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
 
 <ul>
 <li>第一种开发方式</li>
@@ -332,10 +323,200 @@
 </ul>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//webpack.config.js</span></span><br><span class="line">&#123;</span><br><span class="line">    test: <span class="regexp">/\.vue$/</span>,</span><br><span class="line">    use: [<span class="string">&#x27;vue-loader&#x27;</span>]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<h1 id="plugin"><a href="#plugin" class="headerlink" title="plugin"></a>plugin</h1><h2 id="添加一个版权提示插件"><a href="#添加一个版权提示插件" class="headerlink" title="添加一个版权提示插件"></a>添加一个版权提示插件</h2><p>BannerPlugin是webpack自带的所以不用另外下载</p>
+<h2 id="plugin"><a href="#plugin" class="headerlink" title="plugin"></a>plugin</h2><h3 id="添加一个版权提示插件"><a href="#添加一个版权提示插件" class="headerlink" title="添加一个版权提示插件"></a>添加一个版权提示插件</h3><p>BannerPlugin是webpack自带的所以不用另外下载</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//webpack.config.js</span></span><br><span class="line"><span class="keyword">const</span> webpack = <span class="built_in">require</span>(<span class="string">&#x27;webpack&#x27;</span>)</span><br><span class="line"><span class="built_in">module</span>.exports=&#123;</span><br><span class="line">	plugins:[</span><br><span class="line">		<span class="keyword">new</span> webpack.BannerPlugin(<span class="string">&quot;最终解释权归EE所有&quot;</span>)</span><br><span class="line">	]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p>P87</p>
+<h3 id="HtmlWebpackPlugin"><a href="#HtmlWebpackPlugin" class="headerlink" title="HtmlWebpackPlugin"></a>HtmlWebpackPlugin</h3><p>生成index.html到dist</p>
+<ul>
+<li>安装</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install html-webpack-plugin --save-dev</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>配置</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//webpack.config.js</span></span><br><span class="line"><span class="keyword">const</span> HtmlWebpackPlugin = <span class="built_in">require</span>(<span class="string">&#x27;html-webpack-plugin&#x27;</span>)</span><br><span class="line"></span><br><span class="line">plugins:[</span><br><span class="line">	<span class="keyword">new</span> HtmlWebpackPlugin(&#123;</span><br><span class="line">        template:<span class="string">&#x27;index.html&#x27;</span><span class="comment">//根据index.html为模板生成</span></span><br><span class="line">    &#125;)</span><br><span class="line">]</span><br></pre></td></tr></table></figure>
+
+<h3 id="JS压缩插件"><a href="#JS压缩插件" class="headerlink" title="JS压缩插件"></a>JS压缩插件</h3><ul>
+<li>安装</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install uglifyjs-webpack-plugin --save-dev</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>配置</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> UglifyjsWebpackPlugin = <span class="built_in">require</span>(<span class="string">&#x27;uglifyjs-webpack-plugin&#x27;</span>)</span><br><span class="line">plugins:&#123;</span><br><span class="line">    <span class="keyword">new</span> UgilifyjsWebpackPlugin()</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="本地node服务器"><a href="#本地node服务器" class="headerlink" title="本地node服务器"></a>本地node服务器</h2><p>本地内存启用服务器，加快调试速度</p>
+<ul>
+<li>安装</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npn install webpack-dev-server --save-dev</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>配置</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//webpack.config.js</span></span><br><span class="line">devServer:&#123;</span><br><span class="line">	contentBase:<span class="string">&#x27;./dist&#x27;</span>,<span class="comment">//选定服务dist文件夹</span></span><br><span class="line">    inline:<span class="literal">true</span>,<span class="comment">//实时监听</span></span><br><span class="line">    port:<span class="comment">//端口号</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//package.json</span></span><br><span class="line"><span class="string">&quot;script&quot;</span>:&#123;</span><br><span class="line">	<span class="string">&quot;dev&quot;</span>:<span class="string">&quot;webpack-dev-server --open&quot;</span><span class="comment">//映射到dev</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>启动</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm run dev</span><br></pre></td></tr></table></figure>
+
+<h2 id="webpack开发时配置和发布时配置分离"><a href="#webpack开发时配置和发布时配置分离" class="headerlink" title="webpack开发时配置和发布时配置分离"></a>webpack开发时配置和发布时配置分离</h2><p>生产和开发时的配置大多数时都不相同，把不同时期的配置文件分开管理是一个比较好的做法</p>
+<p>项目根目录下建立文件夹config,包含一下三个文件</p>
+<p>**base.config.js:**基础配置</p>
+<p><strong>dev.config.js</strong>开发时配置</p>
+<p><strong>prod.config.js</strong>生产打包配置</p>
+<ul>
+<li>安装webpack-merge</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install webpack-merge --save-dev</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>配置</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//dev.config.js</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> webpackMerge = <span class="built_in">require</span>(<span class="string">&#x27;webpack-merge&#x27;</span>)</span><br><span class="line"><span class="keyword">const</span> baseConfig = <span class="built_in">require</span>(<span class="string">&#x27;./base.config.js&#x27;</span>)<span class="comment">//拿到base.config.js的内容</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">module</span>.exports = webpackMerge(baseConfig,&#123;</span><br><span class="line">    plugins:[</span><br><span class="line">        ...<span class="comment">//开发时需要的plugins</span></span><br><span class="line">    ]</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//prod.config.js</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> webpackMerge = <span class="built_in">require</span>(<span class="string">&#x27;webpack-merge&#x27;</span>)</span><br><span class="line"><span class="keyword">const</span> baseConfig = <span class="built_in">require</span>(<span class="string">&#x27;./base.config.js&#x27;</span>)<span class="comment">//拿到base.config.js的内容</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">module</span>.exports = webpackMerge(baseConfig,&#123;</span><br><span class="line">    plugins:[</span><br><span class="line">        ...<span class="comment">//生产打包需要的plugins</span></span><br><span class="line">    ]</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<p><strong>我们需要重新指定package.json里的script项才能使得命令绑定且使用我们想要的配置文件</strong></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//package.json</span></span><br><span class="line"><span class="string">&quot;script&quot;</span>:&#123;</span><br><span class="line">	<span class="string">&quot;bulid&quot;</span>: <span class="string">&quot;webpack --config ./bulid/prod.config.js&quot;</span>,</span><br><span class="line">	<span class="string">&quot;dev&quot;</span>:<span class="string">&quot;webpack-dev-server --open --config ./bulid/dev.config.js&quot;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>执行打包</strong></p>
+<p>​    发现打包的文件夹dist放在了当前config目录下</p>
+<p>修改base.config.js下</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">path: path.resolve(__dirname, <span class="string">&#x27;../dist&#x27;</span>),</span><br></pre></td></tr></table></figure>
+
+<h1 id="Vue-CLI-version-3"><a href="#Vue-CLI-version-3" class="headerlink" title="Vue CLI(version-3)"></a>Vue CLI(version-3)</h1><p>快速生成Vue开发环境，自动配置webpack</p>
+<h2 id="cnpm"><a href="#cnpm" class="headerlink" title="cnpm"></a>cnpm</h2><ul>
+<li>安装</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g cnpm --registry&#x3D;https:&#x2F;&#x2F;registry.npm.taobao.org</span><br></pre></td></tr></table></figure>
+
+<h2 id="CLI安装"><a href="#CLI安装" class="headerlink" title="CLI安装"></a>CLI安装</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g @vue&#x2F;cli@版本号vue -v</span><br></pre></td></tr></table></figure>
+
+<h2 id="VueCLI-version-2"><a href="#VueCLI-version-2" class="headerlink" title="VueCLI(version-2)"></a>VueCLI(version-2)</h2><ul>
+<li>创建项目</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vue init webpack 项目名</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>流程</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">Project name (项目名)</span><br><span class="line">Project description  &#x2F;&#x2F;项目描述</span><br><span class="line">Author &#x2F;&#x2F;作者</span><br><span class="line"></span><br><span class="line">Runtime + Compiler:</span><br><span class="line">Runtime-only:</span><br><span class="line"></span><br><span class="line">Install vue-router?</span><br><span class="line">Use ESlint to lint your code?  &#x2F;&#x2F;检查代码规范</span><br><span class="line">Set up unit tests              &#x2F;&#x2F;单元测试</span><br><span class="line">Setup e2e tests with Nightwatch &#x2F;&#x2F;依赖Nightwatch的端到端测试</span><br></pre></td></tr></table></figure>
+
+<h2 id="runtimeonly"><a href="#runtimeonly" class="headerlink" title="runtimeonly"></a>runtimeonly</h2><p>此版下vue工作流程</p>
+<p>render -&gt; virtual dom -&gt;DOM</p>
+<h3 id="render"><a href="#render" class="headerlink" title="render"></a>render</h3><p><code>template</code>会被解析为render</p>
+<p>.vue文件会被解析为render可处理的对象</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//函数原型</span></span><br><span class="line">render: <span class="function"><span class="keyword">function</span> (<span class="params">creatElement</span>)</span>&#123;</span><br><span class="line">	<span class="keyword">return</span> createElement(<span class="string">&#x27;h2&#x27;</span>,</span><br><span class="line">          &#123;<span class="attr">class</span>:<span class="string">&#x27;box&#x27;</span>&#125;,</span><br><span class="line">          [<span class="string">&#x27;content&#x27;</span>,createElement(<span class="string">&#x27;button&#x27;</span>,[button])]         )</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//这个render将创建一个</span></span><br><span class="line"><span class="comment">//&lt;h2 class=&#x27;box&#x27;&gt;content&lt;button&gt;button&lt;/button&gt;&lt;/h2&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>传入组件对象</strong></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> cpn = &#123;</span><br><span class="line">	template:<span class="string">&#x27;&lt;div&gt;hello &#123;&#123;message&#125;&#125;&lt;/div&gt;&#x27;</span>,</span><br><span class="line">    data()&#123;</span><br><span class="line">        <span class="keyword">return</span>&#123;</span><br><span class="line">            message:ee</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">render:<span class="function"><span class="keyword">function</span>(<span class="params">creatElement</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">return</span> creatElement(cpn)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="runtime-compiler"><a href="#runtime-compiler" class="headerlink" title="runtime + compiler"></a>runtime + compiler</h2><p>此版下vue工作流程</p>
+<p>template -&gt; ast -&gt; render -&gt; virtual dom -&gt;DOM</p>
+<h2 id="ES6箭头函数"><a href="#ES6箭头函数" class="headerlink" title="ES6箭头函数"></a>ES6箭头函数</h2><p>多用于将函数作为参数传入时</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//传统函数</span></span><br><span class="line"><span class="keyword">const</span> f = <span class="function"><span class="keyword">function</span>(<span class="params">num</span>)</span>&#123;</span><br><span class="line">	</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//箭头函数</span></span><br><span class="line"><span class="keyword">const</span> f = <span class="function">(<span class="params">num</span>) =&gt;</span>&#123;</span><br><span class="line">    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="单个参数简写"><a href="#单个参数简写" class="headerlink" title="单个参数简写"></a>单个参数简写</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//一般箭头函数</span></span><br><span class="line"><span class="keyword">const</span> f = <span class="function">(<span class="params">num</span>) =&gt;</span>&#123;</span><br><span class="line">    <span class="keyword">return</span> num*num</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//省略后</span></span><br><span class="line"><span class="keyword">const</span> f = <span class="function"><span class="params">num</span> =&gt;</span>&#123;</span><br><span class="line">    <span class="keyword">return</span> num*num</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="仅一行代码时简写"><a href="#仅一行代码时简写" class="headerlink" title="仅一行代码时简写"></a>仅一行代码时简写</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//一般写法</span></span><br><span class="line"><span class="keyword">const</span> f = <span class="function">(<span class="params">num</span>) =&gt;</span>&#123;</span><br><span class="line">    <span class="keyword">return</span> num*num</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//省略写法</span></span><br><span class="line"><span class="keyword">const</span> f = <span class="function">(<span class="params">num</span>) =&gt;</span> num*num</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">//-----------无返回值时--------------//</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//一般写法</span></span><br><span class="line"><span class="keyword">const</span> f = <span class="function">(<span class="params">num</span>) =&gt;</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(num) </span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//简写</span></span><br><span class="line"><span class="keyword">const</span> f = <span class="function">(<span class="params">num</span>) =&gt;</span> <span class="built_in">console</span>.log(num)</span><br></pre></td></tr></table></figure>
+
+<h3 id="箭头函数中this的指向问题"><a href="#箭头函数中this的指向问题" class="headerlink" title="箭头函数中this的指向问题"></a>箭头函数中this的指向问题</h3><h1 id="VUE-router"><a href="#VUE-router" class="headerlink" title="VUE-router"></a>VUE-router</h1><h2 id="后端路由"><a href="#后端路由" class="headerlink" title="后端路由"></a>后端路由</h2><p>由后端处理URL和HTML文档的映射关系</p>
+<h2 id="前后端分离"><a href="#前后端分离" class="headerlink" title="前后端分离"></a>前后端分离</h2><p>后端只提供数据，前端请求后端数据并展示</p>
+<h2 id="前端路由"><a href="#前端路由" class="headerlink" title="前端路由"></a>前端路由</h2><p>SPA页面</p>
+<p>仅一个静态资源(html css js) 页面</p>
+<p>根据用户意愿来抽离出静态资源的某部分来展示</p>
+<h2 id="vue-router"><a href="#vue-router" class="headerlink" title="vue-router"></a>vue-router</h2><ul>
+<li>安装</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install --save vue-router</span><br></pre></td></tr></table></figure>
+
+<p>**PS:**CLI创建时可自动安装</p>
+<h3 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h3><ul>
+<li><p>src下创建router文件夹</p>
+</li>
+<li><p>router下创建一个index.js</p>
+</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//index.js</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//引入</span></span><br><span class="line"><span class="keyword">import</span> VueRouter <span class="keyword">from</span> <span class="string">&#x27;vue-router&#x27;</span></span><br><span class="line"><span class="keyword">import</span> Vue <span class="keyword">from</span> <span class="string">&#x27;vue&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//安装插件</span></span><br><span class="line">Vue.use(VueRouter)</span><br><span class="line"></span><br><span class="line"><span class="comment">//创建路由对象</span></span><br><span class="line"><span class="keyword">const</span> router = <span class="keyword">new</span> VueRouter(&#123;</span><br><span class="line">  <span class="comment">//配置路径和组件的映射关系</span></span><br><span class="line">  routes: [</span><br><span class="line">      &#123;</span><br><span class="line">        path:<span class="string">&#x27;&#x27;</span>,</span><br><span class="line">          <span class="comment">//重定向默认网页到首页home</span></span><br><span class="line">        redirect:<span class="string">&#x27;/home&#x27;</span></span><br><span class="line">      &#125;,</span><br><span class="line">    &#123;</span><br><span class="line">        path:<span class="string">&#x27; &#x27;</span>,</span><br><span class="line">        component:</span><br><span class="line">    &#125;</span><br><span class="line">  ]，</span><br><span class="line">    <span class="comment">//将路由模式选择为history模式</span></span><br><span class="line">    mode:<span class="string">&#x27;history&#x27;</span></span><br><span class="line">&#125;)</span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> router</span><br></pre></td></tr></table></figure>
+
+
+
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//main.js</span></span><br><span class="line"><span class="keyword">import</span> router <span class="keyword">from</span> <span class="string">&#x27;./router/index.js&#x27;</span></span><br><span class="line"><span class="keyword">new</span> Vue(&#123;</span><br><span class="line">	router: router</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<h3 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h3><ul>
+<li>router-link</li>
+<li>router-view</li>
+</ul>
+<p>在根vue组件的template中添加</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!--router-link会渲染为通向to的&lt;a&gt;&lt;/a&gt;标签--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">router-link</span> <span class="attr">to</span>=<span class="string">&#x27;/home1&#x27;</span>&gt;</span><span class="tag">&lt;/<span class="name">router-link</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">router-link</span> <span class="attr">to</span>=<span class="string">&#x27;/home2&#x27;</span>&gt;</span><span class="tag">&lt;/<span class="name">router-link</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">router-link</span> <span class="attr">to</span>=<span class="string">&#x27;/home3&#x27;</span>&gt;</span><span class="tag">&lt;/<span class="name">router-link</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!--router-view用来显示所指向的组件内容--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">router-view</span>&gt;</span><span class="tag">&lt;/<span class="name">router-view</span>&gt;</span> </span><br></pre></td></tr></table></figure>
+
+<hr>
+<h3 id="router-link详解"><a href="#router-link详解" class="headerlink" title="router-link详解"></a>router-link详解</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">router-link</span> <span class="attr">to</span>=<span class="string">&#x27;&#x27;</span> <span class="attr">tag</span>=<span class="string">&#x27;&#x27;</span> <span class="attr">replace</span>&gt;</span><span class="tag">&lt;/<span class="name">router-link</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!--</span></span><br><span class="line"><span class="comment">to属性:指明路由到的地址</span></span><br><span class="line"><span class="comment">tag属性:指明router-link渲染为什么标签，默认为&lt;a&gt;</span></span><br><span class="line"><span class="comment">replace:有此属性表示为replace模式路由</span></span><br><span class="line"><span class="comment">--&gt;</span></span><br><span class="line"><span class="comment">&lt;!--被点击后，渲染后的标签会添加一个class--&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="手动router-link"><a href="#手动router-link" class="headerlink" title="手动router-link"></a>手动router-link</h4><p>通过监听点击事件，执行<code>this.$router.push(&#39;/home&#39;)</code>或者<code>this.$router.replace(&#39;/home&#39;)</code></p>
+<p><strong>$router</strong>是vue默认添加的一个数据 </p>
+<h3 id="动态路由"><a href="#动态路由" class="headerlink" title="动态路由"></a>动态路由</h3><h4 id="案例"><a href="#案例" class="headerlink" title="案例"></a>案例</h4><p>例：一个用户名为EE，userID：EE9696</p>
+<p>我们要进入这个user的页面 即：<code>(/user/EE96966)</code>就需要动态路由</p>
+<p>并且我们需要把此user 的ID：EE展示在其页面上</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//router/index.js</span></span><br><span class="line">route:[</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="comment">//动态绑定userid router-link的to会覆盖此属性</span></span><br><span class="line">        path:user/:userid </span><br><span class="line">        <span class="comment">//当然使用user.vue前需要import</span></span><br><span class="line">        component: user </span><br><span class="line">    &#125;</span><br><span class="line">]</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!--App.vue--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">template</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">router-link</span> <span class="attr">:to</span>=<span class="string">&#x27;finalID-path&#x27;</span>&gt;</span><span class="tag">&lt;/<span class="name">router-link</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="javascript">	<span class="keyword">export</span> <span class="keyword">default</span> &#123;</span></span><br><span class="line"><span class="javascript">        name:<span class="string">&#x27;App&#x27;</span>,</span></span><br><span class="line">        data()&#123;</span><br><span class="line"><span class="javascript">            <span class="keyword">return</span>&#123;</span></span><br><span class="line"><span class="javascript">                name:EE    <span class="comment">//userName</span></span></span><br><span class="line"><span class="javascript">                ID:EE9696, <span class="comment">//需要的用户ID</span></span></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;,</span><br><span class="line">        computed:&#123;</span><br><span class="line"><span class="javascript">            <span class="comment">//得到finalID=/user/EE9696</span></span></span><br><span class="line">            finalID()&#123;</span><br><span class="line"><span class="javascript">                <span class="keyword">return</span> <span class="string">&#x27;/user/&#x27;</span>+<span class="built_in">this</span>.ID</span></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;,</span><br><span class="line">    &#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="route与与展示ID"><a href="#route与与展示ID" class="headerlink" title="$route与与展示ID"></a>$route与与展示ID</h4><p><strong>$route</strong>拿到的是当前活跃的路由</p>
+<p>​    注意与**$router<strong>区别:</strong>$router**拿到的是router对象</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!--user.vue--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">template</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line">    	<span class="tag">&lt;<span class="name">p</span>&gt;</span></span><br><span class="line">            ID:&#123;&#123;userID&#125;&#125;</span><br><span class="line">        <span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="javascript">	<span class="keyword">export</span> <span class="keyword">default</span>&#123;</span></span><br><span class="line">        computed:&#123;</span><br><span class="line">            userID()&#123;</span><br><span class="line"><span class="javascript">                <span class="comment">//this.$route指当前活跃的路由</span></span></span><br><span class="line"><span class="javascript">                <span class="comment">//params指参数</span></span></span><br><span class="line"><span class="javascript">                <span class="comment">//userID是配置路由时route的动态path--:userID</span></span></span><br><span class="line"><span class="javascript">                <span class="keyword">return</span> <span class="built_in">this</span>.$route.params.userID</span></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="路由懒加载"><a href="#路由懒加载" class="headerlink" title="路由懒加载"></a>路由懒加载</h2><p>将所有业务代码打包到同一个js文件在网站加载时会非常慢</p>
+<p>把不同路由对应的组件封装到不同的js中，这样在需要时再加载会提高效率，即路由的懒加载</p>
+<p><strong>使用方法</strong></p>
+<ul>
+<li>传统的配置方法</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//router/index.js</span></span><br><span class="line"><span class="keyword">import</span> home <span class="keyword">from</span> <span class="string">&#x27;../component/home.vue&#x27;</span></span><br><span class="line"><span class="keyword">const</span> routes = [</span><br><span class="line">    &#123;</span><br><span class="line">        path:<span class="string">&#x27;/home&#x27;</span>,</span><br><span class="line">        component:<span class="string">&#x27;home&#x27;</span></span><br><span class="line">    &#125;</span><br><span class="line">]</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>懒加载配置方法</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//router/index.js</span></span><br><span class="line"><span class="keyword">const</span> routes = [</span><br><span class="line">    &#123;</span><br><span class="line">        path:<span class="string">&#x27;/home&#x27;</span>,</span><br><span class="line">        component:<span class="function">()=&gt;</span> <span class="keyword">import</span>(../component/home.vue)</span><br><span class="line">    &#125;</span><br><span class="line">]</span><br><span class="line"></span><br><span class="line"><span class="comment">//你也可以这样写</span></span><br><span class="line"><span class="keyword">const</span> home = <span class="function">() =&gt;</span> <span class="keyword">import</span>(../component/home.vue)</span><br><span class="line"><span class="keyword">const</span> routes =[</span><br><span class="line">    &#123;</span><br><span class="line">        path:<span class="string">&#x27;/home&#x27;</span>,</span><br><span class="line">        component<span class="string">&quot; home</span></span><br><span class="line"><span class="string">    &#125;</span></span><br><span class="line"><span class="string">]</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="路由嵌套"><a href="#路由嵌套" class="headerlink" title="路由嵌套"></a>路由嵌套</h2><h3 id="案例-1"><a href="#案例-1" class="headerlink" title="案例"></a>案例</h3><p>要在<code>/home</code>页面下设置<code>/home/news</code>和<code>/home/message</code></p>
+<h3 id="配置和使用"><a href="#配置和使用" class="headerlink" title="配置和使用"></a>配置和使用</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//router/index.js</span></span><br><span class="line"><span class="comment">//使用前引入，安装(省)</span></span><br><span class="line"><span class="keyword">const</span> routes:[</span><br><span class="line">    &#123;</span><br><span class="line">        path:<span class="string">&#x27;/home&#x27;</span>,</span><br><span class="line">        component:home,</span><br><span class="line">        children:[</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="comment">//嵌套的子组件路径前不加/</span></span><br><span class="line">                path:<span class="string">&#x27;news&#x27;</span>,</span><br><span class="line">                component:news,</span><br><span class="line">            &#125;，</span><br><span class="line">            &#123;</span><br><span class="line">            	path:<span class="string">&#x27;message&#x27;</span>,</span><br><span class="line">            	component:news</span><br><span class="line">			&#125;</span><br><span class="line">        ]</span><br><span class="line">    &#125;</span><br><span class="line">]</span><br></pre></td></tr></table></figure>
+
+<p>因为我们是在home页面下配置的嵌套子路由，所以我们要在home.vue下配置<code>router-link</code>和<code>router-view</code></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!--home.vue--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">template</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="comment">&lt;!--注意这里to必须是完整的路径，因为to不会切换到当前路径--&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">router-link</span> <span class="attr">to</span>=<span class="string">&#x27;/home/news&#x27;</span>&gt;</span>News<span class="tag">&lt;/<span class="name">router-link</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">router-link</span> <span class="attr">to</span>=<span class="string">&#x27;/home/message&#x27;</span>&gt;</span>Message<span class="tag">&lt;/<span class="name">router-link</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">router-view</span>&gt;</span><span class="tag">&lt;/<span class="name">router-view</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>PS:嵌套路由也可以默认重定向</strong></p>
+<h2 id="路由传参"><a href="#路由传参" class="headerlink" title="路由传参"></a>路由传参</h2><h3 id="params"><a href="#params" class="headerlink" title="params"></a>params</h3><ul>
+<li>路径配置格式:  <code>path: &#39;/router/:id&#39;</code>=&gt;形成的路径格式<code>/router/id(变值)</code></li>
+<li>获取：直接通过<code>&#123;&#123;$route.params.id(与path中的命名一致)&#125;&#125;</code>获取</li>
+</ul>
+<h3 id="query"><a href="#query" class="headerlink" title="query"></a>query</h3><ul>
+<li><p>路由配置格式：普通格式</p>
+</li>
+<li><p>router-link配置：这时的<code>to=&#39;&#39;</code>里是一个对象</p>
+<ul>
+<li>对象内容：</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">	path:&#39;&#39;&#x2F;&#x2F;路由的路径</span><br><span class="line">	query:&#123;</span><br><span class="line">	&#x2F;&#x2F;这里是传入的数据</span><br><span class="line">		data: value</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>获取：在相应的组件中通过<code>&#123;&#123;$route.query.**&#125;&#125;</code>获得</p>
+<ul>
+<li>$route会自动传入data中，所以可以直接获取</li>
+</ul>
+</li>
+</ul>
+<h3 id="router-amp-route详解"><a href="#router-amp-route详解" class="headerlink" title="$router &amp; $route详解"></a>$router &amp; $route详解</h3><h2 id="全局导航守卫"><a href="#全局导航守卫" class="headerlink" title="全局导航守卫"></a>全局导航守卫</h2><p>​    用于监听路由跳转的过程。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//router/index.js</span></span><br><span class="line">router.beforeEach(<span class="function">(<span class="params">to,<span class="keyword">from</span>,next</span>) =&gt;</span> &#123;</span><br><span class="line">	<span class="comment">//这里必须调用next()函数</span></span><br><span class="line">	next()</span><br><span class="line">    <span class="comment">//这里的CODE会在跳转时执行</span></span><br><span class="line">    CODE</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<p>p116</p>
  
       <!-- reward -->
       
@@ -406,7 +587,7 @@
     <a class="modal-close" href="javascript:;"><i class="ri-close-circle-line"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://example.com/2020/11/25/Vue%E7%BB%84%E4%BB%B6/" alt="微信分享二维码">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://example.com/2020/12/12/Vue%E7%BB%84%E4%BB%B6/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -419,19 +600,19 @@
    
   <nav class="article-nav">
     
-      <a href="/2020/11/30/mySQL%E5%9F%BA%E7%A1%80/" class="article-nav-link">
+      <a href="/2220/09/20/ReadME!!!/" class="article-nav-link">
         <strong class="article-nav-caption">上一篇</strong>
         <div class="article-nav-title">
           
-            mySQL基础
+            ReadME!!
           
         </div>
       </a>
     
     
-      <a href="/2020/11/08/%E5%BE%88%E5%BF%AB%E5%95%8A/" class="article-nav-link">
+      <a href="/2020/12/03/java%E7%9B%B8%E5%85%B3/" class="article-nav-link">
         <strong class="article-nav-caption">下一篇</strong>
-        <div class="article-nav-title">很快啊</div>
+        <div class="article-nav-title">java相关</div>
       </a>
     
   </nav>
