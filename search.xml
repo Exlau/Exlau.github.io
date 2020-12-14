@@ -599,6 +599,131 @@
       </tags>
   </entry>
   <entry>
+    <title>JS备忘</title>
+    <url>/2020/10/21/JS%E5%A4%87%E5%BF%98/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="Start"><a href="#Start" class="headerlink" title="Start"></a>Start</h1><h2 id="一般事件绑定"><a href="#一般事件绑定" class="headerlink" title="一般事件绑定"></a>一般事件绑定</h2><ul>
+<li><p><code>.onclick</code>：点击事件</p>
+</li>
+<li><p><code>.onfocus</code>：聚焦（选中）</p>
+</li>
+<li><p><code>.onblur</code>：解除聚焦</p>
+</li>
+<li><p><code>.onmouse(over/out)</code>：鼠标移入/移开</p>
+</li>
+<li><p><code>.onsubmit</code>：表单提交</p>
+</li>
+<li><p><code>.addEventListener(&#39;事件&#39;,函数)/removeEventListener(&#39;事件&#39;,函数)</code>：添加/移除，监听事件，可对一个对象的一个事件添加两个不同函数</p>
+</li>
+</ul>
+<h2 id="特殊对象"><a href="#特殊对象" class="headerlink" title="特殊对象"></a>特殊对象</h2><ul>
+<li>诸如<code>event evt e（可以是任何表示）</code>都是事件对象会默认传入事件绑定的函数，<code>event/evt/e.target</code>指刚刚发生事件的元素</li>
+</ul>
+<h2 id="继承"><a href="#继承" class="headerlink" title="继承"></a>继承</h2><ul>
+<li><p><code>Objet().</code>的属性不被继承，而<code>Object.prototype.</code>的属性被继承</p>
+</li>
+<li><p><code>.call()</code>：这个函数允许您调用一个在这个文件里别处定义的函数。第一个参数指明了在您运行这个函数时想对“<code>this</code>”指定的值，也就是说，您可以重新指定您调用的函数里所有“<code>this</code>”指向的对象。可以让构造器继承某个构造器的属性</p>
+</li>
+<li><p><code>newObj.prototype = Object.create(Obj.prototype)</code>这串代码使得newObj继承了Obj的方法</p>
+</li>
+<li><p><code>newObj.prototype.constructor = newObj</code>这使得newObj的prototype和constructior只想的newObj构造器本身，而不是调用call函数的对象的构造器</p>
+</li>
+<li><p><code>Obj.prototype.constructor===Obj()（构造方法）</code></p>
+</li>
+</ul>
+<h2 id="JSON"><a href="#JSON" class="headerlink" title="JSON"></a>JSON</h2><p><strong>纯数据，无函数</strong></p>
+<ul>
+<li>获取内部成员的方法类似对象</li>
+<li><code>.parse()</code>：接收json字符串，返回json对象</li>
+<li><code>.stringify()</code>：接收对象，返回json字符串</li>
+</ul>
+<h2 id="异步"><a href="#异步" class="headerlink" title="异步"></a>异步</h2><p>JS一般是单线程</p>
+<p><code>() =&gt; x</code> 是 <code>()=&gt; &#123;return x;&#125;</code> 的有效简写; </p>
+<h3 id="callbacks-回调函数"><a href="#callbacks-回调函数" class="headerlink" title="callbacks(回调函数)"></a>callbacks(回调函数)</h3><p>将回调函数作为参数传递给另一个函数仅仅是把回调函数定义作为参数传递过去 — 回调函数并没有立刻执行，回调函数会在包含它的函数的某个地方异步执行，包含函数负责在合适的时候执行回调函数。</p>
+<h3 id="promises"><a href="#promises" class="headerlink" title="promises"></a>promises</h3><p>用来表示异步操作成功或者失败的对象</p>
+<p>​    有三个状态：</p>
+<ul>
+<li><p>pending(待定)</p>
+</li>
+<li><p>resolved(已解决)</p>
+<ul>
+<li>fullfilled（成功）</li>
+<li>rejected（失败）</li>
+</ul>
+</li>
+</ul>
+<p><code>promise.all()</code>：传入promise数组，当数组中所有promise执行成功后再执行<code>promise.all()</code>的<code>then</code></p>
+<h3 id="异步函数"><a href="#异步函数" class="headerlink" title="异步函数"></a>异步函数</h3><h4 id="setTimeout-和setInterval"><a href="#setTimeout-和setInterval" class="headerlink" title="setTimeout()和setInterval()"></a>setTimeout()和setInterval()</h4><ul>
+<li><p><code>setTimeout(func,time)</code>：在一段时间time后执行函数func</p>
+<ul>
+<li><code>clearTimeout()</code>：清除</li>
+</ul>
+</li>
+<li><p><code>setInterval(func,time)</code>：以固定时间间隔重复运行代码</p>
+<ul>
+<li><p><code>clearInterval()</code>：清除intervals</p>
+</li>
+<li><pre><code class="javascript">setTimeout(func,time)
+function func()&#123;
+    //options-codes;
+    setTimeout(func,time);
+&#125;
+//用递归和setTimeout()实现与setInterval相同的功能</code></pre>
+</li>
+</ul>
+</li>
+<li><p><code>setTimeout()</code>严格按照所传入的时间间隔执行，而<code>setInterval()</code>传入的时间间隔则包括代码执行时间和间隔时间(<em>例如传入100ms，代码执行10ms，则实际间隔只有90ms</em>)</p>
+</li>
+<li><p>使用<strong>0</strong>用作<code>setTimeout()</code>的回调函数会立刻执行，但是在主线程代码运行之后执行。</p>
+</li>
+</ul>
+<h4 id="requestAnimationFrame"><a href="#requestAnimationFrame" class="headerlink" title="requestAnimationFrame()"></a>requestAnimationFrame()</h4><ul>
+<li><code>requestAnimationFrame()</code>：setInterval()的现代版本;在浏览器下一次重新绘制显示之前执行指定的代码块，从而允许动画在适当的帧率下运行，而不管它在什么环境中运行.</li>
+<li><code>requestAnimationFrame()</code>:可传入一个带时间戳参数的函数，表示从函数执行到现在的时间</li>
+<li><code>cancelAnimationFrame()</code>：用于撤销动画</li>
+</ul>
+<h3 id="异步API"><a href="#异步API" class="headerlink" title="异步API"></a>异步API</h3><ul>
+<li><code>URL.createObjectURL(thing)</code>：此静态方法会创建一个thing的URL</li>
+</ul>
+<p><strong>fetch</strong></p>
+<ul>
+<li>全局fetch：<code>fetch(URL).then(func1()).then(func2()).catch(func3(err))</code>：返回一个promise，两个<code>then</code>的参数都是回调函数，如果前一个操作成功则运行该回调函数，并且每个回调函数的参数均是前一个操作的返回值，每个<code>then</code>也会返回一个promise，当任何一个<code>then</code>失败就会运行<code>catch</code></li>
+</ul>
+<h2 id="APIS"><a href="#APIS" class="headerlink" title="APIS"></a>APIS</h2><h3 id="浏览器"><a href="#浏览器" class="headerlink" title="浏览器"></a>浏览器</h3><ul>
+<li>window是载入浏览器的标签，在JavaScript中用<a href="https://developer.mozilla.org/zh-CN/docs/Web/API/Window"><code>Window</code></a>对象来表示，使用这个对象的可用方法，你可以返回窗口的大小（参见<a href="https://developer.mozilla.org/zh-CN/docs/Web/API/Window/innerWidth"><code>Window.innerWidth</code></a>和<a href="https://developer.mozilla.org/zh-CN/docs/Web/API/Window/innerHeight"><code>Window.innerHeight</code></a>），操作载入窗口的文档，存储客户端上文档的特殊数据（例如使用本地数据库或其他存储设备），为当前窗口绑定<a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Events#A_series_of_fortunate_events">event handler</a>，等等。</li>
+<li>navigator表示浏览器存在于web上的状态和标识（即用户代理）。在JavaScript中，用<a href="https://developer.mozilla.org/zh-CN/docs/Web/API/Navigator"><code>Navigator</code></a>来表示。你可以用这个对象获取一些信息，比如来自用户摄像头的地理信息、用户偏爱的语言、多媒体流等等。</li>
+<li>document（在浏览器中用DOM表示）是载入窗口的实际页面，在JavaScript中用<a href="https://developer.mozilla.org/zh-CN/docs/Web/API/Document"><code>Document</code></a> 对象表示，你可以用这个对象来返回和操作文档中HTML和CSS上的信息。例如获取DOM中一个元素的引用，修改其文本内容，并应用新的样式，创建新的元素并添加为当前元素的子元素，甚至把他们一起删除。<ul>
+<li><code>.querySelector()</code>：根据dom规则寻找元素</li>
+<li><code>.appendChild()</code>：添加子元素</li>
+<li><code>.removeChild()</code>：rm子元素</li>
+</ul>
+</li>
+</ul>
+<h2 id="正则匹配"><a href="#正则匹配" class="headerlink" title="正则匹配"></a>正则匹配</h2><ul>
+<li><code>\d</code>：匹配数字</li>
+<li><code>\w</code>：匹配字母</li>
+<li><code>.</code>：匹配任意字符</li>
+<li><code>*</code>：匹配任意个字符，包括<strong>0</strong>个，<ul>
+<li>用**+**来表示至少包含一个字符，</li>
+<li><strong>？</strong>来匹配0或者1个字符，</li>
+<li>{n}表示n个字符</li>
+<li>{n,m}表示n-m个字符</li>
+</ul>
+</li>
+<li><code>\s</code>：匹配空白符</li>
+<li><code>[]</code>：表示范围，例如<code>[0-9a-zA-Z\_]</code>可以匹配一个数字、字母或者下划线</li>
+<li><code>A|B</code>：匹配A或者B</li>
+<li><code>^</code>：表示行的开头<ul>
+<li><code>^\d</code>：表示以数字开头</li>
+</ul>
+</li>
+<li><code>$</code>：表示行结束<ul>
+<li><code>\d$</code>：表示以数字结束</li>
+</ul>
+</li>
+</ul>
+<h2 id="AJAX"><a href="#AJAX" class="headerlink" title="AJAX"></a>AJAX</h2>]]></content>
+  </entry>
+  <entry>
     <title>HTTP</title>
     <url>/2020/11/08/HTTP/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="HTTP"><a href="#HTTP" class="headerlink" title="HTTP"></a>HTTP</h1><h2 id="特点"><a href="#特点" class="headerlink" title="特点"></a>特点</h2><ul>
@@ -787,131 +912,6 @@
       </tags>
   </entry>
   <entry>
-    <title>JS备忘</title>
-    <url>/2020/10/21/JS%E5%A4%87%E5%BF%98/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="Start"><a href="#Start" class="headerlink" title="Start"></a>Start</h1><h2 id="一般事件绑定"><a href="#一般事件绑定" class="headerlink" title="一般事件绑定"></a>一般事件绑定</h2><ul>
-<li><p><code>.onclick</code>：点击事件</p>
-</li>
-<li><p><code>.onfocus</code>：聚焦（选中）</p>
-</li>
-<li><p><code>.onblur</code>：解除聚焦</p>
-</li>
-<li><p><code>.onmouse(over/out)</code>：鼠标移入/移开</p>
-</li>
-<li><p><code>.onsubmit</code>：表单提交</p>
-</li>
-<li><p><code>.addEventListener(&#39;事件&#39;,函数)/removeEventListener(&#39;事件&#39;,函数)</code>：添加/移除，监听事件，可对一个对象的一个事件添加两个不同函数</p>
-</li>
-</ul>
-<h2 id="特殊对象"><a href="#特殊对象" class="headerlink" title="特殊对象"></a>特殊对象</h2><ul>
-<li>诸如<code>event evt e（可以是任何表示）</code>都是事件对象会默认传入事件绑定的函数，<code>event/evt/e.target</code>指刚刚发生事件的元素</li>
-</ul>
-<h2 id="继承"><a href="#继承" class="headerlink" title="继承"></a>继承</h2><ul>
-<li><p><code>Objet().</code>的属性不被继承，而<code>Object.prototype.</code>的属性被继承</p>
-</li>
-<li><p><code>.call()</code>：这个函数允许您调用一个在这个文件里别处定义的函数。第一个参数指明了在您运行这个函数时想对“<code>this</code>”指定的值，也就是说，您可以重新指定您调用的函数里所有“<code>this</code>”指向的对象。可以让构造器继承某个构造器的属性</p>
-</li>
-<li><p><code>newObj.prototype = Object.create(Obj.prototype)</code>这串代码使得newObj继承了Obj的方法</p>
-</li>
-<li><p><code>newObj.prototype.constructor = newObj</code>这使得newObj的prototype和constructior只想的newObj构造器本身，而不是调用call函数的对象的构造器</p>
-</li>
-<li><p><code>Obj.prototype.constructor===Obj()（构造方法）</code></p>
-</li>
-</ul>
-<h2 id="JSON"><a href="#JSON" class="headerlink" title="JSON"></a>JSON</h2><p><strong>纯数据，无函数</strong></p>
-<ul>
-<li>获取内部成员的方法类似对象</li>
-<li><code>.parse()</code>：接收json字符串，返回json对象</li>
-<li><code>.stringify()</code>：接收对象，返回json字符串</li>
-</ul>
-<h2 id="异步"><a href="#异步" class="headerlink" title="异步"></a>异步</h2><p>JS一般是单线程</p>
-<p><code>() =&gt; x</code> 是 <code>()=&gt; &#123;return x;&#125;</code> 的有效简写; </p>
-<h3 id="callbacks-回调函数"><a href="#callbacks-回调函数" class="headerlink" title="callbacks(回调函数)"></a>callbacks(回调函数)</h3><p>将回调函数作为参数传递给另一个函数仅仅是把回调函数定义作为参数传递过去 — 回调函数并没有立刻执行，回调函数会在包含它的函数的某个地方异步执行，包含函数负责在合适的时候执行回调函数。</p>
-<h3 id="promises"><a href="#promises" class="headerlink" title="promises"></a>promises</h3><p>用来表示异步操作成功或者失败的对象</p>
-<p>​    有三个状态：</p>
-<ul>
-<li><p>pending(待定)</p>
-</li>
-<li><p>resolved(已解决)</p>
-<ul>
-<li>fullfilled（成功）</li>
-<li>rejected（失败）</li>
-</ul>
-</li>
-</ul>
-<p><code>promise.all()</code>：传入promise数组，当数组中所有promise执行成功后再执行<code>promise.all()</code>的<code>then</code></p>
-<h3 id="异步函数"><a href="#异步函数" class="headerlink" title="异步函数"></a>异步函数</h3><h4 id="setTimeout-和setInterval"><a href="#setTimeout-和setInterval" class="headerlink" title="setTimeout()和setInterval()"></a>setTimeout()和setInterval()</h4><ul>
-<li><p><code>setTimeout(func,time)</code>：在一段时间time后执行函数func</p>
-<ul>
-<li><code>clearTimeout()</code>：清除</li>
-</ul>
-</li>
-<li><p><code>setInterval(func,time)</code>：以固定时间间隔重复运行代码</p>
-<ul>
-<li><p><code>clearInterval()</code>：清除intervals</p>
-</li>
-<li><pre><code class="javascript">setTimeout(func,time)
-function func()&#123;
-    //options-codes;
-    setTimeout(func,time);
-&#125;
-//用递归和setTimeout()实现与setInterval相同的功能</code></pre>
-</li>
-</ul>
-</li>
-<li><p><code>setTimeout()</code>严格按照所传入的时间间隔执行，而<code>setInterval()</code>传入的时间间隔则包括代码执行时间和间隔时间(<em>例如传入100ms，代码执行10ms，则实际间隔只有90ms</em>)</p>
-</li>
-<li><p>使用<strong>0</strong>用作<code>setTimeout()</code>的回调函数会立刻执行，但是在主线程代码运行之后执行。</p>
-</li>
-</ul>
-<h4 id="requestAnimationFrame"><a href="#requestAnimationFrame" class="headerlink" title="requestAnimationFrame()"></a>requestAnimationFrame()</h4><ul>
-<li><code>requestAnimationFrame()</code>：setInterval()的现代版本;在浏览器下一次重新绘制显示之前执行指定的代码块，从而允许动画在适当的帧率下运行，而不管它在什么环境中运行.</li>
-<li><code>requestAnimationFrame()</code>:可传入一个带时间戳参数的函数，表示从函数执行到现在的时间</li>
-<li><code>cancelAnimationFrame()</code>：用于撤销动画</li>
-</ul>
-<h3 id="异步API"><a href="#异步API" class="headerlink" title="异步API"></a>异步API</h3><ul>
-<li><code>URL.createObjectURL(thing)</code>：此静态方法会创建一个thing的URL</li>
-</ul>
-<p><strong>fetch</strong></p>
-<ul>
-<li>全局fetch：<code>fetch(URL).then(func1()).then(func2()).catch(func3(err))</code>：返回一个promise，两个<code>then</code>的参数都是回调函数，如果前一个操作成功则运行该回调函数，并且每个回调函数的参数均是前一个操作的返回值，每个<code>then</code>也会返回一个promise，当任何一个<code>then</code>失败就会运行<code>catch</code></li>
-</ul>
-<h2 id="APIS"><a href="#APIS" class="headerlink" title="APIS"></a>APIS</h2><h3 id="浏览器"><a href="#浏览器" class="headerlink" title="浏览器"></a>浏览器</h3><ul>
-<li>window是载入浏览器的标签，在JavaScript中用<a href="https://developer.mozilla.org/zh-CN/docs/Web/API/Window"><code>Window</code></a>对象来表示，使用这个对象的可用方法，你可以返回窗口的大小（参见<a href="https://developer.mozilla.org/zh-CN/docs/Web/API/Window/innerWidth"><code>Window.innerWidth</code></a>和<a href="https://developer.mozilla.org/zh-CN/docs/Web/API/Window/innerHeight"><code>Window.innerHeight</code></a>），操作载入窗口的文档，存储客户端上文档的特殊数据（例如使用本地数据库或其他存储设备），为当前窗口绑定<a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Events#A_series_of_fortunate_events">event handler</a>，等等。</li>
-<li>navigator表示浏览器存在于web上的状态和标识（即用户代理）。在JavaScript中，用<a href="https://developer.mozilla.org/zh-CN/docs/Web/API/Navigator"><code>Navigator</code></a>来表示。你可以用这个对象获取一些信息，比如来自用户摄像头的地理信息、用户偏爱的语言、多媒体流等等。</li>
-<li>document（在浏览器中用DOM表示）是载入窗口的实际页面，在JavaScript中用<a href="https://developer.mozilla.org/zh-CN/docs/Web/API/Document"><code>Document</code></a> 对象表示，你可以用这个对象来返回和操作文档中HTML和CSS上的信息。例如获取DOM中一个元素的引用，修改其文本内容，并应用新的样式，创建新的元素并添加为当前元素的子元素，甚至把他们一起删除。<ul>
-<li><code>.querySelector()</code>：根据dom规则寻找元素</li>
-<li><code>.appendChild()</code>：添加子元素</li>
-<li><code>.removeChild()</code>：rm子元素</li>
-</ul>
-</li>
-</ul>
-<h2 id="正则匹配"><a href="#正则匹配" class="headerlink" title="正则匹配"></a>正则匹配</h2><ul>
-<li><code>\d</code>：匹配数字</li>
-<li><code>\w</code>：匹配字母</li>
-<li><code>.</code>：匹配任意字符</li>
-<li><code>*</code>：匹配任意个字符，包括<strong>0</strong>个，<ul>
-<li>用**+**来表示至少包含一个字符，</li>
-<li><strong>？</strong>来匹配0或者1个字符，</li>
-<li>{n}表示n个字符</li>
-<li>{n,m}表示n-m个字符</li>
-</ul>
-</li>
-<li><code>\s</code>：匹配空白符</li>
-<li><code>[]</code>：表示范围，例如<code>[0-9a-zA-Z\_]</code>可以匹配一个数字、字母或者下划线</li>
-<li><code>A|B</code>：匹配A或者B</li>
-<li><code>^</code>：表示行的开头<ul>
-<li><code>^\d</code>：表示以数字开头</li>
-</ul>
-</li>
-<li><code>$</code>：表示行结束<ul>
-<li><code>\d$</code>：表示以数字结束</li>
-</ul>
-</li>
-</ul>
-<h2 id="AJAX"><a href="#AJAX" class="headerlink" title="AJAX"></a>AJAX</h2>]]></content>
-  </entry>
-  <entry>
     <title>RPC相关</title>
     <url>/2020/10/21/RPC%E7%9B%B8%E5%85%B3/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="流程"><a href="#流程" class="headerlink" title="流程"></a>流程</h1><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">graph LR</span><br><span class="line">本地--&gt;|要执行的函数与函数参数|服务端</span><br><span class="line">服务端--&gt;|通过回调函数传回函数结果|本地</span><br></pre></td></tr></table></figure>
@@ -984,16 +984,6 @@ function func()&#123;
       </tags>
   </entry>
   <entry>
-    <title>《关掉》</title>
-    <url>/2020/10/16/%E3%80%8A%E5%85%B3%E6%8E%89%E3%80%8B/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>​    关掉！关掉！一定要关掉！再不关掉那些网络游戏，小孩哪有美好的未来？哪有美好的前程？祖国哪有</p>
-<h1 id="栋"><a href="#栋" class="headerlink" title="栋"></a>栋</h1><p>梁之才？</p>
-<iframe src="//player.bilibili.com/player.html?aid=457253380&bvid=BV1s5411j7Po&cid=242488467&page=1" width="800px" height="450px" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" auto="1"> </iframe>]]></content>
-      <tags>
-        <tag>关掉</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>MySQL相关</title>
     <url>/2020/09/19/mysql%E7%9B%B8%E5%85%B3(building)/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="MySQL-（building）"><a href="#MySQL-（building）" class="headerlink" title="MySQL!（building）"></a>MySQL!（building）</h1><h2 id="启动与关闭"><a href="#启动与关闭" class="headerlink" title="启动与关闭"></a>启动与关闭</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">mysqld --console</span><br><span class="line">&#x2F;&#x2F;启动</span><br></pre></td></tr></table></figure>
@@ -1004,6 +994,16 @@ function func()&#123;
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">root@host# mysql -u root -p</span><br><span class="line">Enter password:*******</span><br><span class="line">mysql&gt; use mysql;</span><br><span class="line">Database changed</span><br><span class="line"></span><br><span class="line">mysql&gt; INSERT INTO user </span><br><span class="line">          (host, user, password, </span><br><span class="line">           select_priv, insert_priv, update_priv) </span><br><span class="line">           VALUES (&#39;localhost&#39;, &#39;guest&#39;, </span><br><span class="line">           PASSWORD(&#39;guest123&#39;), &#39;Y&#39;, &#39;Y&#39;, &#39;Y&#39;);</span><br><span class="line">Query OK, 1 row affected (0.20 sec)</span><br><span class="line"></span><br><span class="line">mysql&gt; FLUSH PRIVILEGES;</span><br><span class="line">Query OK, 1 row affected (0.01 sec)</span><br><span class="line"></span><br><span class="line">mysql&gt; SELECT host, user, password FROM user WHERE user &#x3D; &#39;guest&#39;;</span><br><span class="line">+-----------+---------+------------------+</span><br><span class="line">| host      | user    | password         |</span><br><span class="line">+-----------+---------+------------------+</span><br><span class="line">| localhost | guest | 6f8c114b58f2ce9e |</span><br><span class="line">+-----------+---------+------------------+</span><br><span class="line">1 row in set (0.00 sec)</span><br></pre></td></tr></table></figure>
 
 ]]></content>
+  </entry>
+  <entry>
+    <title>《关掉》</title>
+    <url>/2020/10/16/%E3%80%8A%E5%85%B3%E6%8E%89%E3%80%8B/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>​    关掉！关掉！一定要关掉！再不关掉那些网络游戏，小孩哪有美好的未来？哪有美好的前程？祖国哪有</p>
+<h1 id="栋"><a href="#栋" class="headerlink" title="栋"></a>栋</h1><p>梁之才？</p>
+<iframe src="//player.bilibili.com/player.html?aid=457253380&bvid=BV1s5411j7Po&cid=242488467&page=1" width="800px" height="450px" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" auto="1"> </iframe>]]></content>
+      <tags>
+        <tag>关掉</tag>
+      </tags>
   </entry>
   <entry>
     <title>很快啊</title>
@@ -1020,7 +1020,7 @@ height = "450px" width="800px"framespacing="0" allowfullscreen="true" auto = "1"
   </entry>
   <entry>
     <title>Vue相关</title>
-    <url>/2020/12/12/Vue%E7%BB%84%E4%BB%B6/</url>
+    <url>/2020/12/14/Vue%E7%BB%84%E4%BB%B6/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="组件"><a href="#组件" class="headerlink" title="组件"></a>组件</h1><h2 id="流程"><a href="#流程" class="headerlink" title="流程"></a>流程</h2><ul>
 <li>创建组件构造器 </li>
 </ul>
@@ -1449,9 +1449,32 @@ height = "450px" width="800px"framespacing="0" allowfullscreen="true" auto = "1"
 </li>
 </ul>
 <h3 id="router-amp-route详解"><a href="#router-amp-route详解" class="headerlink" title="$router &amp; $route详解"></a>$router &amp; $route详解</h3><h2 id="全局导航守卫"><a href="#全局导航守卫" class="headerlink" title="全局导航守卫"></a>全局导航守卫</h2><p>​    用于监听路由跳转的过程。</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">//router/index.js</span></span><br><span class="line">router.beforeEach(<span class="function">(<span class="params">to,<span class="keyword">from</span>,next</span>) =&gt;</span> &#123;</span><br><span class="line">	<span class="comment">//这里必须调用next()函数</span></span><br><span class="line">	next()</span><br><span class="line">    <span class="comment">//这里的CODE会在跳转时执行</span></span><br><span class="line">    CODE</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<h3 id="beforeEach"><a href="#beforeEach" class="headerlink" title="beforeEach"></a>beforeEach</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">//router/index.js</span></span><br><span class="line">router.beforeEach(<span class="function">(<span class="params">to,<span class="keyword">from</span>,next</span>) =&gt;</span> &#123;</span><br><span class="line">	<span class="comment">//这里必须调用next()函数，用于跳转到下一个守卫</span></span><br><span class="line">	next()</span><br><span class="line">    <span class="comment">//这里的CODE会在跳转前执行</span></span><br><span class="line">    CODE</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
 
-<p>p116</p>
+<h3 id="afterEach"><a href="#afterEach" class="headerlink" title="afterEach"></a>afterEach</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">//router/index.js</span></span><br><span class="line">router.beforeEach(<span class="function">(<span class="params">to.<span class="keyword">from</span></span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="comment">//这里的CODE会在跳转后执行</span></span><br><span class="line">    CODE</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<h2 id="路由独享守卫"><a href="#路由独享守卫" class="headerlink" title="路由独享守卫"></a>路由独享守卫</h2><h2 id="组件内守卫"><a href="#组件内守卫" class="headerlink" title="组件内守卫"></a>组件内守卫</h2><h2 id="vue-keepalive"><a href="#vue-keepalive" class="headerlink" title="vue-keepalive"></a>vue-keepalive</h2><p>vue组件的状态在跳转后不会被保存，每次会创建一个新的组件。这样不仅消耗资源，并且会带来一些使用上的问题</p>
+<p>我们使用vue内置组件<code>&lt;keep-alive&gt;</code>来解决</p>
+<ul>
+<li>用法</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">keep-alive</span>&gt;</span><span class="tag">&lt;<span class="name">router-view</span>&gt;</span><span class="tag">&lt;/<span class="name">router-view</span>&gt;</span><span class="tag">&lt;/<span class="name">keep-alive</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">keep-alive</span> <span class="attr">include</span>=<span class="string">&#x27;&#x27;</span>&gt;</span><span class="tag">&lt;/<span class="name">keep-alive</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>include和exclude参数<ul>
+<li><code>include:&#39;&#39;</code>：仅’’内的组件套用<code>keep-alive</code></li>
+<li><code>exclude:&#39;&#39;</code>：’’外的组件套用<code>keep-alive</code></li>
+<li><code>&#39;&#39;</code>内为正则表达式或字符串</li>
+</ul>
+</li>
+</ul>
+<h3 id="activated-amp-deactivated"><a href="#activated-amp-deactivated" class="headerlink" title="activated()&amp;deactivated"></a>activated()&amp;deactivated</h3><p>​    在当前组件活跃(不活跃)时执行的函数</p>
+<p>必须在<code>&lt;keep-alive&gt;</code>内包含的组件才能使用这两个函数</p>
+<h1 id="TabBar实例"><a href="#TabBar实例" class="headerlink" title="TabBar实例"></a>TabBar实例</h1><ul>
+<li>**SampleString.indexOf(String)**方法</li>
+</ul>
+<p>返回括号内<code>String</code>在<code>SampleString</code>第一次出现的位置，若没有出现则返回-1</p>
+<p>p125</p>
 ]]></content>
       <tags>
         <tag>buliding...</tag>
