@@ -71,7 +71,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> Word count:</span>
-            <span class="post-count">6.5k</span>
+            <span class="post-count">6.7k</span>
         </span>
     </span>
 
@@ -80,7 +80,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-book-open-line"></i>
             <span class="post-meta-item-text"> Reading time≈</span>
-            <span class="post-count">31 min</span>
+            <span class="post-count">32 min</span>
         </span>
     </span>
 </div>
@@ -589,7 +589,7 @@
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//使用方法与原型一模一样</span></span><br><span class="line">axiosSample.get(&#123;</span><br><span class="line">	url:<span class="string">&#x27;&#x27;</span>,</span><br><span class="line">	params:&#123;</span><br><span class="line">		type:</span><br><span class="line">		...</span><br><span class="line">	&#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
 
 <h2 id="axios封装"><a href="#axios封装" class="headerlink" title="axios封装"></a>axios封装</h2><p>设想一下，你的每个程序都是用axios框架发送网络请求，但是某一天axios突然挂掉。那么需要重构的代码量将会非常巨大，为了应对这种情况，我们对框架做一层封装。</p>
-<ul>
+<h3 id="基本思路"><a href="#基本思路" class="headerlink" title="基本思路"></a>基本思路</h3><ul>
 <li>封装</li>
 </ul>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//建立一个request.js文件作为axios封装的文件夹</span></span><br><span class="line"><span class="keyword">import</span> axios <span class="keyword">from</span> <span class="string">&#x27;axios&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="function"><span class="keyword">function</span> <span class="title">request</span>(<span class="params">config, success, failure</span>) </span>&#123;</span><br><span class="line">    <span class="comment">//创建axios实例</span></span><br><span class="line">    <span class="keyword">const</span> instance = axios.create(&#123;</span><br><span class="line">        baseURL: <span class="string">&#x27;http://123.207.32.32:8000&#x27;</span>,</span><br><span class="line">        timeout: <span class="number">5000</span></span><br><span class="line">    &#125;)</span><br><span class="line"></span><br><span class="line">    instance(config)</span><br><span class="line">        .then(<span class="function"><span class="params">res</span> =&gt;</span> &#123; success(res) &#125;) <span class="comment">//成功时调用success</span></span><br><span class="line">        .catch(<span class="function"><span class="params">err</span> =&gt;</span> &#123; failure(err) &#125;)<span class="comment">//失败时调用failure</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -612,7 +612,9 @@
 </ul>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> axios <span class="keyword">from</span> <span class="string">&#x27;axios&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="function"><span class="keyword">function</span> <span class="title">request</span>(<span class="params">config</span>) </span>&#123;</span><br><span class="line">        <span class="keyword">const</span> instance = axios.create(&#123;</span><br><span class="line">            baseURL: <span class="string">&#x27;&#x27;</span>,</span><br><span class="line">            timeout: <span class="number">5000</span></span><br><span class="line">        &#125;)</span><br><span class="line">       <span class="keyword">return</span> instance(config)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p>p147</p>
+<h2 id="axios拦截器"><a href="#axios拦截器" class="headerlink" title="axios拦截器"></a>axios拦截器</h2><p>为上面的封装添加拦截器</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> axios <span class="keyword">from</span> <span class="string">&#x27;axios&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="function"><span class="keyword">function</span> <span class="title">request</span>(<span class="params">config</span>) </span>&#123;</span><br><span class="line">        <span class="keyword">const</span> instance = axios.create(&#123;</span><br><span class="line">            baseURL: <span class="string">&#x27;&#x27;</span>,</span><br><span class="line">            timeout: <span class="number">5000</span></span><br><span class="line">        &#125;)</span><br><span class="line">        <span class="comment">//请求拦截器</span></span><br><span class="line">        instance.interceptors.request.use(</span><br><span class="line">            req=&gt;&#123;</span><br><span class="line">            <span class="comment">//请求发送成功时的操作，并且拦截到了请求</span></span><br><span class="line">            <span class="comment">//添加一条return req才能继续请求，要不然请求被拦截</span></span><br><span class="line">                <span class="keyword">return</span> req</span><br><span class="line">        	&#125;,</span><br><span class="line">            err=&gt;&#123;</span><br><span class="line">            <span class="comment">//请求发送失败时的操作</span></span><br><span class="line">        	&#125;</span><br><span class="line">        );</span><br><span class="line">    	<span class="comment">//响应拦截器</span></span><br><span class="line">    	instance.interceptors.response.use(</span><br><span class="line">        	res=&gt;&#123;</span><br><span class="line">                <span class="comment">//在这里对拦截到的响应作操作</span></span><br><span class="line">                <span class="comment">//同样需要return</span></span><br><span class="line">                <span class="keyword">return</span> res</span><br><span class="line">            &#125;,</span><br><span class="line">            err=&gt;&#123;</span><br><span class="line">                </span><br><span class="line">            &#125;</span><br><span class="line">        )</span><br><span class="line">        <span class="comment">//发送请求</span></span><br><span class="line">       <span class="keyword">return</span> instance(config)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
  
       <!-- reward -->
       
@@ -696,11 +698,11 @@
    
   <nav class="article-nav">
     
-      <a href="/2220/09/20/ReadME!!!/" class="article-nav-link">
+      <a href="/2020/12/20/D3js/" class="article-nav-link">
         <strong class="article-nav-caption">上一篇</strong>
         <div class="article-nav-title">
           
-            ReadME!!
+            D3js
           
         </div>
       </a>

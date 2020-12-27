@@ -1,116 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>HTML备忘</title>
-    <url>/2020/10/14/HTML%E5%A4%87%E5%BF%98/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="HTML备忘录"><a href="#HTML备忘录" class="headerlink" title="HTML备忘录"></a>HTML备忘录</h1><h2 id="标签相关"><a href="#标签相关" class="headerlink" title="标签相关"></a>标签相关</h2><ul>
-<li><p>块级元素自动换行而内联元素不自动换行</p>
-</li>
-<li><p>disabled = <em>value</em> 无论<em>value</em>值为什么，标签都会处于disabled状态，想要改变需将<em>value</em>置空</p>
-</li>
-<li><p>特殊字符引用表</p>
-</li>
-</ul>
-<table>
-<thead>
-<tr>
-<th align="left">原义字符</th>
-<th align="left">等价字符引用</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="left">&lt;”</td>
-<td align="left">&amp;lt</td>
-</tr>
-<tr>
-<td align="left">&gt;</td>
-<td align="left">&amp;gt</td>
-</tr>
-<tr>
-<td align="left">“</td>
-<td align="left">&amp;quot</td>
-</tr>
-<tr>
-<td align="left">‘</td>
-<td align="left">&amp;apos</td>
-</tr>
-<tr>
-<td align="left">&amp;</td>
-<td align="left">&amp;amp</td>
-</tr>
-<tr>
-<td align="left"></td>
-<td align="left"></td>
-</tr>
-</tbody></table>
-<ul>
-<li><p>使用相对路径优于绝对路径(舍去了DNS查找等操作)</p>
-</li>
-<li><p><code>&lt;script&gt;</code>放在<code> &lt;body&gt;</code>末尾前更优，这样可以确保脚本加载前浏览器已经解析HTML内容</p>
-</li>
-<li><p><code> &lt;a&gt;</code>标签的title属性作为悬停提示</p>
-</li>
-<li><p>href的mailto subject cc body等关键字，用于发送邮件</p>
-</li>
-<li><p>描述列表</p>
-</li>
-<li><p>块引用<code> &lt;blockquote cite=&quot;url&quot;&gt;&lt;/blockquote&gt;</code></p>
-</li>
-<li><p>行内引用<code>&lt;q cite=&quot;url&quot;&gt;</code></p>
-</li>
-<li><p>缩略语<code>&lt;abbr title=&quot;..&quot;&gt;&lt;/abbr&gt;</code></p>
-</li>
-<li><p>保留空格渲染<code>&lt;pre&gt;content&lt;/pre&gt;</code></p>
-</li>
-<li><p>标记键盘输入<code>&lt;kbd&gt;&lt;/kbd&gt;</code></p>
-</li>
-<li><p>换行<code>&lt;br&gt;</code></p>
-</li>
-<li><p>水平线<code>&lt;hr&gt;</code></p>
-</li>
-<li><p>嵌入其他网页<code>&lt;iframe&gt;</code></p>
-<p>属性：</p>
-<p>allowfullscreen：可设置全屏</p>
-<p>frameborder：边框</p>
-<p>（尽量用js设置src）</p>
-</li>
-<li><p>嵌入PDF,SVG,Flash—<code>&lt;embed&gt;&lt;object&gt;</code></p>
-</li>
-<li><p>视频标签:<code>&lt;video&gt;</code></p>
-<p>属性：</p>
-<p>autoplay:自动播放</p>
-<p>loop:循环</p>
-<p>muted:静音播放</p>
-<p>poster:封面图</p>
-<p>preload:缓冲（”none”：不缓冲 “auto”：页面加载自动缓冲）</p>
-</li>
-<li><p>权限管理 sandbox属性</p>
-</li>
-<li><p>表格相关</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">table</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- colgroup 必须包含在table标签内--&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">colgroup</span>&gt;</span> </span><br><span class="line">		<span class="tag">&lt;<span class="name">col</span> <span class="attr">style</span>=<span class="string">&quot;#&quot;</span> <span class="attr">span</span>=<span class="string">&quot;x&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">colgroup</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- col标签可以指定每一行的属性，span是需要设置属性的行数--&gt;</span></span><br><span class="line">        <span class="comment">&lt;!-- table row --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">tr</span>&gt;</span> </span><br><span class="line">    <span class="tag">&lt;<span class="name">td</span>&gt;</span> </span><br><span class="line">        <span class="comment">&lt;!-- table data --&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">table</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<p>​    </p>
-</li>
-</ul>
-<h2 id="响应式设计"><a href="#响应式设计" class="headerlink" title="响应式设计"></a>响应式设计</h2><ul>
-<li><p>```<img>``的 srcset和sizes属性</p>
-<p>举例:</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!--srcset是一个文件列表，后面以w为单位的数据是文件的像素大小--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">img</span> <span class="attr">srcset</span>=<span class="string">&quot;elva-fairy-320w.jpg 320w,</span></span></span><br><span class="line"><span class="tag"><span class="string">             elva-fairy-480w.jpg 480w,</span></span></span><br><span class="line"><span class="tag"><span class="string">             elva-fairy-800w.jpg 800w&quot;</span></span></span><br><span class="line">     &lt;!-- sizes 括号内的是条件 括号外的是前面条件为真时采用的样式--&gt;</span><br><span class="line">     sizes=&quot;(max-width: 320px) 280px,</span><br><span class="line">            (max-width: 480px) 440px,</span><br><span class="line">            800px&quot; <span class="comment">&lt;!--无条件的是默认样式--&gt;</span></span><br><span class="line">     src=&quot;elva-fairy-800w.jpg&quot; alt=&quot;Elva dressed as a fairy&quot;&gt;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p><code>&lt;picture&gt;</code>的应用</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">​	&#96;&#96;&#96;&lt;soucre&gt;&#96;&#96;&#96;包含media srcset sizes属性</span><br><span class="line"></span><br><span class="line">&#96;&#96;&#96;html</span><br><span class="line">&lt;source media&#x3D;&quot;(maxwidth:799px)&quot;srcset&#x3D;&quot;exa.jpg&quot;&gt;</span><br><span class="line">&lt;!--media属性设置一个条件，为真则显示此图片--&gt;</span><br></pre></td></tr></table></figure>
-
-
-
-</li>
-</ul>
-<p>aaa</p>
-]]></content>
-      <tags>
-        <tag>HTML备忘</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>CSS备忘</title>
     <url>/2020/11/04/CSS%E5%A4%87%E5%BF%98(building)/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="CSS备忘（building）"><a href="#CSS备忘（building）" class="headerlink" title="CSS备忘（building）"></a>CSS备忘（building）</h1><h2 id="属性相关"><a href="#属性相关" class="headerlink" title="属性相关"></a>属性相关</h2><ul>
@@ -599,6 +489,314 @@
       </tags>
   </entry>
   <entry>
+    <title>D3js</title>
+    <url>/2020/12/20/D3js/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="D3"><a href="#D3" class="headerlink" title="D3"></a>D3</h1><h2 id="select"><a href="#select" class="headerlink" title="select"></a>select</h2><p>语法与Jquery相同，只是接口不同</p>
+<p>例如：</p>
+<ul>
+<li><strong>d3.select(‘#id’)</strong></li>
+<li><strong>d3.selectall(‘.calss’)</strong></li>
+</ul>
+<h2 id="SVG属性"><a href="#SVG属性" class="headerlink" title="SVG属性"></a>SVG属性</h2><ul>
+<li>id class</li>
+<li>x,y</li>
+<li>fill stroke</li>
+<li>height width r</li>
+<li>transform -&gt; translate, rotate, scale</li>
+</ul>
+<h3 id="设置属性-attr"><a href="#设置属性-attr" class="headerlink" title="设置属性.attr"></a>设置属性.attr</h3><p><strong>.attr(‘attribute’,’value’)</strong></p>
+<h2 id="添加-删除"><a href="#添加-删除" class="headerlink" title="添加/删除"></a>添加/删除</h2><h3 id="添加"><a href="#添加" class="headerlink" title="添加"></a>添加</h3><p><strong>d3.select(‘#main’).append(‘rect’).attr(‘width’,100).attr(‘height’,100)</strong></p>
+<p>​    表示在main下添加一个矩形宽为100 长为100</p>
+<h3 id="删除"><a href="#删除" class="headerlink" title="删除"></a>删除</h3><h2 id="比例尺"><a href="#比例尺" class="headerlink" title="比例尺"></a>比例尺</h2><h3 id="定义比例尺"><a href="#定义比例尺" class="headerlink" title="定义比例尺"></a>定义比例尺</h3><p><code>d3.scaleLinear().domain([0,10]).range([-1000,1000])</code></p>
+<p>这段代码创建了<code>0-10</code>对<code>-1000-1000</code>的映射</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>Echarts</title>
+    <url>/2020/12/20/Echarts/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h2><p>Echarts使用JSON格式进行配置</p>
+<figure class="highlight"><table><tr><td class="code"><pre><span class="line"><span class="comment">//配置标题</span></span><br><span class="line">title:&#123;</span><br><span class="line">	text:&#x27;&#x27;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//配置提示信息</span></span><br><span class="line">tooltip:&#123;</span><br><span class="line">    </span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//图例组件</span></span><br><span class="line">legend:&#123;</span><br><span class="line">    data:[&#123;</span><br><span class="line">        name:&#x27;&#x27;,</span><br><span class="line">        <span class="comment">//图形</span></span><br><span class="line">        icon:&#x27;cirle&#x27;,</span><br><span class="line">        <span class="comment">//文本颜色</span></span><br><span class="line">        textStyle:&#123;</span><br><span class="line">            color:&#x27;red&#x27;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;]</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//X轴上显示的项</span></span><br><span class="line">xAxis:&#123;</span><br><span class="line">    data:[&#x27;&#x27;,&#x27;&#x27;]</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//Y轴上显示的项</span></span><br><span class="line">yAxis:&#123;</span><br><span class="line">    </span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//系列列表</span></span><br><span class="line">series:[&#123;</span><br><span class="line">    <span class="comment">//系列名称</span></span><br><span class="line">	name:&#x27;&#x27;,</span><br><span class="line">    <span class="comment">//系列图标类型</span></span><br><span class="line">    type:&#x27;bar&#x27;，</span><br><span class="line">    <span class="comment">//系列中的数据内容</span></span><br><span class="line">    data:[a,s,d,f,g]</span><br><span class="line">&#125;]</span><br></pre></td></tr></table></figure>
+
+<h3 id="常用type集合"><a href="#常用type集合" class="headerlink" title="常用type集合"></a>常用type集合</h3><ul>
+<li>**type: ‘bar’**：柱状/条形图</li>
+<li>**type: ‘line’**：折线/面积图</li>
+<li>**type: ‘pie’**：饼图</li>
+<li>**type: ‘scatter’**：散点（气泡）图</li>
+<li>**type: ‘effectScatter’**：带有涟漪特效动画的散点（气泡）</li>
+<li>**type: ‘radar’**：雷达图</li>
+<li>**type: ‘tree’**：树型图</li>
+<li>**type: ‘treemap’**：树型图</li>
+<li>**type: ‘sunburst’**：旭日图</li>
+<li>**type: ‘boxplot’**：箱形图</li>
+<li>**type: ‘candlestick’**：K线图</li>
+<li>**type: ‘heatmap’**：热力图</li>
+<li>**type: ‘map’**：地图</li>
+<li>**type: ‘parallel’**：平行坐标系的系列</li>
+<li>**type: ‘lines’**：线图</li>
+<li>**type: ‘graph’**：关系图</li>
+<li>**type: ‘sankey’**：桑基图</li>
+<li>**type: ‘funnel’**：漏斗图</li>
+<li>**type: ‘gauge’**：仪表盘</li>
+<li>**type: ‘pictorialBar’**：象形柱图</li>
+<li>**type: ‘themeRiver’**：主题河流</li>
+<li>**type: ‘custom’**：自定义系列</li>
+</ul>
+<h2 id="样式"><a href="#样式" class="headerlink" title="样式"></a>样式</h2><h3 id="颜色主题"><a href="#颜色主题" class="headerlink" title="颜色主题"></a>颜色主题</h3><p>默认两个主题</p>
+<ul>
+<li>light：<code>var chart = echarts.init(dom, &#39;light&#39;);</code></li>
+<li>dark:  <code>var chart = echarts.init(dom, &#39;dark&#39;);</code></li>
+</ul>
+<h3 id="调色盘"><a href="#调色盘" class="headerlink" title="调色盘"></a>调色盘</h3><p>调色盘可以在 option 中设置。</p>
+<p>调色盘给定了一组颜色，图形、系列会自动从其中选择颜色。</p>
+<p>可以设置全局的调色盘，也可以设置系列自己专属的调色盘。</p>
+<figure class="highlight"><table><tr><td class="code"><pre><span class="line">option = &#123;</span><br><span class="line">    <span class="comment">// 全局调色盘。</span></span><br><span class="line">    color: [&#x27;#c23531&#x27;,&#x27;#2f4554&#x27;, &#x27;#61a0a8&#x27;, &#x27;#d48265&#x27;, &#x27;#91c7ae&#x27;,&#x27;#749f83&#x27;,  &#x27;#ca8622&#x27;, &#x27;#bda29a&#x27;,&#x27;#6e7074&#x27;, &#x27;#546570&#x27;, &#x27;#c4ccd3&#x27;],</span><br><span class="line"></span><br><span class="line">    series: [&#123;</span><br><span class="line">        type: &#x27;bar&#x27;,</span><br><span class="line">        <span class="comment">// 此系列自己的调色盘。</span></span><br><span class="line">        color: [&#x27;#dd6b66&#x27;,&#x27;#759aa0&#x27;,&#x27;#e69d87&#x27;,&#x27;#8dc1a9&#x27;,&#x27;#ea7e53&#x27;,&#x27;#eedd78&#x27;,&#x27;#73a373&#x27;,&#x27;#73b9bc&#x27;,&#x27;#7289ab&#x27;, &#x27;#91ca8c&#x27;,&#x27;#f49f42&#x27;],</span><br><span class="line">        ...</span><br><span class="line">    &#125;, &#123;</span><br><span class="line">        type: &#x27;pie&#x27;,</span><br><span class="line">        <span class="comment">// 此系列自己的调色盘。</span></span><br><span class="line">        color: [&#x27;#37A2DA&#x27;, &#x27;#32C5E9&#x27;, &#x27;#67E0E3&#x27;, &#x27;#9FE6B8&#x27;, &#x27;#FFDB5C&#x27;,&#x27;#ff9f7f&#x27;, &#x27;#fb7293&#x27;, &#x27;#E062AE&#x27;, &#x27;#E690D1&#x27;, &#x27;#e7bcf3&#x27;, &#x27;#9d96f5&#x27;, &#x27;#8378EA&#x27;, &#x27;#96BFFF&#x27;],</span><br><span class="line">        ...</span><br><span class="line">    &#125;]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="高亮-emphasis"><a href="#高亮-emphasis" class="headerlink" title="高亮-emphasis"></a>高亮-emphasis</h3><p>在鼠标悬浮到图形元素上时，一般会出现高亮的样式。默认情况下，高亮的样式是根据普通样式自动生成的。</p>
+<p>如果要自定义高亮样式可以通过 emphasis 属性来定制：</p>
+<figure class="highlight"><table><tr><td class="code"><pre><span class="line">emphasis: &#123;</span><br><span class="line">    itemStyle: &#123;</span><br><span class="line">        <span class="comment">// 高亮时点的颜色</span></span><br><span class="line">        color: &#x27;red&#x27;</span><br><span class="line">    &#125;,</span><br><span class="line">    label: &#123;</span><br><span class="line">        show: true,</span><br><span class="line">        <span class="comment">// 高亮时标签的文字</span></span><br><span class="line">        formatter: &#x27;高亮时显示的标签内容&#x27;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
+
+<h2 id="异步加载添加loading效果"><a href="#异步加载添加loading效果" class="headerlink" title="异步加载添加loading效果"></a>异步加载添加loading效果</h2><p>只需要调用 showLoading 方法显示。数据加载完成后再调用 hideLoading 方法隐藏加载动画：</p>
+<figure class="highlight"><table><tr><td class="code"><pre><span class="line">var myChart = echarts.init(document.getElementById(&#x27;main&#x27;));</span><br><span class="line">myChart.showLoading();  // 开启 loading 效果</span><br><span class="line">$.get(&#x27;https://www.runoob.com/static/js/echarts_test_data.json&#x27;, function (data) &#123;</span><br><span class="line">    myChart.hideLoading();  // 隐藏 loading 效果</span><br><span class="line">    myChart.setOption(&#123;</span><br><span class="line">        series : [</span><br><span class="line">            &#123;</span><br><span class="line">                name: &#x27;访问来源&#x27;,</span><br><span class="line">                type: &#x27;pie&#x27;,    // 设置图表类型为饼图</span><br><span class="line">                radius: &#x27;55%&#x27;,  // 饼图的半径，外半径为可视区尺寸（容器高宽中较小一项）的 55% 长度。</span><br><span class="line">                data:data.data_pie</span><br><span class="line">            &#125;</span><br><span class="line">        ]</span><br><span class="line">    &#125;)</span><br><span class="line">&#125;, &#x27;json&#x27;)</span><br></pre></td></tr></table></figure>
+
+<p><a href="https://www.cnblogs.com/ringwang/p/9619472.html">https://www.cnblogs.com/ringwang/p/9619472.html</a></p>
+]]></content>
+  </entry>
+  <entry>
+    <title>JS备忘</title>
+    <url>/2020/10/21/JS%E5%A4%87%E5%BF%98/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="Start"><a href="#Start" class="headerlink" title="Start"></a>Start</h1><h2 id="一般事件绑定"><a href="#一般事件绑定" class="headerlink" title="一般事件绑定"></a>一般事件绑定</h2><ul>
+<li><p><code>.onclick</code>：点击事件</p>
+</li>
+<li><p><code>.onfocus</code>：聚焦（选中）</p>
+</li>
+<li><p><code>.onblur</code>：解除聚焦</p>
+</li>
+<li><p><code>.onmouse(over/out)</code>：鼠标移入/移开</p>
+</li>
+<li><p><code>.onsubmit</code>：表单提交</p>
+</li>
+<li><p><code>.addEventListener(&#39;事件&#39;,函数)/removeEventListener(&#39;事件&#39;,函数)</code>：添加/移除，监听事件，可对一个对象的一个事件添加两个不同函数</p>
+</li>
+</ul>
+<h2 id="特殊对象"><a href="#特殊对象" class="headerlink" title="特殊对象"></a>特殊对象</h2><ul>
+<li>诸如<code>event evt e（可以是任何表示）</code>都是事件对象会默认传入事件绑定的函数，<code>event/evt/e.target</code>指刚刚发生事件的元素</li>
+</ul>
+<h2 id="继承"><a href="#继承" class="headerlink" title="继承"></a>继承</h2><ul>
+<li><p><code>Objet().</code>的属性不被继承，而<code>Object.prototype.</code>的属性被继承</p>
+</li>
+<li><p><code>.call()</code>：这个函数允许您调用一个在这个文件里别处定义的函数。第一个参数指明了在您运行这个函数时想对“<code>this</code>”指定的值，也就是说，您可以重新指定您调用的函数里所有“<code>this</code>”指向的对象。可以让构造器继承某个构造器的属性</p>
+</li>
+<li><p><code>newObj.prototype = Object.create(Obj.prototype)</code>这串代码使得newObj继承了Obj的方法</p>
+</li>
+<li><p><code>newObj.prototype.constructor = newObj</code>这使得newObj的prototype和constructior只想的newObj构造器本身，而不是调用call函数的对象的构造器</p>
+</li>
+<li><p><code>Obj.prototype.constructor===Obj()（构造方法）</code></p>
+</li>
+</ul>
+<h2 id="JSON"><a href="#JSON" class="headerlink" title="JSON"></a>JSON</h2><p><strong>纯数据，无函数</strong></p>
+<ul>
+<li>获取内部成员的方法类似对象</li>
+<li><code>.parse()</code>：接收json字符串，返回json对象</li>
+<li><code>.stringify()</code>：接收对象，返回json字符串</li>
+</ul>
+<h2 id="异步"><a href="#异步" class="headerlink" title="异步"></a>异步</h2><p>JS一般是单线程</p>
+<p><code>() =&gt; x</code> 是 <code>()=&gt; &#123;return x;&#125;</code> 的有效简写; </p>
+<h3 id="callbacks-回调函数"><a href="#callbacks-回调函数" class="headerlink" title="callbacks(回调函数)"></a>callbacks(回调函数)</h3><p>将回调函数作为参数传递给另一个函数仅仅是把回调函数定义作为参数传递过去 — 回调函数并没有立刻执行，回调函数会在包含它的函数的某个地方异步执行，包含函数负责在合适的时候执行回调函数。</p>
+<h3 id="promises"><a href="#promises" class="headerlink" title="promises"></a>promises</h3><p>用来表示异步操作成功或者失败的对象</p>
+<p>​    有三个状态：</p>
+<ul>
+<li><p>pending(待定)</p>
+</li>
+<li><p>resolved(已解决)</p>
+<ul>
+<li>fullfilled（成功）</li>
+<li>rejected（失败）</li>
+</ul>
+</li>
+</ul>
+<p><code>promise.all()</code>：传入promise数组，当数组中所有promise执行成功后再执行<code>promise.all()</code>的<code>then</code></p>
+<h3 id="异步函数"><a href="#异步函数" class="headerlink" title="异步函数"></a>异步函数</h3><h4 id="setTimeout-和setInterval"><a href="#setTimeout-和setInterval" class="headerlink" title="setTimeout()和setInterval()"></a>setTimeout()和setInterval()</h4><ul>
+<li><p><code>setTimeout(func,time)</code>：在一段时间time后执行函数func</p>
+<ul>
+<li><code>clearTimeout()</code>：清除</li>
+</ul>
+</li>
+<li><p><code>setInterval(func,time)</code>：以固定时间间隔重复运行代码</p>
+<ul>
+<li><p><code>clearInterval()</code>：清除intervals</p>
+</li>
+<li><pre><code class="javascript">setTimeout(func,time)
+function func()&#123;
+    //options-codes;
+    setTimeout(func,time);
+&#125;
+//用递归和setTimeout()实现与setInterval相同的功能</code></pre>
+</li>
+</ul>
+</li>
+<li><p><code>setTimeout()</code>严格按照所传入的时间间隔执行，而<code>setInterval()</code>传入的时间间隔则包括代码执行时间和间隔时间(<em>例如传入100ms，代码执行10ms，则实际间隔只有90ms</em>)</p>
+</li>
+<li><p>使用<strong>0</strong>用作<code>setTimeout()</code>的回调函数会立刻执行，但是在主线程代码运行之后执行。</p>
+</li>
+</ul>
+<h4 id="requestAnimationFrame"><a href="#requestAnimationFrame" class="headerlink" title="requestAnimationFrame()"></a>requestAnimationFrame()</h4><ul>
+<li><code>requestAnimationFrame()</code>：setInterval()的现代版本;在浏览器下一次重新绘制显示之前执行指定的代码块，从而允许动画在适当的帧率下运行，而不管它在什么环境中运行.</li>
+<li><code>requestAnimationFrame()</code>:可传入一个带时间戳参数的函数，表示从函数执行到现在的时间</li>
+<li><code>cancelAnimationFrame()</code>：用于撤销动画</li>
+</ul>
+<h3 id="异步API"><a href="#异步API" class="headerlink" title="异步API"></a>异步API</h3><ul>
+<li><code>URL.createObjectURL(thing)</code>：此静态方法会创建一个thing的URL</li>
+</ul>
+<p><strong>fetch</strong></p>
+<ul>
+<li>全局fetch：<code>fetch(URL).then(func1()).then(func2()).catch(func3(err))</code>：返回一个promise，两个<code>then</code>的参数都是回调函数，如果前一个操作成功则运行该回调函数，并且每个回调函数的参数均是前一个操作的返回值，每个<code>then</code>也会返回一个promise，当任何一个<code>then</code>失败就会运行<code>catch</code></li>
+</ul>
+<h2 id="APIS"><a href="#APIS" class="headerlink" title="APIS"></a>APIS</h2><h3 id="浏览器"><a href="#浏览器" class="headerlink" title="浏览器"></a>浏览器</h3><ul>
+<li>window是载入浏览器的标签，在JavaScript中用<a href="https://developer.mozilla.org/zh-CN/docs/Web/API/Window"><code>Window</code></a>对象来表示，使用这个对象的可用方法，你可以返回窗口的大小（参见<a href="https://developer.mozilla.org/zh-CN/docs/Web/API/Window/innerWidth"><code>Window.innerWidth</code></a>和<a href="https://developer.mozilla.org/zh-CN/docs/Web/API/Window/innerHeight"><code>Window.innerHeight</code></a>），操作载入窗口的文档，存储客户端上文档的特殊数据（例如使用本地数据库或其他存储设备），为当前窗口绑定<a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Events#A_series_of_fortunate_events">event handler</a>，等等。</li>
+<li>navigator表示浏览器存在于web上的状态和标识（即用户代理）。在JavaScript中，用<a href="https://developer.mozilla.org/zh-CN/docs/Web/API/Navigator"><code>Navigator</code></a>来表示。你可以用这个对象获取一些信息，比如来自用户摄像头的地理信息、用户偏爱的语言、多媒体流等等。</li>
+<li>document（在浏览器中用DOM表示）是载入窗口的实际页面，在JavaScript中用<a href="https://developer.mozilla.org/zh-CN/docs/Web/API/Document"><code>Document</code></a> 对象表示，你可以用这个对象来返回和操作文档中HTML和CSS上的信息。例如获取DOM中一个元素的引用，修改其文本内容，并应用新的样式，创建新的元素并添加为当前元素的子元素，甚至把他们一起删除。<ul>
+<li><code>.querySelector()</code>：根据dom规则寻找元素</li>
+<li><code>.appendChild()</code>：添加子元素</li>
+<li><code>.removeChild()</code>：rm子元素</li>
+</ul>
+</li>
+</ul>
+<h2 id="正则匹配"><a href="#正则匹配" class="headerlink" title="正则匹配"></a>正则匹配</h2><ul>
+<li><code>\d</code>：匹配数字</li>
+<li><code>\w</code>：匹配字母</li>
+<li><code>.</code>：匹配任意字符</li>
+<li><code>*</code>：匹配任意个字符，包括<strong>0</strong>个，<ul>
+<li>用**+**来表示至少包含一个字符，</li>
+<li><strong>？</strong>来匹配0或者1个字符，</li>
+<li>{n}表示n个字符</li>
+<li>{n,m}表示n-m个字符</li>
+</ul>
+</li>
+<li><code>\s</code>：匹配空白符</li>
+<li><code>[]</code>：表示范围，例如<code>[0-9a-zA-Z\_]</code>可以匹配一个数字、字母或者下划线</li>
+<li><code>A|B</code>：匹配A或者B</li>
+<li><code>^</code>：表示行的开头<ul>
+<li><code>^\d</code>：表示以数字开头</li>
+</ul>
+</li>
+<li><code>$</code>：表示行结束<ul>
+<li><code>\d$</code>：表示以数字结束</li>
+</ul>
+</li>
+</ul>
+<h2 id="AJAX"><a href="#AJAX" class="headerlink" title="AJAX"></a>AJAX</h2>]]></content>
+  </entry>
+  <entry>
+    <title>HTML备忘</title>
+    <url>/2020/10/14/HTML%E5%A4%87%E5%BF%98/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="HTML备忘录"><a href="#HTML备忘录" class="headerlink" title="HTML备忘录"></a>HTML备忘录</h1><h2 id="标签相关"><a href="#标签相关" class="headerlink" title="标签相关"></a>标签相关</h2><ul>
+<li><p>块级元素自动换行而内联元素不自动换行</p>
+</li>
+<li><p>disabled = <em>value</em> 无论<em>value</em>值为什么，标签都会处于disabled状态，想要改变需将<em>value</em>置空</p>
+</li>
+<li><p>特殊字符引用表</p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th align="left">原义字符</th>
+<th align="left">等价字符引用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">&lt;”</td>
+<td align="left">&amp;lt</td>
+</tr>
+<tr>
+<td align="left">&gt;</td>
+<td align="left">&amp;gt</td>
+</tr>
+<tr>
+<td align="left">“</td>
+<td align="left">&amp;quot</td>
+</tr>
+<tr>
+<td align="left">‘</td>
+<td align="left">&amp;apos</td>
+</tr>
+<tr>
+<td align="left">&amp;</td>
+<td align="left">&amp;amp</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+</tbody></table>
+<ul>
+<li><p>使用相对路径优于绝对路径(舍去了DNS查找等操作)</p>
+</li>
+<li><p><code>&lt;script&gt;</code>放在<code> &lt;body&gt;</code>末尾前更优，这样可以确保脚本加载前浏览器已经解析HTML内容</p>
+</li>
+<li><p><code> &lt;a&gt;</code>标签的title属性作为悬停提示</p>
+</li>
+<li><p>href的mailto subject cc body等关键字，用于发送邮件</p>
+</li>
+<li><p>描述列表</p>
+</li>
+<li><p>块引用<code> &lt;blockquote cite=&quot;url&quot;&gt;&lt;/blockquote&gt;</code></p>
+</li>
+<li><p>行内引用<code>&lt;q cite=&quot;url&quot;&gt;</code></p>
+</li>
+<li><p>缩略语<code>&lt;abbr title=&quot;..&quot;&gt;&lt;/abbr&gt;</code></p>
+</li>
+<li><p>保留空格渲染<code>&lt;pre&gt;content&lt;/pre&gt;</code></p>
+</li>
+<li><p>标记键盘输入<code>&lt;kbd&gt;&lt;/kbd&gt;</code></p>
+</li>
+<li><p>换行<code>&lt;br&gt;</code></p>
+</li>
+<li><p>水平线<code>&lt;hr&gt;</code></p>
+</li>
+<li><p>嵌入其他网页<code>&lt;iframe&gt;</code></p>
+<p>属性：</p>
+<p>allowfullscreen：可设置全屏</p>
+<p>frameborder：边框</p>
+<p>（尽量用js设置src）</p>
+</li>
+<li><p>嵌入PDF,SVG,Flash—<code>&lt;embed&gt;&lt;object&gt;</code></p>
+</li>
+<li><p>视频标签:<code>&lt;video&gt;</code></p>
+<p>属性：</p>
+<p>autoplay:自动播放</p>
+<p>loop:循环</p>
+<p>muted:静音播放</p>
+<p>poster:封面图</p>
+<p>preload:缓冲（”none”：不缓冲 “auto”：页面加载自动缓冲）</p>
+</li>
+<li><p>权限管理 sandbox属性</p>
+</li>
+<li><p>表格相关</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">table</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- colgroup 必须包含在table标签内--&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">colgroup</span>&gt;</span> </span><br><span class="line">		<span class="tag">&lt;<span class="name">col</span> <span class="attr">style</span>=<span class="string">&quot;#&quot;</span> <span class="attr">span</span>=<span class="string">&quot;x&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">colgroup</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- col标签可以指定每一行的属性，span是需要设置属性的行数--&gt;</span></span><br><span class="line">        <span class="comment">&lt;!-- table row --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">tr</span>&gt;</span> </span><br><span class="line">    <span class="tag">&lt;<span class="name">td</span>&gt;</span> </span><br><span class="line">        <span class="comment">&lt;!-- table data --&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">table</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>​    </p>
+</li>
+</ul>
+<h2 id="响应式设计"><a href="#响应式设计" class="headerlink" title="响应式设计"></a>响应式设计</h2><ul>
+<li><p>```<img>``的 srcset和sizes属性</p>
+<p>举例:</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!--srcset是一个文件列表，后面以w为单位的数据是文件的像素大小--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">img</span> <span class="attr">srcset</span>=<span class="string">&quot;elva-fairy-320w.jpg 320w,</span></span></span><br><span class="line"><span class="tag"><span class="string">             elva-fairy-480w.jpg 480w,</span></span></span><br><span class="line"><span class="tag"><span class="string">             elva-fairy-800w.jpg 800w&quot;</span></span></span><br><span class="line">     &lt;!-- sizes 括号内的是条件 括号外的是前面条件为真时采用的样式--&gt;</span><br><span class="line">     sizes=&quot;(max-width: 320px) 280px,</span><br><span class="line">            (max-width: 480px) 440px,</span><br><span class="line">            800px&quot; <span class="comment">&lt;!--无条件的是默认样式--&gt;</span></span><br><span class="line">     src=&quot;elva-fairy-800w.jpg&quot; alt=&quot;Elva dressed as a fairy&quot;&gt;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><code>&lt;picture&gt;</code>的应用</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">​	&#96;&#96;&#96;&lt;soucre&gt;&#96;&#96;&#96;包含media srcset sizes属性</span><br><span class="line"></span><br><span class="line">&#96;&#96;&#96;html</span><br><span class="line">&lt;source media&#x3D;&quot;(maxwidth:799px)&quot;srcset&#x3D;&quot;exa.jpg&quot;&gt;</span><br><span class="line">&lt;!--media属性设置一个条件，为真则显示此图片--&gt;</span><br></pre></td></tr></table></figure>
+
+
+
+</li>
+</ul>
+<p>aaa</p>
+]]></content>
+      <tags>
+        <tag>HTML备忘</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>HTTP</title>
     <url>/2020/11/08/HTTP/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="HTTP"><a href="#HTTP" class="headerlink" title="HTTP"></a>HTTP</h1><h2 id="特点"><a href="#特点" class="headerlink" title="特点"></a>特点</h2><ul>
@@ -787,129 +985,193 @@
       </tags>
   </entry>
   <entry>
-    <title>JS备忘</title>
-    <url>/2020/10/21/JS%E5%A4%87%E5%BF%98/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="Start"><a href="#Start" class="headerlink" title="Start"></a>Start</h1><h2 id="一般事件绑定"><a href="#一般事件绑定" class="headerlink" title="一般事件绑定"></a>一般事件绑定</h2><ul>
-<li><p><code>.onclick</code>：点击事件</p>
-</li>
-<li><p><code>.onfocus</code>：聚焦（选中）</p>
-</li>
-<li><p><code>.onblur</code>：解除聚焦</p>
-</li>
-<li><p><code>.onmouse(over/out)</code>：鼠标移入/移开</p>
-</li>
-<li><p><code>.onsubmit</code>：表单提交</p>
-</li>
-<li><p><code>.addEventListener(&#39;事件&#39;,函数)/removeEventListener(&#39;事件&#39;,函数)</code>：添加/移除，监听事件，可对一个对象的一个事件添加两个不同函数</p>
-</li>
-</ul>
-<h2 id="特殊对象"><a href="#特殊对象" class="headerlink" title="特殊对象"></a>特殊对象</h2><ul>
-<li>诸如<code>event evt e（可以是任何表示）</code>都是事件对象会默认传入事件绑定的函数，<code>event/evt/e.target</code>指刚刚发生事件的元素</li>
-</ul>
-<h2 id="继承"><a href="#继承" class="headerlink" title="继承"></a>继承</h2><ul>
-<li><p><code>Objet().</code>的属性不被继承，而<code>Object.prototype.</code>的属性被继承</p>
-</li>
-<li><p><code>.call()</code>：这个函数允许您调用一个在这个文件里别处定义的函数。第一个参数指明了在您运行这个函数时想对“<code>this</code>”指定的值，也就是说，您可以重新指定您调用的函数里所有“<code>this</code>”指向的对象。可以让构造器继承某个构造器的属性</p>
-</li>
-<li><p><code>newObj.prototype = Object.create(Obj.prototype)</code>这串代码使得newObj继承了Obj的方法</p>
-</li>
-<li><p><code>newObj.prototype.constructor = newObj</code>这使得newObj的prototype和constructior只想的newObj构造器本身，而不是调用call函数的对象的构造器</p>
-</li>
-<li><p><code>Obj.prototype.constructor===Obj()（构造方法）</code></p>
-</li>
-</ul>
-<h2 id="JSON"><a href="#JSON" class="headerlink" title="JSON"></a>JSON</h2><p><strong>纯数据，无函数</strong></p>
+    <title>NodeJs学习</title>
+    <url>/2020/12/27/NodeJs%E5%AD%A6%E4%B9%A0/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="Node-JS"><a href="#Node-JS" class="headerlink" title="Node.JS"></a>Node.JS</h1><p>Node.JS是使用javascript来开发后端的工具。</p>
+<p>可以使得JS代码不再依托浏览器运行。</p>
+<p>（注：Node.js也可称为Node，NodeJS）</p>
+<h2 id="第一个Node程序"><a href="#第一个Node程序" class="headerlink" title="第一个Node程序"></a>第一个Node程序</h2><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">//test.js</span></span><br><span class="line"><span class="meta">&#x27;use strict&#x27;</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">&#x27;hello world!&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F;终端</span><br><span class="line">&#x2F;&#x2F;运行test.js</span><br><span class="line">node test.js</span><br></pre></td></tr></table></figure>
+
+<p>在终端可输入<code>node</code>进入Node交互模式，交互模式下可输入JS代码直接运行，并且node会将代码结果自行打印出来</p>
+<h3 id="使用严格模式"><a href="#使用严格模式" class="headerlink" title="使用严格模式"></a>使用严格模式</h3><p>如果在JavaScript文件开头写上<code>&#39;use strict&#39;;</code>，那么Node在执行该JavaScript时将使用严格模式。但是，在服务器环境下，如果有很多JavaScript文件，每个文件都写上<code>&#39;use strict&#39;;</code>很麻烦。我们可以给Nodejs传递一个参数，让Node直接为所有js文件开启严格模式：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">node --use_strict calc.js</span><br></pre></td></tr></table></figure>
+
+<h2 id="模块"><a href="#模块" class="headerlink" title="模块"></a>模块</h2><p>模块化最大的好处是大大提高了代码的可维护性。其次，编写代码不必从零开始。当一个模块编写完毕，就可以被其他地方引用。我们在编写程序的时候，也经常引用其他模块，包括Node内置的模块和来自第三方的模块。</p>
+<p>使用模块还可以避免函数名和变量名冲突。相同名字的函数和变量完全可以分别存在不同的模块中，因此，我们自己在编写模块时，不必考虑名字会与其他模块冲突。</p>
+<p>例如：</p>
 <ul>
-<li>获取内部成员的方法类似对象</li>
-<li><code>.parse()</code>：接收json字符串，返回json对象</li>
-<li><code>.stringify()</code>：接收对象，返回json字符串</li>
+<li>导出</li>
 </ul>
-<h2 id="异步"><a href="#异步" class="headerlink" title="异步"></a>异步</h2><p>JS一般是单线程</p>
-<p><code>() =&gt; x</code> 是 <code>()=&gt; &#123;return x;&#125;</code> 的有效简写; </p>
-<h3 id="callbacks-回调函数"><a href="#callbacks-回调函数" class="headerlink" title="callbacks(回调函数)"></a>callbacks(回调函数)</h3><p>将回调函数作为参数传递给另一个函数仅仅是把回调函数定义作为参数传递过去 — 回调函数并没有立刻执行，回调函数会在包含它的函数的某个地方异步执行，包含函数负责在合适的时候执行回调函数。</p>
-<h3 id="promises"><a href="#promises" class="headerlink" title="promises"></a>promises</h3><p>用来表示异步操作成功或者失败的对象</p>
-<p>​    有三个状态：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">//hello.js</span></span><br><span class="line"><span class="meta">&#x27;use strict&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> s = <span class="string">&#x27;Hello&#x27;</span>;</span><br><span class="line"></span><br><span class="line">greet(name)&#123;</span><br><span class="line">	<span class="built_in">console</span>.log(s + <span class="string">&#x27; &#x27;</span> + name + <span class="string">&#x27;!&#x27;</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="built_in">module</span>.exports = greet;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">//也可以直接 exports 但更推荐上面的方式</span></span><br><span class="line"><span class="built_in">exports</span> = greet</span><br></pre></td></tr></table></figure>
+
+
+
 <ul>
-<li><p>pending(待定)</p>
-</li>
-<li><p>resolved(已解决)</p>
+<li>导入</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F;main.js</span><br><span class="line">&#x2F;&#x2F;导入刚刚的hello模块</span><br><span class="line">let greet &#x3D; require(&#39;.&#x2F;hello&#39;)</span><br></pre></td></tr></table></figure>
+
+<h2 id="global"><a href="#global" class="headerlink" title="global"></a>global</h2><p>avaScript有且仅有一个全局对象，在浏览器中，叫<code>window</code>对象。而在Node.js环境中，也有唯一的全局对象，但不叫<code>window</code>，而叫<code>global</code>，这个对象的属性和方法也和浏览器环境的<code>window</code>不同。</p>
+<p>在Node交互环境中输入</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">&gt;</span><span class="bash"> global.console</span></span><br><span class="line">Console &#123;</span><br><span class="line">  log: [Function: bound ],</span><br><span class="line">  info: [Function: bound ],</span><br><span class="line">  warn: [Function: bound ],</span><br><span class="line">  error: [Function: bound ],</span><br><span class="line">  dir: [Function: bound ],</span><br><span class="line">  time: [Function: bound ],</span><br><span class="line">  timeEnd: [Function: bound ],</span><br><span class="line">  trace: [Function: bound trace],</span><br><span class="line">  assert: [Function: bound ],</span><br><span class="line">  Console: [Function: Console] &#125;`</span><br></pre></td></tr></table></figure>
+
+<h2 id="process"><a href="#process" class="headerlink" title="process"></a>process</h2><p><code>process</code>也是Node.js提供的一个对象，它代表当前Node.js进程。</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">&gt;</span><span class="bash"> process === global.process;</span></span><br><span class="line">true</span><br><span class="line"><span class="meta">&gt;</span><span class="bash"> process.version;</span></span><br><span class="line">&#x27;v5.2.0&#x27;</span><br><span class="line"><span class="meta">&gt;</span><span class="bash"> process.platform;</span></span><br><span class="line">&#x27;darwin&#x27;</span><br><span class="line"><span class="meta">&gt;</span><span class="bash"> process.arch;</span></span><br><span class="line">&#x27;x64&#x27;</span><br><span class="line"><span class="meta">&gt;</span><span class="bash"> process.cwd(); //返回当前工作目录</span></span><br><span class="line">&#x27;/Users/michael&#x27;</span><br><span class="line"><span class="meta">&gt;</span><span class="bash"> process.chdir(<span class="string">&#x27;/private/tmp&#x27;</span>); // 切换当前工作目录</span></span><br><span class="line">undefined</span><br><span class="line"><span class="meta">&gt;</span><span class="bash"> process.cwd();</span></span><br><span class="line">&#x27;/private/tmp&#x27;</span><br></pre></td></tr></table></figure>
+
+<h3 id="process-nextTick"><a href="#process-nextTick" class="headerlink" title="process.nextTick()"></a>process.nextTick()</h3><p><code>process.nextTick()</code>接收一个函数。</p>
+<p>传入<code>process.nextTick()</code>的函数不是立刻执行，而是要等到下一次事件循环。</p>
+<p>即循环执行代码一次，等到第二次循环再执行<code>process.nextTick()</code>的内容</p>
+<p>例如：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// test.js</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// process.nextTick()将在下一轮事件循环中调用:</span></span><br><span class="line"><span class="keyword">let</span> nextTick1 = process.nextTick(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">&#x27;next tick callback&#x27;</span>)</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">&#x27;next was set&#x27;</span>)</span><br><span class="line"><span class="keyword">let</span> nextTick2 = process.nextTick(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">&#x27;next tick callback&#x27;</span>)</span><br><span class="line">&#125;)</span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">&#x27;next was set twice&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">//输出</span><br><span class="line">next was set</span><br><span class="line">next was set twice</span><br><span class="line">next tick callback</span><br><span class="line">next tick callback</span><br></pre></td></tr></table></figure>
+
+<p>执行过程：</p>
 <ul>
-<li>fullfilled（成功）</li>
-<li>rejected（失败）</li>
+<li>第一次循环代码<ul>
+<li>跳过<code>nextTick1</code></li>
+<li>执行<code>console.log(&#39;next was set&#39;)</code></li>
+<li>跳过<code>nextTick2</code></li>
+<li>执行<code>console.log(&#39;next was set twice&#39;)</code></li>
+</ul>
+</li>
+<li>第二次循环代码<ul>
+<li>执行<code>nextTick1</code></li>
+<li>跳过<code>console.log(&#39;next was set&#39;)</code></li>
+<li>执行<code>nextTick2</code></li>
+<li>跳过<code>console.log(&#39;next was set twice&#39;)</code></li>
 </ul>
 </li>
 </ul>
-<p><code>promise.all()</code>：传入promise数组，当数组中所有promise执行成功后再执行<code>promise.all()</code>的<code>then</code></p>
-<h3 id="异步函数"><a href="#异步函数" class="headerlink" title="异步函数"></a>异步函数</h3><h4 id="setTimeout-和setInterval"><a href="#setTimeout-和setInterval" class="headerlink" title="setTimeout()和setInterval()"></a>setTimeout()和setInterval()</h4><ul>
-<li><p><code>setTimeout(func,time)</code>：在一段时间time后执行函数func</p>
+<h3 id="exit事件"><a href="#exit事件" class="headerlink" title="exit事件"></a>exit事件</h3><p>Node.js进程本身的事件就由<code>process</code>对象来处理。如果我们响应<code>exit</code>事件，就可以在程序即将退出时执行某个回调函数</p>
+<p>例如：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// test.js</span></span><br><span class="line"><span class="comment">// 程序即将退出时的回调函数:</span></span><br><span class="line">process.on(<span class="string">&#x27;exit&#x27;</span>, <span class="function"><span class="keyword">function</span> (<span class="params">code</span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">&#x27;about to exit with code: &#x27;</span> + code);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<h3 id="判别JS执行环境"><a href="#判别JS执行环境" class="headerlink" title="判别JS执行环境"></a>判别JS执行环境</h3><p>有很多JavaScript代码既能在浏览器中执行，也能在Node环境执行，但有些时候，程序本身需要判断自己到底是在什么环境下执行的，常用的方式就是根据浏览器和Node环境提供的全局变量名称来判断：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// test.js</span></span><br><span class="line"><span class="comment">//通过独特的全局对象来判别</span></span><br><span class="line"><span class="keyword">if</span> (<span class="keyword">typeof</span>(<span class="built_in">window</span>) === <span class="string">&#x27;undefined&#x27;</span>) &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">&#x27;node.js&#x27;</span>);</span><br><span class="line">&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">&#x27;browser&#x27;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="基本模块"><a href="#基本模块" class="headerlink" title="基本模块"></a>基本模块</h2><h3 id="fs"><a href="#fs" class="headerlink" title="fs"></a>fs</h3><p>用于读写文件</p>
+<h4 id="异步读取文本"><a href="#异步读取文本" class="headerlink" title="异步读取文本"></a>异步读取文本</h4><p>例如：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// test.js</span></span><br><span class="line"><span class="meta">&#x27;use strict&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> fs = <span class="built_in">require</span>(<span class="string">&#x27;fs&#x27;</span>);</span><br><span class="line"></span><br><span class="line">fs.readFile(<span class="string">&#x27;sample.txt&#x27;</span>, <span class="string">&#x27;utf-8&#x27;</span>, <span class="function"><span class="keyword">function</span> (<span class="params">err, data</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (err) &#123;</span><br><span class="line">        <span class="built_in">console</span>.log(err);</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="built_in">console</span>.log(data);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<p>回调函数需要两个参数：err，data</p>
 <ul>
-<li><code>clearTimeout()</code>：清除</li>
-</ul>
+<li><p>正常情况下<code>err == null</code> , <code>data</code>为读取到的文本</p>
 </li>
-<li><p><code>setInterval(func,time)</code>：以固定时间间隔重复运行代码</p>
-<ul>
-<li><p><code>clearInterval()</code>：清除intervals</p>
-</li>
-<li><pre><code class="javascript">setTimeout(func,time)
-function func()&#123;
-    //options-codes;
-    setTimeout(func,time);
-&#125;
-//用递归和setTimeout()实现与setInterval相同的功能</code></pre>
+<li><p>发生错误时<code>err</code>为一个错误对象，<code>data == undefined</code></p>
 </li>
 </ul>
-</li>
-<li><p><code>setTimeout()</code>严格按照所传入的时间间隔执行，而<code>setInterval()</code>传入的时间间隔则包括代码执行时间和间隔时间(<em>例如传入100ms，代码执行10ms，则实际间隔只有90ms</em>)</p>
-</li>
-<li><p>使用<strong>0</strong>用作<code>setTimeout()</code>的回调函数会立刻执行，但是在主线程代码运行之后执行。</p>
-</li>
+<h4 id="读取二进制文件（异步）"><a href="#读取二进制文件（异步）" class="headerlink" title="读取二进制文件（异步）"></a>读取二进制文件（异步）</h4><p>例如：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// test.js</span></span><br><span class="line"><span class="comment">// 读取图片</span></span><br><span class="line"><span class="meta">&#x27;use strict&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> fs = <span class="built_in">require</span>(<span class="string">&#x27;fs&#x27;</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">//注意这里没有传入文件编码格式</span></span><br><span class="line">fs.readFile(<span class="string">&#x27;sample.png&#x27;</span>, <span class="function"><span class="keyword">function</span> (<span class="params">err, data</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (err) &#123;</span><br><span class="line">        <span class="built_in">console</span>.log(err);</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="built_in">console</span>.log(data);</span><br><span class="line">        <span class="built_in">console</span>.log(data.length + <span class="string">&#x27; bytes&#x27;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<p>当读取二进制文件时，不传入文件编码时，回调函数的<code>data</code>参数将返回一个<code>Buffer</code>对象。在Node.js中，<code>Buffer</code>对象就是一个包含零个或任意个字节的数组（注意和Array不同）。</p>
+<p><code>Buffer</code>对象可以和String作转换，例如，把一个<code>Buffer</code>对象转换成String：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// Buffer -&gt; String</span></span><br><span class="line"><span class="comment">// text为Buffer</span></span><br><span class="line"><span class="keyword">var</span> text = data.toString(<span class="string">&#x27;utf-8&#x27;</span>);</span><br><span class="line"><span class="built_in">console</span>.log(text);</span><br></pre></td></tr></table></figure>
+
+<h4 id="同步读取文件"><a href="#同步读取文件" class="headerlink" title="同步读取文件"></a>同步读取文件</h4><p>除了标准的异步读取模式外，<code>fs</code>也提供相应的同步读取函数。同步读取的函数和异步函数相比，多了一个<code>Sync</code>后缀，并且不接收回调函数，函数直接返回结果。</p>
+<p>例如：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// test.js</span></span><br><span class="line"><span class="comment">// 同步读取</span></span><br><span class="line"></span><br><span class="line"><span class="meta">&#x27;use strict&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> fs = <span class="built_in">require</span>(<span class="string">&#x27;fs&#x27;</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> data = fs.readFileSync(<span class="string">&#x27;sample.txt&#x27;</span>, <span class="string">&#x27;utf-8&#x27;</span>);</span><br><span class="line"><span class="built_in">console</span>.log(data);</span><br></pre></td></tr></table></figure>
+
+<p>如果同步读取发生错误，则需要用<code>try...catch</code>捕获</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 异常处理</span></span><br><span class="line"><span class="keyword">try</span> &#123;</span><br><span class="line">    <span class="keyword">var</span> data = fs.readFileSync(<span class="string">&#x27;sample.txt&#x27;</span>, <span class="string">&#x27;utf-8&#x27;</span>);</span><br><span class="line">    <span class="built_in">console</span>.log(data);</span><br><span class="line">&#125; <span class="keyword">catch</span> (err) &#123;</span><br><span class="line">    <span class="comment">// 出错了</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="异步写文件"><a href="#异步写文件" class="headerlink" title="异步写文件"></a>异步写文件</h4><p>将数据写入文件是通过<code>fs.writeFile()</code>实现的</p>
+<p>例如：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// test.js</span></span><br><span class="line"><span class="meta">&#x27;use strict&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> fs = <span class="built_in">require</span>(<span class="string">&#x27;fs&#x27;</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> data = <span class="string">&#x27;Hello, Node.js&#x27;</span>;</span><br><span class="line">fs.writeFile(<span class="string">&#x27;output.txt&#x27;</span>, data, <span class="function"><span class="keyword">function</span> (<span class="params">err</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (err) &#123;</span><br><span class="line">        <span class="built_in">console</span>.log(err);</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">&#x27;ok.&#x27;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<p><code>writeFile()</code>的参数依次为文件名、数据和回调函数。如果传入的数据是String，默认按UTF-8编码写入文本文件，如果传入的参数是<code>Buffer</code>，则写入的是二进制文件。回调函数由于只关心成功与否，因此只需要一个<code>err</code>参数。</p>
+<h4 id="同步写文件"><a href="#同步写文件" class="headerlink" title="同步写文件"></a>同步写文件</h4><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// test.js</span></span><br><span class="line"><span class="meta">&#x27;use strict&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> fs = <span class="built_in">require</span>(<span class="string">&#x27;fs&#x27;</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> data = <span class="string">&#x27;Hello, Node.js&#x27;</span>;</span><br><span class="line">fs.writeFileSync(<span class="string">&#x27;output.txt&#x27;</span>, data);</span><br></pre></td></tr></table></figure>
+
+<p>同样需要使用<code>try...catch</code>捕获异常</p>
+<h4 id="获取文件信息-异步"><a href="#获取文件信息-异步" class="headerlink" title="获取文件信息(异步)"></a>获取文件信息(异步)</h4><p>如果我们要获取文件大小，创建时间等信息，可以使用<code>fs.stat()</code>，它返回一个<code>Stat</code>对象，能告诉我们文件或目录的详细信息</p>
+<p>例如：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="meta">&#x27;use strict&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> fs = <span class="built_in">require</span>(<span class="string">&#x27;fs&#x27;</span>);</span><br><span class="line"></span><br><span class="line">fs.stat(<span class="string">&#x27;sample.txt&#x27;</span>, <span class="function"><span class="keyword">function</span> (<span class="params">err, stat</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (err) &#123;</span><br><span class="line">        <span class="built_in">console</span>.log(err);</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="comment">// 是否是文件:</span></span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">&#x27;isFile: &#x27;</span> + stat.isFile());</span><br><span class="line">        <span class="comment">// 是否是目录:</span></span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">&#x27;isDirectory: &#x27;</span> + stat.isDirectory());</span><br><span class="line">        <span class="keyword">if</span> (stat.isFile()) &#123;</span><br><span class="line">            <span class="comment">// 文件大小:</span></span><br><span class="line">            <span class="built_in">console</span>.log(<span class="string">&#x27;size: &#x27;</span> + stat.size);</span><br><span class="line">            <span class="comment">// 创建时间, Date对象:</span></span><br><span class="line">            <span class="built_in">console</span>.log(<span class="string">&#x27;birth time: &#x27;</span> + stat.birthtime);</span><br><span class="line">            <span class="comment">// 修改时间, Date对象:</span></span><br><span class="line">            <span class="built_in">console</span>.log(<span class="string">&#x27;modified time: &#x27;</span> + stat.mtime);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<h4 id="获取文件信息-同步"><a href="#获取文件信息-同步" class="headerlink" title="获取文件信息(同步)"></a>获取文件信息(同步)</h4><p><code>stat()</code>也有一个对应的同步函数<code>statSync()</code>，请试着改写上述异步代码为同步代码。</p>
+<h3 id="stream"><a href="#stream" class="headerlink" title="stream"></a>stream</h3><p>流是一种抽象的数据结构。想象水流，当在水管中流动时，就可以从某个地方（例如自来水厂）源源不断地到达另一个地方（比如你家的洗手池）。我们也可以把数据看成是数据流，比如你敲键盘的时候，就可以把每个字符依次连起来，看成字符流。这个流是从键盘输入到应用程序，实际上它还对应着一个名字：标准输入流（stdin）。</p>
+<p>如果应用程序把字符一个一个输出到显示器上，这也可以看成是一个流，这个流也有名字：标准输出流（stdout）。流的特点是数据是有序的，而且必须依次读取，或者依次写入，不能像Array那样随机定位</p>
+<h4 id="使用流读取文件"><a href="#使用流读取文件" class="headerlink" title="使用流读取文件"></a>使用流读取文件</h4><p>​    一般步骤：创建一个文件流对象，响应<code>data</code>事件从文件流中读出数据，响应<code>end</code>事件关闭流</p>
+<p>​    流也是一个对象，我们只需要响应流的事件就可以了：<code>data</code>事件表示流的数据已经可以读取了，<code>end</code>事件表示这个流已经到末尾了，没有数据可以读取了，<code>error</code>事件表示出错了。</p>
+<p>例如：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// test.js</span></span><br><span class="line"><span class="meta">&#x27;use strict&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> fs = <span class="built_in">require</span>(<span class="string">&#x27;fs&#x27;</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 打开一个流:</span></span><br><span class="line"><span class="keyword">var</span> rs = fs.createReadStream(<span class="string">&#x27;sample.txt&#x27;</span>, <span class="string">&#x27;utf-8&#x27;</span>);</span><br><span class="line"></span><br><span class="line">rs.on(<span class="string">&#x27;data&#x27;</span>, <span class="function"><span class="keyword">function</span> (<span class="params">chunk</span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">&#x27;DATA:&#x27;</span>)</span><br><span class="line">    <span class="built_in">console</span>.log(chunk);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">rs.on(<span class="string">&#x27;end&#x27;</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">&#x27;END&#x27;</span>);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">rs.on(<span class="string">&#x27;error&#x27;</span>, <span class="function"><span class="keyword">function</span> (<span class="params">err</span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">&#x27;ERROR: &#x27;</span> + err);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<p>要注意，<code>data</code>事件可能会有多次，每次传递的<code>chunk</code>是流的一部分数据。</p>
+<p>要以流的形式写入文件，只需要不断调用<code>write()</code>方法，最后以<code>end()</code>结束：</p>
+<p>例如：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// test.js</span></span><br><span class="line"><span class="meta">&#x27;use strict&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> fs = <span class="built_in">require</span>(<span class="string">&#x27;fs&#x27;</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> ws1 = fs.createWriteStream(<span class="string">&#x27;output1.txt&#x27;</span>, <span class="string">&#x27;utf-8&#x27;</span>);</span><br><span class="line">ws1.write(<span class="string">&#x27;使用Stream写入文本数据...\n&#x27;</span>);</span><br><span class="line">ws1.write(<span class="string">&#x27;END.&#x27;</span>);</span><br><span class="line">ws1.end();</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> ws2 = fs.createWriteStream(<span class="string">&#x27;output2.txt&#x27;</span>);</span><br><span class="line">ws2.write(<span class="keyword">new</span> Buffer(<span class="string">&#x27;使用Stream写入二进制数据...\n&#x27;</span>, <span class="string">&#x27;utf-8&#x27;</span>));</span><br><span class="line">ws2.write(<span class="keyword">new</span> Buffer(<span class="string">&#x27;END.&#x27;</span>, <span class="string">&#x27;utf-8&#x27;</span>));</span><br><span class="line">ws2.end();</span><br></pre></td></tr></table></figure>
+
+<h4 id="pipe"><a href="#pipe" class="headerlink" title="pipe"></a>pipe</h4><p>就像可以把两个水管串成一个更长的水管一样，两个流也可以串起来。一个<code>Readable</code>流和一个<code>Writable</code>流串起来后，所有的数据自动从<code>Readable</code>流进入<code>Writable</code>流，这种操作叫<code>pipe</code>。</p>
+<p>例如：</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// test.js</span></span><br><span class="line"><span class="meta">&#x27;use strict&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> fs = <span class="built_in">require</span>(<span class="string">&#x27;fs&#x27;</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> rs = fs.createReadStream(<span class="string">&#x27;sample.txt&#x27;</span>);</span><br><span class="line"><span class="keyword">var</span> ws = fs.createWriteStream(<span class="string">&#x27;copied.txt&#x27;</span>);</span><br><span class="line"></span><br><span class="line">rs.pipe(ws);</span><br></pre></td></tr></table></figure>
+
+<p> 注：当<code>Readable</code>流的数据读取完毕，<code>end</code>事件触发后，将自动关闭<code>Writable</code>流。如果我们不希望自动关闭<code>Writable</code>流，需要传入参数：</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">readable.pipe(writable, &#123; <span class="attr">end</span>: <span class="literal">false</span> &#125;);</span><br></pre></td></tr></table></figure>
+
+<h3 id="http"><a href="#http" class="headerlink" title="http"></a>http</h3><p>要开发HTTP服务器程序，从头处理TCP连接，解析HTTP是不现实的。这些工作实际上已经由Node.js自带的<code>http</code>模块完成了。应用程序并不直接和HTTP协议打交道，而是操作<code>http</code>模块提供的<code>request</code>和<code>response</code>对象。</p>
+<p><code>request</code>对象封装了HTTP请求，我们调用<code>request</code>对象的属性和方法就可以拿到所有HTTP请求的信息；</p>
+<p><code>response</code>对象封装了HTTP响应，我们操作<code>response</code>对象的方法，就可以把HTTP响应返回给浏览器。</p>
+<h4 id="简单的服务器"><a href="#简单的服务器" class="headerlink" title="简单的服务器"></a>简单的服务器</h4><p>例如：</p>
+<p>​    用Node.js实现一个HTTP服务器程序非常简单。我们来实现一个最简单的Web程序<code>hello.js</code>，它对于所有请求，都返回<code>Hello world!</code>：</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// server.js</span></span><br><span class="line"><span class="meta">&#x27;use strict&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 导入http模块:</span></span><br><span class="line"><span class="keyword">var</span> http = <span class="built_in">require</span>(<span class="string">&#x27;http&#x27;</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 创建http server，并传入回调函数:</span></span><br><span class="line"><span class="keyword">var</span> server = http.createServer(<span class="function"><span class="keyword">function</span> (<span class="params">request, response</span>) </span>&#123;</span><br><span class="line">    <span class="comment">// 回调函数接收request和response对象,</span></span><br><span class="line">    <span class="comment">// 获得HTTP请求的method和url:</span></span><br><span class="line">    <span class="built_in">console</span>.log(request.method + <span class="string">&#x27;: &#x27;</span> + request.url);</span><br><span class="line">    <span class="comment">// 将HTTP响应200写入response, 同时设置Content-Type: text/html:</span></span><br><span class="line">    response.writeHead(<span class="number">200</span>, &#123;<span class="string">&#x27;Content-Type&#x27;</span>: <span class="string">&#x27;text/html&#x27;</span>&#125;);</span><br><span class="line">    <span class="comment">// 将HTTP响应的HTML内容写入response:</span></span><br><span class="line">    response.end(<span class="string">&#x27;&lt;h1&gt;Hello world!&lt;/h1&gt;&#x27;</span>);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 让服务器监听8080端口:</span></span><br><span class="line">server.listen(<span class="number">8080</span>);</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">&#x27;Server is running at http://127.0.0.1:8080/&#x27;</span>);</span><br></pre></td></tr></table></figure>
+
+<h4 id="文件服务器"><a href="#文件服务器" class="headerlink" title="文件服务器"></a>文件服务器</h4><p>扩展一下上面的Web程序。我们可以设定一个目录，然后让Web程序变成一个文件服务器。要实现这一点，我们只需要解析<code>request.url</code>中的路径，然后在本地找到对应的文件，把文件内容发送出去就可以了。</p>
+<h5 id="url解析"><a href="#url解析" class="headerlink" title="url解析"></a>url解析</h5><p>解析URL需要用到Node.js提供的<code>url</code>模块，它使用起来非常简单，通过<code>parse()</code>将一个字符串解析为一个<code>Url</code>对象：</p>
+<p>例如：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// server.js</span></span><br><span class="line"><span class="meta">&#x27;use strict&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> url = <span class="built_in">require</span>(<span class="string">&#x27;url&#x27;</span>);</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(url.parse(<span class="string">&#x27;http://user:pass@host.com:8080/path/to/file?query=string#hash&#x27;</span>));</span><br></pre></td></tr></table></figure>
+
+<p>结果如下</p>
+<figure class="highlight"><table><tr><td class="code"><pre><span class="line">Url &#123;</span><br><span class="line">  protocol: &#x27;http:&#x27;,</span><br><span class="line">  slashes: true,</span><br><span class="line">  auth: &#x27;user:pass&#x27;,</span><br><span class="line">  host: &#x27;host.com:8080&#x27;,</span><br><span class="line">  port: &#x27;8080&#x27;,</span><br><span class="line">  hostname: &#x27;host.com&#x27;,</span><br><span class="line">  hash: &#x27;#hash&#x27;,</span><br><span class="line">  search: &#x27;?query=string&#x27;,</span><br><span class="line">  query: &#x27;query=string&#x27;,</span><br><span class="line">  pathname: &#x27;/path/to/file&#x27;,</span><br><span class="line">  path: &#x27;/path/to/file?query=string&#x27;,</span><br><span class="line">  href: &#x27;http://user:pass@host.com:8080/path/to/file?query=string#hash&#x27; &#125;</span><br></pre></td></tr></table></figure>
+
+<h5 id="path模块"><a href="#path模块" class="headerlink" title="path模块"></a>path模块</h5><p>处理本地文件目录需要使用Node.js提供的<code>path</code>模块，它可以方便地构造目录：</p>
+<p>例如：</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// server.js</span></span><br><span class="line"><span class="meta">&#x27;use strict&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> path = <span class="built_in">require</span>(<span class="string">&#x27;path&#x27;</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 解析当前目录:</span></span><br><span class="line"><span class="keyword">var</span> workDir = path.resolve(<span class="string">&#x27;.&#x27;</span>); <span class="comment">// &#x27;/Users/michael&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 组合完整的文件路径:当前目录+&#x27;pub&#x27;+&#x27;index.html&#x27;:</span></span><br><span class="line"><span class="keyword">var</span> filePath = path.join(workDir, <span class="string">&#x27;pub&#x27;</span>, <span class="string">&#x27;index.html&#x27;</span>);</span><br><span class="line"><span class="comment">// &#x27;/Users/michael/pub/index.html&#x27;</span></span><br></pre></td></tr></table></figure>
+
+<h5 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h5><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// server.js</span></span><br><span class="line"><span class="meta">&#x27;use strict&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span></span><br><span class="line">    fs = <span class="built_in">require</span>(<span class="string">&#x27;fs&#x27;</span>),</span><br><span class="line">    url = <span class="built_in">require</span>(<span class="string">&#x27;url&#x27;</span>),</span><br><span class="line">    path = <span class="built_in">require</span>(<span class="string">&#x27;path&#x27;</span>),</span><br><span class="line">    http = <span class="built_in">require</span>(<span class="string">&#x27;http&#x27;</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 从命令行参数获取root目录，默认是当前目录:</span></span><br><span class="line"><span class="keyword">var</span> root = path.resolve(process.argv[<span class="number">2</span>] || <span class="string">&#x27;.&#x27;</span>);</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">&#x27;Static root dir: &#x27;</span> + root);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 创建服务器:</span></span><br><span class="line"><span class="keyword">var</span> server = http.createServer(<span class="function"><span class="keyword">function</span> (<span class="params">request, response</span>) </span>&#123;</span><br><span class="line">    <span class="comment">// 获得URL的path，类似 &#x27;/css/bootstrap.css&#x27;:</span></span><br><span class="line">    <span class="keyword">var</span> pathname = url.parse(request.url).pathname;</span><br><span class="line">    <span class="comment">// 获得对应的本地文件路径，类似 &#x27;/srv/www/css/bootstrap.css&#x27;:</span></span><br><span class="line">    <span class="keyword">var</span> filepath = path.join(root, pathname);</span><br><span class="line">    <span class="comment">// 获取文件状态:</span></span><br><span class="line">    fs.stat(filepath, <span class="function"><span class="keyword">function</span> (<span class="params">err, stats</span>) </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (!err &amp;&amp; stats.isFile()) &#123;</span><br><span class="line">            <span class="comment">// 没有出错并且文件存在:</span></span><br><span class="line">            <span class="built_in">console</span>.log(<span class="string">&#x27;200 &#x27;</span> + request.url);</span><br><span class="line">            <span class="comment">// 发送200响应:</span></span><br><span class="line">            response.writeHead(<span class="number">200</span>);</span><br><span class="line">            <span class="comment">// 将文件流导向response:</span></span><br><span class="line">            fs.createReadStream(filepath).pipe(response);</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            <span class="comment">// 出错了或者文件不存在:</span></span><br><span class="line">            <span class="built_in">console</span>.log(<span class="string">&#x27;404 &#x27;</span> + request.url);</span><br><span class="line">            <span class="comment">// 发送404响应:</span></span><br><span class="line">            response.writeHead(<span class="number">404</span>);</span><br><span class="line">            response.end(<span class="string">&#x27;404 Not Found&#x27;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">server.listen(<span class="number">8080</span>);</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">&#x27;Server is running at http://127.0.0.1:8080/&#x27;</span>);</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="crypto"><a href="#crypto" class="headerlink" title="crypto"></a>crypto</h3><p>crypto模块的目的是为了提供通用的加密和哈希算法。用纯JavaScript代码实现这些功能不是不可能，但速度会非常慢。Nodejs用C/C++实现这些算法后，通过cypto这个模块暴露为JavaScript接口，这样用起来方便，运行速度也快。</p>
+<h4 id="MD5和SHA1"><a href="#MD5和SHA1" class="headerlink" title="MD5和SHA1"></a>MD5和SHA1</h4><p>MD5是一种常用的哈希算法，用于给任意数据一个“签名”。这个签名通常用一个十六进制的字符串表示：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">const crypto &#x3D; require(&#39;crypto&#39;);</span><br><span class="line"></span><br><span class="line">const hash &#x3D; crypto.createHash(&#39;md5&#39;);</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 可任意多次调用update():</span><br><span class="line">hash.update(&#39;Hello, world!&#39;);</span><br><span class="line">hash.update(&#39;Hello, nodejs!&#39;);</span><br><span class="line"></span><br><span class="line">console.log(hash.digest(&#39;hex&#39;)); &#x2F;&#x2F; 7e1977739c748beac0c0fd14fd26a544</span><br></pre></td></tr></table></figure>
+
+<p><code>update()</code>方法默认字符串编码为<code>UTF-8</code>，也可以传入Buffer。</p>
+<p>如果要计算SHA1，只需要把<code>&#39;md5&#39;</code>改成<code>&#39;sha1&#39;</code>，就可以得到SHA1的结果<code>1f32b9c9932c02227819a4151feed43e131aca40</code>。</p>
+<p>还可以使用更安全的<code>sha256</code>和<code>sha512</code>。</p>
+]]></content>
+      <tags>
+        <tag>building</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>RPC相关</title>
+    <url>/2020/10/21/RPC%E7%9B%B8%E5%85%B3/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="流程"><a href="#流程" class="headerlink" title="流程"></a>流程</h1><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">graph LR</span><br><span class="line">本地--&gt;|要执行的函数与函数参数|服务端</span><br><span class="line">服务端--&gt;|通过回调函数传回函数结果|本地</span><br></pre></td></tr></table></figure>
+
+<p>以上传参过程均通过AJAX</p>
+<h1 id="传输的数据"><a href="#传输的数据" class="headerlink" title="传输的数据"></a>传输的数据</h1><p><strong>本地：服务端的函数与函数参数</strong></p>
+<p><strong>服务端：回调执行结果</strong></p>
+<h1 id="序列化与反序列化"><a href="#序列化与反序列化" class="headerlink" title="序列化与反序列化"></a>序列化与反序列化</h1><p>将JSON序列化为PHP形式</p>
+<h1 id="RPC"><a href="#RPC" class="headerlink" title="RPC"></a>RPC</h1><p>RPC(Remote Procedure Call)指的是远程过程调用，简单的说，RPC就是从一台机器上通过参数传递的方式调用另一台机器上的一个函数或方法并得到响应结果。</p>
+<p>即本地来调用远程计算机上的某个函数</p>
+<p>我们不用关心RPC的通讯细节只需要使用上层接口</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>ReadME!!</title>
+    <url>/2220/09/20/ReadME!!!/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><ul>
+<li>欢迎访问！</li>
+<li>第一次加载文章首页图可能很慢。。。</li>
+<li>如要评论文章，请先填写昵称和邮箱（这两者为必要填写项）</li>
 </ul>
-<h4 id="requestAnimationFrame"><a href="#requestAnimationFrame" class="headerlink" title="requestAnimationFrame()"></a>requestAnimationFrame()</h4><ul>
-<li><code>requestAnimationFrame()</code>：setInterval()的现代版本;在浏览器下一次重新绘制显示之前执行指定的代码块，从而允许动画在适当的帧率下运行，而不管它在什么环境中运行.</li>
-<li><code>requestAnimationFrame()</code>:可传入一个带时间戳参数的函数，表示从函数执行到现在的时间</li>
-<li><code>cancelAnimationFrame()</code>：用于撤销动画</li>
-</ul>
-<h3 id="异步API"><a href="#异步API" class="headerlink" title="异步API"></a>异步API</h3><ul>
-<li><code>URL.createObjectURL(thing)</code>：此静态方法会创建一个thing的URL</li>
-</ul>
-<p><strong>fetch</strong></p>
-<ul>
-<li>全局fetch：<code>fetch(URL).then(func1()).then(func2()).catch(func3(err))</code>：返回一个promise，两个<code>then</code>的参数都是回调函数，如果前一个操作成功则运行该回调函数，并且每个回调函数的参数均是前一个操作的返回值，每个<code>then</code>也会返回一个promise，当任何一个<code>then</code>失败就会运行<code>catch</code></li>
-</ul>
-<h2 id="APIS"><a href="#APIS" class="headerlink" title="APIS"></a>APIS</h2><h3 id="浏览器"><a href="#浏览器" class="headerlink" title="浏览器"></a>浏览器</h3><ul>
-<li>window是载入浏览器的标签，在JavaScript中用<a href="https://developer.mozilla.org/zh-CN/docs/Web/API/Window"><code>Window</code></a>对象来表示，使用这个对象的可用方法，你可以返回窗口的大小（参见<a href="https://developer.mozilla.org/zh-CN/docs/Web/API/Window/innerWidth"><code>Window.innerWidth</code></a>和<a href="https://developer.mozilla.org/zh-CN/docs/Web/API/Window/innerHeight"><code>Window.innerHeight</code></a>），操作载入窗口的文档，存储客户端上文档的特殊数据（例如使用本地数据库或其他存储设备），为当前窗口绑定<a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Events#A_series_of_fortunate_events">event handler</a>，等等。</li>
-<li>navigator表示浏览器存在于web上的状态和标识（即用户代理）。在JavaScript中，用<a href="https://developer.mozilla.org/zh-CN/docs/Web/API/Navigator"><code>Navigator</code></a>来表示。你可以用这个对象获取一些信息，比如来自用户摄像头的地理信息、用户偏爱的语言、多媒体流等等。</li>
-<li>document（在浏览器中用DOM表示）是载入窗口的实际页面，在JavaScript中用<a href="https://developer.mozilla.org/zh-CN/docs/Web/API/Document"><code>Document</code></a> 对象表示，你可以用这个对象来返回和操作文档中HTML和CSS上的信息。例如获取DOM中一个元素的引用，修改其文本内容，并应用新的样式，创建新的元素并添加为当前元素的子元素，甚至把他们一起删除。<ul>
-<li><code>.querySelector()</code>：根据dom规则寻找元素</li>
-<li><code>.appendChild()</code>：添加子元素</li>
-<li><code>.removeChild()</code>：rm子元素</li>
-</ul>
-</li>
-</ul>
-<h2 id="正则匹配"><a href="#正则匹配" class="headerlink" title="正则匹配"></a>正则匹配</h2><ul>
-<li><code>\d</code>：匹配数字</li>
-<li><code>\w</code>：匹配字母</li>
-<li><code>.</code>：匹配任意字符</li>
-<li><code>*</code>：匹配任意个字符，包括<strong>0</strong>个，<ul>
-<li>用**+**来表示至少包含一个字符，</li>
-<li><strong>？</strong>来匹配0或者1个字符，</li>
-<li>{n}表示n个字符</li>
-<li>{n,m}表示n-m个字符</li>
-</ul>
-</li>
-<li><code>\s</code>：匹配空白符</li>
-<li><code>[]</code>：表示范围，例如<code>[0-9a-zA-Z\_]</code>可以匹配一个数字、字母或者下划线</li>
-<li><code>A|B</code>：匹配A或者B</li>
-<li><code>^</code>：表示行的开头<ul>
-<li><code>^\d</code>：表示以数字开头</li>
-</ul>
-</li>
-<li><code>$</code>：表示行结束<ul>
-<li><code>\d$</code>：表示以数字结束</li>
-</ul>
-</li>
-</ul>
-<h2 id="AJAX"><a href="#AJAX" class="headerlink" title="AJAX"></a>AJAX</h2>]]></content>
+]]></content>
+      <tags>
+        <tag>Hello!</tag>
+      </tags>
   </entry>
   <entry>
     <title>java相关</title>
@@ -946,34 +1208,57 @@ function func()&#123;
 <p>在启动JVM时设置<code>classpath</code></p>
 <figure class="highlight java"><table><tr><td class="code"><pre><span class="line">java -classpath .;C:\work\project1\bin;C:\shared abc.xyz.Hello</span><br><span class="line"></span><br><span class="line">java -cp .;C:\work\project1\bin;C:\shared abc.xyz.Hello</span><br></pre></td></tr></table></figure>
 
-]]></content>
-  </entry>
-  <entry>
-    <title>RPC相关</title>
-    <url>/2020/10/21/RPC%E7%9B%B8%E5%85%B3/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="流程"><a href="#流程" class="headerlink" title="流程"></a>流程</h1><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">graph LR</span><br><span class="line">本地--&gt;|要执行的函数与函数参数|服务端</span><br><span class="line">服务端--&gt;|通过回调函数传回函数结果|本地</span><br></pre></td></tr></table></figure>
-
-<p>以上传参过程均通过AJAX</p>
-<h1 id="传输的数据"><a href="#传输的数据" class="headerlink" title="传输的数据"></a>传输的数据</h1><p><strong>本地：服务端的函数与函数参数</strong></p>
-<p><strong>服务端：回调执行结果</strong></p>
-<h1 id="序列化与反序列化"><a href="#序列化与反序列化" class="headerlink" title="序列化与反序列化"></a>序列化与反序列化</h1><p>将JSON序列化为PHP形式</p>
-<h1 id="RPC"><a href="#RPC" class="headerlink" title="RPC"></a>RPC</h1><p>RPC(Remote Procedure Call)指的是远程过程调用，简单的说，RPC就是从一台机器上通过参数传递的方式调用另一台机器上的一个函数或方法并得到响应结果。</p>
-<p>即本地来调用远程计算机上的某个函数</p>
-<p>我们不用关心RPC的通讯细节只需要使用上层接口</p>
-]]></content>
-  </entry>
-  <entry>
-    <title>ReadME!!</title>
-    <url>/2220/09/20/ReadME!!!/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><ul>
-<li>欢迎访问！</li>
-<li>第一次加载文章首页图可能很慢。。。</li>
-<li>如要评论文章，请先填写昵称和邮箱（这两者为必要填写项）</li>
+<h1 id="JavaBean"><a href="#JavaBean" class="headerlink" title="JavaBean"></a>JavaBean</h1><p>在Java中，有很多<code>class</code>的定义都符合这样的规范：</p>
+<ul>
+<li>若干<code>private</code>实例字段；</li>
+<li>通过<code>public</code>方法来读写实例字段。</li>
 </ul>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">//如下面这个class</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Person</span></span>&#123;</span><br><span class="line">	<span class="keyword">private</span> String name;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">getName</span><span class="params">()</span></span>&#123;</span><br><span class="line">		<span class="keyword">return</span> <span class="keyword">this</span>.name;	</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//这种class被称为JavaBean</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>使用<code>Introspector.getBeanInfo()</code>可以获取属性列表。</li>
+</ul>
+<h1 id="enum枚举"><a href="#enum枚举" class="headerlink" title="enum枚举"></a>enum枚举</h1><p>为了让编译器能自动检查某个值在枚举的集合内，并且，不同用途的枚举需要不同的类型来标记，不能混用，我们可以使用<code>enum</code>来定义枚举类：</p>
+<p>​    Java使用<code>enum</code>定义枚举类型，它被编译器编译为<code>final class Xxx extends Enum &#123; … &#125;</code>；</p>
+<p>​    这样定义了一个数据集合，我们可以自定义属于这个数据集合的数据</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">enum</span> <span class="title">Weekday</span> </span>&#123;</span><br><span class="line">    SUN, MON, TUE, WED, THU, FRI, SAT;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//定义Weekday类型</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Main</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">    Weekday day = Weekday.SUN;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+<p>使用<code>enum</code>定义的枚举类是一种引用类型。引用类型比较，要使用<code>equals()</code>方法，但是<code>enum</code>除外，这是因为<code>enum</code>类型的每个常量在JVM中只有一个唯一实例，所以可以直接用<code>==</code>比较</p>
+<ul>
+<li>定义的<code>enum</code>类型总是继承自<code>java.lang.Enum</code>，且无法被继承；</li>
+<li>只能定义出<code>enum</code>的实例，而无法通过<code>new</code>操作符创建<code>enum</code>的实例；</li>
+<li>定义的每个实例都是引用类型的唯一实例；</li>
+<li>可以将<code>enum</code>类型用于<code>switch</code>语句。</li>
+</ul>
+<h2 id="enum的方法"><a href="#enum的方法" class="headerlink" title="enum的方法"></a>enum的方法</h2><ul>
+<li><code>name()</code>：返回常量名</li>
+<li><code>ordinal()</code>:返回定义常量的顺序，从0开始</li>
+</ul>
+<h2 id="为enum创建方法"><a href="#为enum创建方法" class="headerlink" title="为enum创建方法"></a>为enum创建方法</h2><p>可以为<code>enum</code>编写构造方法、字段和方法</p>
+<p><code>enum</code>的构造方法要声明为<code>private</code>，字段强烈建议声明为<code>final</code>；</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">enum</span> <span class="title">Weekday</span> </span>&#123;</span><br><span class="line">    MON(<span class="number">1</span>), TUE(<span class="number">2</span>), WED(<span class="number">3</span>), THU(<span class="number">4</span>), FRI(<span class="number">5</span>), SAT(<span class="number">6</span>), SUN(<span class="number">0</span>);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">final</span> <span class="keyword">int</span> dayValue;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="title">Weekday</span><span class="params">(<span class="keyword">int</span> dayValue)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.dayValue = dayValue;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h1 id="记录类"><a href="#记录类" class="headerlink" title="记录类"></a>记录类</h1><h2 id="不变类"><a href="#不变类" class="headerlink" title="不变类"></a>不变类</h2><p>使用<code>String</code>、<code>Integer</code>等类型的时候，这些类型都是不变类，一个不变类具有以下特点：</p>
+<ol>
+<li>定义class时使用<code>final</code>，无法派生子类；</li>
+<li>每个字段使用<code>final</code>，保证创建实例后无法修改任何字段。</li>
+</ol>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">//例如</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">final</span> <span class="class"><span class="keyword">class</span> <span class="title">Point</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">final</span> <span class="keyword">int</span> x;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">final</span> <span class="keyword">int</span> y;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Point</span><span class="params">(<span class="keyword">int</span> x, <span class="keyword">int</span> y)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.x = x;</span><br><span class="line">        <span class="keyword">this</span>.y = y;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">x</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">this</span>.x;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">y</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">this</span>.y;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="不变类改记录类"><a href="#不变类改记录类" class="headerlink" title="不变类改记录类"></a>不变类改记录类</h2><p>从Java 14开始，引入了新的<code>Record</code>类。我们定义<code>Record</code>类时，使用关键字<code>record</code>。把上述<code>Point</code>类改写为<code>Record</code>类，代码如下：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> record <span class="title">Point</span><span class="params">(<span class="keyword">int</span> x, <span class="keyword">int</span> y)</span> </span>&#123;&#125;</span><br><span class="line"><span class="comment">//是的，就这一行</span></span><br><span class="line"><span class="comment">//等于</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">final</span> <span class="class"><span class="keyword">class</span> <span class="title">Point</span> <span class="keyword">extends</span> <span class="title">Record</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">final</span> <span class="keyword">int</span> x;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">final</span> <span class="keyword">int</span> y;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Point</span><span class="params">(<span class="keyword">int</span> x, <span class="keyword">int</span> y)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.x = x;</span><br><span class="line">        <span class="keyword">this</span>.y = y;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">x</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">this</span>.x;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">y</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">this</span>.y;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">toString</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> String.format(<span class="string">&quot;Point[x=%s, y=%s]&quot;</span>, x, y);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">equals</span><span class="params">(Object o)</span> </span>&#123;</span><br><span class="line">        ...</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">hashCode</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        ...</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>除了用<code>final</code>修饰class以及每个字段外，编译器还自动为我们创建了构造方法，和字段名同名的方法，以及覆写<code>toString()</code>、<code>equals()</code>和<code>hashCode()</code>方法。</p>
+<p>和<code>enum</code>类似，我们自己不能直接从<code>Record</code>派生，只能通过<code>record</code>关键字由编译器实现继承。</p>
+<h3 id="检查数据"><a href="#检查数据" class="headerlink" title="检查数据"></a>检查数据</h3><p>既然编译器自动生成了方法，那我们要检查构造方法传入的数据要怎么办呢？</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">final</span> <span class="class"><span class="keyword">class</span> <span class="title">Point</span> <span class="keyword">extends</span> <span class="title">Record</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Point</span><span class="params">(<span class="keyword">int</span> x, <span class="keyword">int</span> y)</span> </span>&#123;</span><br><span class="line">        <span class="comment">// 这是我们编写的Compact Constructor:</span></span><br><span class="line">        <span class="keyword">if</span> (x &lt; <span class="number">0</span> || y &lt; <span class="number">0</span>) &#123;</span><br><span class="line">            <span class="keyword">throw</span> <span class="keyword">new</span> IllegalArgumentException();</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// 这是编译器继续生成的赋值代码:</span></span><br><span class="line">        <span class="keyword">this</span>.x = x;</span><br><span class="line">        <span class="keyword">this</span>.y = y;</span><br><span class="line">    &#125;</span><br><span class="line">    ...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="添加静态方法"><a href="#添加静态方法" class="headerlink" title="添加静态方法"></a>添加静态方法</h3><p>作为<code>record</code>的<code>Point</code>仍然可以添加静态方法。一种常用的静态方法是<code>of()</code>方法，用来创建<code>Point</code>：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> record <span class="title">Point</span><span class="params">(<span class="keyword">int</span> x, <span class="keyword">int</span> y)</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> Point <span class="title">of</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> Point(<span class="number">0</span>, <span class="number">0</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> Point <span class="title">of</span><span class="params">(<span class="keyword">int</span> x, <span class="keyword">int</span> y)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> Point(x, y);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h1 id="常用库"><a href="#常用库" class="headerlink" title="常用库"></a>常用库</h1><h2 id="random"><a href="#random" class="headerlink" title="random"></a>random</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Random r &#x3D; new Random();</span><br><span class="line">r.nextInt(); &#x2F;&#x2F; 2071575453,每次都不一样</span><br><span class="line">r.nextInt(10); &#x2F;&#x2F; 5,生成一个[0,10)之间的int</span><br><span class="line">r.nextLong(); &#x2F;&#x2F; 8811649292570369305,每次都不一样</span><br><span class="line">r.nextFloat(); &#x2F;&#x2F; 0.54335...生成一个[0,1)之间的float</span><br><span class="line">r.nextDouble(); &#x2F;&#x2F; 0.3716...生成一个[0,1)之间的double</span><br></pre></td></tr></table></figure>
+
 ]]></content>
-      <tags>
-        <tag>Hello!</tag>
-      </tags>
   </entry>
   <entry>
     <title>mySQL基础</title>
@@ -982,6 +1267,45 @@ function func()&#123;
       <tags>
         <tag>password</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>vue小项目</title>
+    <url>/2020/12/25/vue%E5%B0%8F%E9%A1%B9%E7%9B%AE/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="vue项目"><a href="#vue项目" class="headerlink" title="vue项目"></a>vue项目</h1><p>基于Vue-CLI3</p>
+<h2 id="创建"><a href="#创建" class="headerlink" title="创建"></a>创建</h2><ul>
+<li>创建文件夹</li>
+<li>vue create ‘project name’(Vue-CLI3)</li>
+<li>创建 GitHub 仓库</li>
+</ul>
+<h3 id="与git远程库连接"><a href="#与git远程库连接" class="headerlink" title="与git远程库连接"></a>与git远程库连接</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git init</span><br><span class="line">git add .</span><br><span class="line">git commit -m &#39;初始化项目&#39;</span><br><span class="line">git remote add origin https:&#x2F;&#x2F;github.com&#x2F;.&#x2F;</span><br><span class="line">git push -u origin master</span><br></pre></td></tr></table></figure>
+
+<h2 id="构造目录"><a href="#构造目录" class="headerlink" title="构造目录"></a>构造目录</h2><p>​    在新项目中，先构造目录是 一个很好的习惯</p>
+<ul>
+<li>assets用于存放静态资源，如css, img等</li>
+<li>components的根目录一般存放公用组件，子目录存放区分更细致的组件</li>
+</ul>
+<h3 id="src的结构"><a href="#src的结构" class="headerlink" title="src的结构"></a>src的结构</h3><ul>
+<li>assets<ul>
+<li>css<ul>
+<li>normalize.css(大佬写的通用css，用于处理各浏览器规范 [见github])</li>
+<li>base.css(自己写的项目css规范)</li>
+</ul>
+</li>
+<li>img</li>
+</ul>
+</li>
+<li>common</li>
+<li>components</li>
+<li>network</li>
+<li>router</li>
+<li>store</li>
+<li>views</li>
+</ul>
+<h2 id="配置文件夹别名"><a href="#配置文件夹别名" class="headerlink" title="配置文件夹别名"></a>配置文件夹别名</h2><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">//vue.config.js</span></span><br><span class="line"><span class="built_in">module</span>.exports = &#123;</span><br><span class="line">    configureWebpack: &#123;</span><br><span class="line">        resolve: &#123;</span><br><span class="line">            alias: &#123;</span><br><span class="line">                <span class="string">&#x27;assets&#x27;</span>: <span class="string">&#x27;@/assets&#x27;</span>,</span><br><span class="line">                <span class="string">&#x27;common&#x27;</span>: <span class="string">&#x27;@/common&#x27;</span>,</span><br><span class="line">                <span class="string">&#x27;components&#x27;</span>: <span class="string">&#x27;@/components&#x27;</span>,</span><br><span class="line">                <span class="string">&#x27;network&#x27;</span>: <span class="string">&#x27;@/network&#x27;</span>,</span><br><span class="line">                <span class="string">&#x27;views&#x27;</span>: <span class="string">&#x27;@/views&#x27;</span></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="撰写-editorconfig"><a href="#撰写-editorconfig" class="headerlink" title="撰写.editorconfig"></a>撰写.editorconfig</h2><p>.editorconfig 用于统一代码风格</p>
+<p>p152</p>
+]]></content>
   </entry>
   <entry>
     <title>MySQL相关</title>
@@ -1515,7 +1839,7 @@ height = "450px" width="800px"framespacing="0" allowfullscreen="true" auto = "1"
 <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">//使用方法与原型一模一样</span></span><br><span class="line">axiosSample.get(&#123;</span><br><span class="line">	url:<span class="string">&#x27;&#x27;</span>,</span><br><span class="line">	params:&#123;</span><br><span class="line">		type:</span><br><span class="line">		...</span><br><span class="line">	&#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
 
 <h2 id="axios封装"><a href="#axios封装" class="headerlink" title="axios封装"></a>axios封装</h2><p>设想一下，你的每个程序都是用axios框架发送网络请求，但是某一天axios突然挂掉。那么需要重构的代码量将会非常巨大，为了应对这种情况，我们对框架做一层封装。</p>
-<ul>
+<h3 id="基本思路"><a href="#基本思路" class="headerlink" title="基本思路"></a>基本思路</h3><ul>
 <li>封装</li>
 </ul>
 <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">//建立一个request.js文件作为axios封装的文件夹</span></span><br><span class="line"><span class="keyword">import</span> axios <span class="keyword">from</span> <span class="string">&#x27;axios&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="function"><span class="keyword">function</span> <span class="title">request</span>(<span class="params">config, success, failure</span>) </span>&#123;</span><br><span class="line">    <span class="comment">//创建axios实例</span></span><br><span class="line">    <span class="keyword">const</span> instance = axios.create(&#123;</span><br><span class="line">        baseURL: <span class="string">&#x27;http://123.207.32.32:8000&#x27;</span>,</span><br><span class="line">        timeout: <span class="number">5000</span></span><br><span class="line">    &#125;)</span><br><span class="line"></span><br><span class="line">    instance(config)</span><br><span class="line">        .then(<span class="function"><span class="params">res</span> =&gt;</span> &#123; success(res) &#125;) <span class="comment">//成功时调用success</span></span><br><span class="line">        .catch(<span class="function"><span class="params">err</span> =&gt;</span> &#123; failure(err) &#125;)<span class="comment">//失败时调用failure</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -1538,7 +1862,9 @@ height = "450px" width="800px"framespacing="0" allowfullscreen="true" auto = "1"
 </ul>
 <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> axios <span class="keyword">from</span> <span class="string">&#x27;axios&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="function"><span class="keyword">function</span> <span class="title">request</span>(<span class="params">config</span>) </span>&#123;</span><br><span class="line">        <span class="keyword">const</span> instance = axios.create(&#123;</span><br><span class="line">            baseURL: <span class="string">&#x27;&#x27;</span>,</span><br><span class="line">            timeout: <span class="number">5000</span></span><br><span class="line">        &#125;)</span><br><span class="line">       <span class="keyword">return</span> instance(config)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p>p147</p>
+<h2 id="axios拦截器"><a href="#axios拦截器" class="headerlink" title="axios拦截器"></a>axios拦截器</h2><p>为上面的封装添加拦截器</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> axios <span class="keyword">from</span> <span class="string">&#x27;axios&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="function"><span class="keyword">function</span> <span class="title">request</span>(<span class="params">config</span>) </span>&#123;</span><br><span class="line">        <span class="keyword">const</span> instance = axios.create(&#123;</span><br><span class="line">            baseURL: <span class="string">&#x27;&#x27;</span>,</span><br><span class="line">            timeout: <span class="number">5000</span></span><br><span class="line">        &#125;)</span><br><span class="line">        <span class="comment">//请求拦截器</span></span><br><span class="line">        instance.interceptors.request.use(</span><br><span class="line">            req=&gt;&#123;</span><br><span class="line">            <span class="comment">//请求发送成功时的操作，并且拦截到了请求</span></span><br><span class="line">            <span class="comment">//添加一条return req才能继续请求，要不然请求被拦截</span></span><br><span class="line">                <span class="keyword">return</span> req</span><br><span class="line">        	&#125;,</span><br><span class="line">            err=&gt;&#123;</span><br><span class="line">            <span class="comment">//请求发送失败时的操作</span></span><br><span class="line">        	&#125;</span><br><span class="line">        );</span><br><span class="line">    	<span class="comment">//响应拦截器</span></span><br><span class="line">    	instance.interceptors.response.use(</span><br><span class="line">        	res=&gt;&#123;</span><br><span class="line">                <span class="comment">//在这里对拦截到的响应作操作</span></span><br><span class="line">                <span class="comment">//同样需要return</span></span><br><span class="line">                <span class="keyword">return</span> res</span><br><span class="line">            &#125;,</span><br><span class="line">            err=&gt;&#123;</span><br><span class="line">                </span><br><span class="line">            &#125;</span><br><span class="line">        )</span><br><span class="line">        <span class="comment">//发送请求</span></span><br><span class="line">       <span class="keyword">return</span> instance(config)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 ]]></content>
       <tags>
         <tag>buliding...</tag>
